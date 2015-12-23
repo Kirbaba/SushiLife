@@ -1,0 +1,88 @@
+.navigation {
+	background-color: #2C2C2C;
+	height: 110px;
+	-moz-box-shadow: 0 8px 12px rgba(0,0,0,.11);
+	-webkit-box-shadow: 0 8px 12px rgba(0,0,0,.11);
+	box-shadow: 0 8px 12px rgba(0,0,0,.11);
+	z-index: 1;
+	&--logo {
+		display: block;
+		float: left;
+		margin-right: 15px;
+		width: 12%;
+	}
+	&--box {
+		display: block;
+		float: left;
+		position: relative;
+		margin-left: 15px;
+		width: 100%;
+		width: 85%;
+		padding: 15px 0;	
+		&--topline {
+			display: block;
+			float: left;
+			width: 100%;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #424242;
+			
+		}	
+		&--contacts {
+			display: inline-block;
+			float: left;
+			position: relative;
+			width: 45%;
+			h4 {
+				font-family: $mp;
+				text-transform: uppercase;
+				font-size: 20px;
+				margin: 0 15px 5px 0;
+				color: #FFF;
+				display: inline-block;
+			}
+			a {
+				display: inline-block;
+				position: relative;
+				margin: 0 0 0 15px;				
+				i {
+					margin-right: 5px;
+					color: #F14036;
+				}
+				span {
+					font-family: $b;
+					font-size: 12px;
+					text-decoration: underline;
+					color: #F14036;
+					text-transform: uppercase;
+				}
+			}
+			p {
+				display: block;
+				float: left;
+				position: relative;
+				color: #FFF;
+				font-size: 10px;
+				font-family: $b;
+				margin-bottom: 0;
+				margin: 0 10px;
+				&:after {
+					content: "";
+					width: 3px;
+					height: 3px;
+					@include border-radius(50%);
+					background-color: #FE3F31;
+					display: block;
+					position: absolute;
+					left: -10px;
+					top: 5px;
+				}
+				&:first-of-type {
+					margin-left: 0;
+					&:after {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}

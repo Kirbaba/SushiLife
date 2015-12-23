@@ -1,2 +1,26 @@
-
+.basket {
+	display: block;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #F6F6F6;
+	z-index: 2;
+	&--width {
+		padding: 0 0 0 30px;
+	}
+	&__head {
+		display: block;
+		position: fixed;
+		top: 0;
+		height: 110px;
+		background-color: #F13f35;
+		h3 {
+			text-align: center;
+			color: #FFF;
+			text-transform: uppercase;
+		}		
+	}
+}
 

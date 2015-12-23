@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* font-family: "ProximaNovaRegular"; */
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+  src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* font-family: "ProximaNovaBold"; */
+@font-face {
+  font-family: "ProximaNovaBold";
+  src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+  src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"), url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url("../fonts/ProximaNova/ProximaNovaLight.eot");
+  src: url("../fonts/ProximaNova/ProximaNovaLight.eot") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNovaLight.woff2") format("woff2"), url("../fonts/ProximaNova/ProximaNovaLight.woff") format("woff"), url("../fonts/ProximaNova/ProximaNovaLight.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNovaLight.svg#ProximaNovaLight") format("svg"); }
 a {
   text-decoration: none; }
   a:hover, a:focus, a:active {
@@ -15,11 +39,114 @@ ul {
 .p0 {
   padding: 0; }
 
+.pr-0 {
+  padding-right: 0; }
+
 .align-left {
   text-align: left; }
 
 .align-right {
   text-align: right; }
+
+.navigation {
+  background-color: #2C2C2C;
+  height: 110px;
+  -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.11);
+  z-index: 1; }
+  .navigation--logo {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    width: 12%; }
+  .navigation--box {
+    display: block;
+    float: left;
+    position: relative;
+    margin-left: 15px;
+    width: 100%;
+    width: 85%;
+    padding: 15px 0; }
+    .navigation--box--topline {
+      display: block;
+      float: left;
+      width: 100%;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #424242; }
+    .navigation--box--contacts {
+      display: inline-block;
+      float: left;
+      position: relative;
+      width: 45%; }
+      .navigation--box--contacts h4 {
+        font-family: "MyriadProRegular";
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 15px 5px 0;
+        color: #FFF;
+        display: inline-block; }
+      .navigation--box--contacts a {
+        display: inline-block;
+        position: relative;
+        margin: 0 0 0 15px; }
+        .navigation--box--contacts a i {
+          margin-right: 5px;
+          color: #F14036; }
+        .navigation--box--contacts a span {
+          font-family: "ProximaNovaBold";
+          font-size: 12px;
+          text-decoration: underline;
+          color: #F14036;
+          text-transform: uppercase; }
+      .navigation--box--contacts p {
+        display: block;
+        float: left;
+        position: relative;
+        color: #FFF;
+        font-size: 10px;
+        font-family: "ProximaNovaBold";
+        margin-bottom: 0;
+        margin: 0 10px; }
+        .navigation--box--contacts p:after {
+          content: "";
+          width: 3px;
+          height: 3px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          background-color: #FE3F31;
+          display: block;
+          position: absolute;
+          left: -10px;
+          top: 5px; }
+        .navigation--box--contacts p:first-of-type {
+          margin-left: 0; }
+          .navigation--box--contacts p:first-of-type:after {
+            content: none; }
+
+.basket {
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #F6F6F6;
+  z-index: 2; }
+  .basket--width {
+    padding: 0 0 0 30px; }
+  .basket__head {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 110px;
+    background-color: #F13f35; }
+    .basket__head h3 {
+      text-align: center;
+      color: #FFF;
+      text-transform: uppercase; }
 
 @media only screen and (max-width: 770px) {
   .align-left {
