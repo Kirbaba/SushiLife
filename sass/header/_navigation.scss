@@ -17,7 +17,7 @@
 		position: relative;
 		margin-left: 15px;
 		width: 100%;
-		width: 85%;
+		width: 83%;
 		padding: 15px 0;	
 		&--topline {
 			display: block;
@@ -31,7 +31,7 @@
 			display: inline-block;
 			float: left;
 			position: relative;
-			width: 45%;
+			width: 46%;
 			h4 {
 				font-family: $mp;
 				text-transform: uppercase;
@@ -81,6 +81,80 @@
 					&:after {
 						content: none;
 					}
+				}
+			}
+		}
+		&--delivery {
+			display: block;
+			float: left;
+			position: relative;
+			width: 30%;
+			h3 {
+				font-family: $r;
+				font-size: 20px;
+				color: #FFF;
+				margin: 0;
+				text-transform: uppercase;
+				line-height: 27px;
+			}
+			p {
+				display: block;
+				font-size: 10px;
+				color: #FFF;
+				font-family: $b;
+				margin-bottom: 0;
+			}
+		}
+		&--onlinecam {
+			display: block;
+			float: left;
+			width: 22%;
+			padding-top: 5px;
+			position: relative;
+			a {
+				display: block;
+				text-decoration: none;
+				width: 127px;
+				height: 30px;
+				@include border-radius(10px);
+				@include background-clip(padding-box);
+				border: 1px solid #ef3f35;
+				text-transform: uppercase;
+				font-size: 10px;
+				font-family: $r;
+				text-align: center;
+				line-height: 30px;
+				color: #EF3F35;
+				@include transition(0.2s);
+				i {
+					margin-right: 5px;
+				}
+				&:hover, &:active, &:focus {
+					background-color: #EF3F35;
+					color: #fff;
+				}
+			}
+		}
+	}
+	&--navline {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		ul {
+			padding: 0;
+			li {
+				display: block;
+				float: left;
+				position: relative;
+				a {
+					font-size: 16px;
+					color: #FFF;
+					font-family: $r;
+					text-transform: uppercase;
+					padding-right: 20px;
+					text-decoration: none;
+					font-weight: 600;
 				}
 			}
 		}

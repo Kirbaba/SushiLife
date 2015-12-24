@@ -28,6 +28,23 @@
 								<p>Пт-Сб с 11:00 до 00:00</p>
 								<p>Николаев</p>							
 							</div>
+							<div class="navigation--box--delivery">
+								<h3>бесплатная</h3>
+								<p>Доставка суши в Николаеве</p>
+							</div>
+							<div class="navigation--box--onlinecam">
+								<a href="#"><i class="fa fa-video-camera"></i>On-line камера</a>
+							</div>
+						</div>
+						<div class="navigation--navline">
+							<ul>
+								<li><a href="#">Роллы</a></li>
+								<li><a href="#">Сеты</a></li>
+								<li><a href="#">СУши</a></li>
+								<li><a href="#">Салаты</a></li>
+								<li><a href="#">Горячая кухня</a></li>
+								<li><a href="#">Напитки</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>

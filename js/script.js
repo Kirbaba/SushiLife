@@ -23,6 +23,10 @@ $(function() {
 });
 $( document ).ready(function() {
     setRightBasket();
+    $( window ).resize(function() {
+        setRightBasket();
+    });
+
 });
 function setRightBasket(){
     var basket_width = $('.basket--width').width();
