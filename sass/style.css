@@ -60,6 +60,8 @@ ul {
     float: left;
     margin-right: 15px;
     width: 12%; }
+    .navigation--logo img {
+      width: 100%; }
   .navigation--box {
     display: block;
     float: left;
@@ -231,19 +233,285 @@ ul {
   bottom: 0;
   right: 0;
   background-color: #F6F6F6;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-box-shadow: -8px 0 12px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: -8px 0 12px rgba(0, 0, 0, 0.11);
+  box-shadow: -8px 0 12px rgba(0, 0, 0, 0.11); }
   .basket--width {
     padding: 0 0 0 30px; }
   .basket__head {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
-    height: 110px;
-    background-color: #F13f35; }
+    left: 0;
+    right: 0;
+    height: 109px;
+    background-color: #F13f35;
+    text-align: center; }
     .basket__head h3 {
       text-align: center;
       color: #FFF;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-family: "ProximaNovaBold";
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 0; }
+      .basket__head h3 sup {
+        font-family: "ProximaNovaRegular";
+        font-size: 12px;
+        color: #F14036;
+        background-color: #FFF;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        line-height: 22px;
+        top: -22px;
+        right: -5px; }
+    .basket__head--clear {
+      color: #FFF;
+      font-size: 12px;
+      font-family: "ProximaNovaRegular";
+      margin-top: 0;
+      font-weight: 600;
+      margin-right: 5px; }
+      .basket__head--clear:hover {
+        color: #FFF; }
+  .basket__foot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px 15px 40px;
+    background-color: #FFF;
+    border-top: 1px solid #E9EBEC; }
+    .basket__foot h3 {
+      text-transform: uppercase;
+      font-family: "ProximaNovaBold";
+      color: #444;
+      margin: 0 0 5px;
+      font-size: 16px; }
+      .basket__foot h3 span {
+        text-transform: lowercase;
+        float: right; }
+    .basket__foot--order {
+      width: 100%;
+      font-size: 15px;
+      color: #FFF;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 10px 0;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      border-radius: 12px;
+      -o-background-clip: padding-box;
+      background-clip: padding-box;
+      background-color: #ef3f35;
+      display: block;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: 700;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+      .basket__foot--order:hover {
+        background-color: #df1d12; }
+  .basket__content {
+    display: block;
+    float: left;
+    width: 100%;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    -ms-overflow-y: auto;
+    overflow-y: auto;
+    margin: 109px 0 145px; }
+    .basket__content--item {
+      height: 135px;
+      padding: 10px 61px 16px 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden; }
+      .basket__content--item img {
+        position: absolute;
+        right: -45px;
+        top: 15px;
+        border-radius: 50% 0 0 50%;
+        max-height: 90px;
+        max-width: 90px; }
+      .basket__content--item--title {
+        font-size: 16px;
+        font-family: "ProximaNovaRegular";
+        font-weight: 600;
+        color: #F14036;
+        display: block;
+        margin-bottom: 10px; }
+        .basket__content--item--title:hover {
+          color: #F14036; }
+      .basket__content--item--weight {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        font-size: 11px;
+        font-family: "ProximaNovaRegular";
+        font-weight: 600;
+        padding-left: 20px;
+        background-image: url("../img/44-16.png");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        color: #A0A0A0; }
+      .basket__content--item--qt {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        font-size: 11px;
+        font-family: "ProximaNovaRegular";
+        font-weight: 600;
+        background-image: url("../img/food-drink-26-16.png");
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        background-position: 0 50%;
+        color: #A0A0A0; }
+      .basket__content--item--pricebox {
+        display: block;
+        margin-top: 10px;
+        float: left;
+        width: 100%; }
+        .basket__content--item--pricebox--price {
+          display: block;
+          float: left;
+          margin-right: 20px;
+          font-family: "ProximaNovaBold";
+          color: #444;
+          line-height: 22px; }
+        .basket__content--item--pricebox--counter {
+          display: block;
+          float: left;
+          margin-right: 10px;
+          padding: 0 10px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          border-radius: 5px;
+          -o-background-clip: padding-box;
+          background-clip: padding-box;
+          border: 1px solid #caced1;
+          font-family: "ProximaNovaBold";
+          -webkit-transition: all 0.2s linear;
+          -moz-transition: all 0.2s linear;
+          -ms-transition: all 0.2s linear;
+          -o-transition: all 0.2s linear;
+          transition: all 0.2s linear; }
+          .basket__content--item--pricebox--counter .plus {
+            display: block;
+            float: left;
+            text-decoration: none;
+            color: #F14036;
+            padding-left: 10px;
+            font-size: 12px;
+            line-height: 22px; }
+            .basket__content--item--pricebox--counter .plus:hover {
+              color: #F14036; }
+          .basket__content--item--pricebox--counter .minus {
+            text-decoration: none;
+            display: block;
+            float: left;
+            color: #F14036;
+            padding-right: 10px;
+            font-size: 12px;
+            line-height: 22px; }
+            .basket__content--item--pricebox--counter .minus:hover {
+              color: #fff; }
+          .basket__content--item--pricebox--counter p {
+            color: #444;
+            font-size: 14px;
+            float: left;
+            display: block;
+            margin: 0;
+            line-height: 20px; }
+          .basket__content--item--pricebox--counter:hover, .basket__content--item--pricebox--counter:active, .basket__content--item--pricebox--counter:focus {
+            background-color: #F14036;
+            border: 1px solid #F14036; }
+            .basket__content--item--pricebox--counter:hover p, .basket__content--item--pricebox--counter:hover .minus, .basket__content--item--pricebox--counter:hover .plus, .basket__content--item--pricebox--counter:active p, .basket__content--item--pricebox--counter:active .minus, .basket__content--item--pricebox--counter:active .plus, .basket__content--item--pricebox--counter:focus p, .basket__content--item--pricebox--counter:focus .minus, .basket__content--item--pricebox--counter:focus .plus {
+              color: #fff; }
+      .basket__content--item--clear {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        padding: 0 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        -o-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #caced1;
+        font-family: "ProximaNovaBold";
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        line-height: 22px;
+        color: #F14036;
+        text-align: center;
+        text-decoration: none; }
+        .basket__content--item--clear:hover, .basket__content--item--clear:active, .basket__content--item--clear:focus {
+          background-color: #F14036;
+          border: 1px solid #F14036;
+          color: #fff; }
+  .basket--flipper {
+    display: block;
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #f13f35;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    margin-top: -30px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    .basket--flipper img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-style: preserve-3d;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .basket--flipper:hover {
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+      .basket--flipper:hover img {
+        display: none; }
 
 @media only screen and (max-width: 770px) {
   .align-left {

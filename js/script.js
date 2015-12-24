@@ -30,6 +30,9 @@ $( document ).ready(function() {
 });
 function setRightBasket(){
     var basket_width = $('.basket--width').width();
+    var basket__foot_height = $('.basket__foot').height() + 25 + 40;
+    var basket__head_height = $('.basket__head').height();
     $('.basket').width(basket_width);
-    $('.basket__head').width(basket_width);
+    $('.basket__content').height($(window).height() - basket__foot_height - basket__head_height);
+    
 }
