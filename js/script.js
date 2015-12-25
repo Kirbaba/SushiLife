@@ -34,5 +34,49 @@ function setRightBasket(){
     var basket__head_height = $('.basket__head').height();
     $('.basket').width(basket_width);
     $('.basket__content').height($(window).height() - basket__foot_height - basket__head_height);
-    
+    $('.main__wrapper').css({
+        paddingRight: basket_width - 5
+    } );
 }
+
+
+jQuery(function ($) {
+
+    jQuery('.main__carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        adaptiveHeight: false,
+        arrows: true,        
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+});

@@ -1,0 +1,35 @@
+.main__carousel {
+	.slick-dots {
+	    bottom: 50px;
+	    li {
+	    	button {
+	    		width: 10px;
+	    		height: 10px;
+	    		&:before {
+	    			font-size: 0;
+	    			width: 10px;
+	    			height: 10px;
+	    			@include border-radius(50%);
+    			    background-color: #000;
+    			    opacity: .75;
+    			    @include transition(0.2s);
+	    		}
+	    	}
+	    }
+	    li.slick-active {
+	    	button {
+		    	width: 15px;
+		    	height: 15px;
+		    	&:before {
+		    		-webkit-transform: scale(1.4);
+		    		   -moz-transform: scale(1.4);
+		    		    -ms-transform: scale(1.4);
+		    		     -o-transform: scale(1.4);
+		    		        transform: scale(1.4);
+		    		opacity: 1;
+		    	}
+		    }
+	    }
+	}
+}
+

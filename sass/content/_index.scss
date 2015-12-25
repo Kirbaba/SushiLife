@@ -1,0 +1,152 @@
+.main__wrapper {
+	width: 100%;
+	display: block;
+	float: left;
+	position: relative;
+	padding-top: 110px;
+}
+
+.main__carousel {
+	height: 650px;
+	position: relative;
+    margin-bottom: 0!important;
+	&--item {
+		height: 650px!important;
+		display: block;
+		position: relative;
+		@include overflow-img;
+		 img {
+		 	max-width: 150%;
+		 	max-height: 150%;
+		    width: auto;
+		    height: 100%;		    
+		}
+		&--content {
+			display: block;
+			float: left;
+			position: absolute;
+			z-index: 10;
+			top: 65px;
+			left: 15px;
+			right: 15px;
+			padding-bottom: 50px;
+			h2 {
+				font-family: $b;
+				text-transform: uppercase;
+				font-weight: 900;
+				font-size: 40px;
+				color: #FFF;
+				display: block;
+				float: left;
+				width: 100%;
+				margin-bottom: 30px;
+				span {
+					background-color: #F14036;
+					padding: 5px 10px;
+					display: block;
+					float: left;
+				}
+			}
+			&_bord {
+				display: block;
+				width: 68px;
+				height: 2px;
+				background-color: #fff;
+				float: left;
+			}	
+			h3 {
+				font-family: $b;
+				text-transform: uppercase;
+				font-weight: 900;
+				font-size: 30px;
+				color: #FFF;
+				display: block;
+				float: left;
+				width: 100%;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			p.sushi--title {
+				font-family: $r;
+				font-weight: 700;
+				margin-bottom: 20px;
+				margin-top: 0;
+				color: #FFF;
+				text-transform: uppercase;
+				padding-left: 30px;
+				background-image: url('../img/131-32.png');
+				background-repeat: no-repeat;
+				background-position: 0 50%;
+				display: block;
+				float: left;
+				width: 100%;
+			}
+			a.go-to-more {
+				display: block;
+				float: left;
+				position: relative;
+				margin: 10px 0;
+				text-align: center;
+				color: #FFF;
+				font-size: 18px;
+				font-family: $r;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding: 10px 30px;
+				text-decoration: none;
+				@include border-radius(12px);
+				@include background-clip(padding-box);
+				background-color: #f13f35;
+				@include transition(0.2s);
+				&:hover, &:active, &:focus {
+					background-color: darken(#F13F35, 10%);
+				}
+			}
+		}
+	}
+}
+
+.advantages {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding: 50px 0;
+	&__icon {
+		display: block;
+		height: 124px;
+		line-height: 124px;
+		width: 124px;
+		margin: 0 auto;
+	}
+	&__title {
+		display: flex;
+		vertical-align: middle;
+		line-height: 60px;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		min-height: 60px;
+		line-height: 60px;
+		padding: 0 15px;
+		margin-bottom: 15px;
+		h4 {
+			font-family: $r;
+			font-weight: 700;			
+			color: #000;
+			margin: 0;
+			font-size: 16px;
+			text-transform: uppercase;			
+		}
+	}
+	&__desc {
+		padding: 0 15px;
+		p {
+			font-size: 14px;
+			color: #7F7F7F;
+			font-family: $r;
+			font-weight: 700;
+		}
+	}
+}

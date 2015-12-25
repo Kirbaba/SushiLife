@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="description" content="">
     <link rel="icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
@@ -17,7 +17,9 @@
 			<div class="row">
 				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 pr-0">
 					<div class="navigation--logo">
-						<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
+						</a>
 					</div>
 					<div class="navigation--box">
 						<div class="navigation--box--topline">

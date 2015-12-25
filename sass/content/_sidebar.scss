@@ -90,6 +90,8 @@
 			@include transition(0.2s);
 			&:hover {
 				background-color: darken(#EF3F35, 10%);
+				text-decoration: none;
+				color: #fff;
 			}
 		}
 	}
