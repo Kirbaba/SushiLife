@@ -27,7 +27,20 @@ $( document ).ready(function() {
         setRightBasket();
     });
 
-});
+     $('#demo').readmore({
+      moreLink: '<div class="showmore--but"><a href="#">Показать больше</a></div>',
+      lessLink: '<a href="#" class="showmore--but--less">Скрыть</a>',
+      collapsedHeight: 190,
+      afterToggle: function(trigger, element, expanded) {
+        if(! expanded) { // The "Close" link was clicked
+          $('html, body').animate({scrollTop: element.offset().top}, {duration: 100});
+        }
+      }
+    });
+
+    // $('article').readmore({speed: 500});
+
+
 function setRightBasket(){
     var basket_width = $('.basket--width').width();
     var basket__foot_height = $('.basket__foot').height() + 25 + 40;
@@ -38,6 +51,7 @@ function setRightBasket(){
         paddingRight: basket_width - 5
     } );
 }
+});
 
 
 jQuery(function ($) {
@@ -119,3 +133,4 @@ jQuery(function ($) {
         ]
     });
 });
+

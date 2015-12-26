@@ -504,7 +504,12 @@ ul {
     color: #2A3E4A;
     text-align: center;
     font-size: 19px;
-    line-height: 50px; }
+    line-height: 50px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
     .social-media--icon-wrap a:hover {
       background-color: #263A47;
       color: #D8D9DB;
@@ -528,6 +533,7 @@ ul {
     font-family: "ProximaNovaRegular";
     font-weight: 700; }
   .reviews__carousel__item {
+    padding-right: 30px;
     padding-left: 15px;
     margin: 15px 0; }
     .reviews__carousel__item--img {
@@ -578,6 +584,94 @@ ul {
       font-weight: 700; }
       .reviews__all a:hover {
         color: #EF4036; }
+
+.cookathome {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background-image: url("../img/Layer-14-1.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .cookathome h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "ProximaNovaRegular";
+    font-weight: 700;
+    margin: 0;
+    line-height: 25px; }
+  .cookathome a {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #DD3C34;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 50px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    .cookathome a:hover {
+      background-color: #be2720;
+      color: #fff;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px; }
+
+.sitedescription {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  padding: 40px 0 60px; }
+  .sitedescription h2 {
+    font-weight: 700;
+    font-family: "ProximaNovaRegular";
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 30px; }
+  .sitedescription p {
+    font-family: "ProximaNovaRegular";
+    font-weight: 700;
+    color: #7F7F7F;
+    font-size: 14px; }
+  .sitedescription .showmore--but {
+    margin-top: -25px;
+    padding-top: 25px;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    background: -moz-linear-gradient(top, rgba(255, 255, 245, 0) 0, #fffff5 38%);
+    background: -webkit-linear-gradient(top, rgba(255, 245, 255, 0) 0, #fffff5 38%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 245, 0) 0, #fffff5 38%);
+    background: linear-gradient(top, rgba(255, 255, 245, 0) 0, #fffff5 38%); }
+    .sitedescription .showmore--but a {
+      font-size: 14px;
+      color: #EF4036;
+      font-weight: 700;
+      font-family: "ProximaNovaRegular"; }
+  .sitedescription a.showmore--but--less {
+    font-size: 14px;
+    color: #EF4036;
+    font-weight: 700;
+    font-family: "ProximaNovaRegular"; }
 
 .basket {
   display: block;
