@@ -1,8 +1,4 @@
 ﻿<?php get_header(); ?>
-
-	<div class="container-fluid">
-		<div class="row">
-			<div class="main__wrapper">
 				<div class="main__carousel">
 					<div class="main__carousel--item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/Layer-13.jpg" alt="">
