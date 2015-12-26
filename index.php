@@ -152,23 +152,63 @@
 				</section>
 
 				<section class="sitedescription">
-					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-					
-							<div class="sitedescription--desc" id="demo">
-								<article>
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">					
+						<div class="sitedescription--desc" id="demo">
+							<article>
 								<h2>Блюда японской кухни с доставкой</h2>
 								<p>Кухня Страны Восходящего Солнца давно перестала считаться чем-то экзотическим. Более того, она завоевала множество поклонников со всего света. Роллы, суши и другие блюда, пришедшие из Японии, сегодня пользуются огромной популярностью среди жителей Екатеринбурга.</p>
 							
 								<p>Если вы хотите приобщиться к японской кухне, не выходя из дома, – вам поможет служба доставки роллов ресторана «Сушкоф». Осуществляя бесплатную доставку, мы готовим их сразу же после вашего заказа и привозим их исключительно свежими. Кроме того, ресторан «Сушкоф» осуществляет доставку роллов круглосуточно, ведь Екатеринбург – это тот город, который никогда не спит. Круглосуточная доставка суши, роллы позволит Вам наслаждаться великолепным вкусом любимых блюд в любое время ночи и дня.</p>
 							
 								<p>Доставка роллов бесплатно в Екатеринбурге превратит даже самый обыденный день в настоящий праздник. Закажите роллы на дом в ресторане «Сушкоф» и вы будете в восторге от вкуснейшей японской кухни, приятного сервиса и оперативной доставки.</p>
-								</article>
-							</div>							
+							</article>
+						</div>							
 					</div>
 				</section>
+
+				<footer class="footer">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<p>Меню</p>
+								<ul class="footer__menu">
+									<li><a href="#">Роллы</a></li>
+									<li><a href="#">Сеты</a></li>
+									<li><a href="#">Суши</a></li>
+									<li><a href="#">Салаты</a></li>
+									<li><a href="#">Горячая кухня</a></li>
+									<li><a href="#">Напитки</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<p>Для клиента</p>
+
+								<ul class="footer__menu">
+									<li><a href="#">Акции и новости</a></li>
+									<li><a href="#">Отзывы</a></li>
+									<li><a href="#">Оплата и доставка</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<p>Про «Sushi-Life»</p>
+
+								<ul class="footer__menu">
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Партнерам</a></li>
+									<li><a href="#">Вакансии</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+					<div class="col-lg-12">
+						<div class="footer__copyright">
+							<p>© 2014. Доставка суши “Sushi-Life”</p>
+						</div>
+					</div>				
+				</footer>
 			</div>
-			<?php get_sidebar(); ?>	
-			
+			<?php get_sidebar(); ?>				
 		</div>
 	</div>
 <?php wp_footer(); ?>

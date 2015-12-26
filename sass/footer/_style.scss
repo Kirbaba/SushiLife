@@ -1,0 +1,40 @@
+.footer {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 40px 0;
+	background-color: #FAFAFA;
+	p {
+		color: #7F7F7F;
+		font-size: 14px;
+		font-weight: 700;
+		font-family: $r;
+	}
+	&__menu {
+		padding: 10px 0;
+		li {
+			margin-bottom: 10px;
+			a {
+				font-size: 14px;
+				color: #EF4036;
+				font-weight: 700;
+				font-family: $r;
+			}
+		}
+	}
+	&__copyright {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		border-top: 1px solid #E1E1E1;
+		padding: 40px 0 10px;
+		margin-right: 30px;
+		p {
+			color: #7F7F7F;
+			font-size: 14px;
+			font-family: $r;			
+		}
+	}
+}

@@ -28,7 +28,7 @@ $( document ).ready(function() {
     });
 
      $('#demo').readmore({
-      moreLink: '<div class="showmore--but"><a href="#">Показать больше</a></div>',
+      moreLink: '<div class="showmore--but"><a href="#">Показать все</a></div>',
       lessLink: '<a href="#" class="showmore--but--less">Скрыть</a>',
       collapsedHeight: 190,
       afterToggle: function(trigger, element, expanded) {
