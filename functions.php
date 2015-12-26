@@ -13,6 +13,7 @@ function add_style(){
     wp_enqueue_style( 'fotorama', get_template_directory_uri() . '/css/fotorama.css', array('my-bootstrap-extension'), '1');
     wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css', array(), '1');
     wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/css/slick-theme.css', array(), '1');
+    wp_enqueue_style( 'igor', get_template_directory_uri() . '/css/style-igor.css', array(), '1');
 }
 
 function add_script(){
