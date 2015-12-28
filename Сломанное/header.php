@@ -44,7 +44,7 @@
 						<div class="navigation--box--menutoggle">
 							<a href="#" class="showbasket--but"><i class="fa fa-shopping-cart"></i>Заказ</a>
 						</div>
-
+					</div>
 						<div class="navigation--navline">
 							<ul>
 								<li><a href="#">Роллы</a></li>
