@@ -338,6 +338,9 @@ ul {
         .navigation--navline--active ul li a:after {
           content: none; }
 
+.navigation--box--topline--basket {
+  display: none; }
+
 .main__wrapper {
   width: 100%;
   display: block;
@@ -983,6 +986,9 @@ ul {
       .basket--flipper:hover img {
         display: none; }
 
+.basket--width--active {
+  display: block; }
+
 .footer {
   display: block;
   float: left;
@@ -1037,7 +1043,7 @@ ul {
     text-align: center; }
 
   .navigation--box--contacts {
-    width: 28%; }
+    width: 50%; }
     .navigation--box--contacts p {
       display: none; }
     .navigation--box--contacts h4 {
@@ -1046,7 +1052,7 @@ ul {
       display: block; }
 
   .navigation--box--delivery {
-    width: 25%; }
+    width: 40%; }
 
   .navigation--box--onlinecam, .navigation--box--menutoggle {
     display: none; }
@@ -1059,7 +1065,8 @@ ul {
 
   .navigation {
     height: auto;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    z-index: 9999; }
 
   .navigation--box {
     margin-left: 15%; }
@@ -1099,9 +1106,110 @@ ul {
 
   .main__carousel--item--content p.sushi--title {
     margin-bottom: 15px;
-    font-size: 12px; } }
-@media only screen and (max-width: 500px) {
+    font-size: 12px; }
+
+  .footer__menu {
+    height: 210px; }
+
+  .navigation--box--topline {
+    float: left;
+    display: block;
+    width: 54%; } }
+@media only screen and (max-width: 737px) {
   .basket--width {
-    display: none; } }
+    display: none; }
+
+  .basket--width--active {
+    display: block;
+    z-index: 999; }
+
+  .basket--flipper {
+    display: none; }
+
+  .navigation--box--topline--basket {
+    display: none; }
+
+  .navigation--box--topline {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2C2C2C;
+    padding: 10px 0;
+    width: 100%; }
+
+  .basket--width {
+    padding: 0; }
+
+  .slick-next, .slick-prev {
+    display: none !important; }
+
+  .sitedescription .showmore--but {
+    position: relative; }
+
+  .main__carousel--item img {
+    max-height: 100%;
+    width: auto;
+    max-width: inherit;
+    height: 100%; }
+
+  .navigation--box--contacts {
+    text-align: center; }
+    .navigation--box--contacts h4 {
+      margin: 0; }
+    .navigation--box--contacts a {
+      margin: 0; }
+
+  .navigation--navline--active {
+    display: block;
+    width: 100%;
+    margin-left: -5%;
+    margin-top: 25px; }
+
+  .social-media h3 {
+    display: none; }
+  .social-media--icon-wrap {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    text-align: center; }
+  .social-media a {
+    display: inline-block;
+    float: none;
+    background-color: #263A47;
+    color: #fff; }
+
+  .basket__foot {
+    padding: 15px; }
+
+  .basket__content--item {
+    height: 120px; } }
+@media only screen and (max-width: 500px) {
+  .navigation--box--menutoggle {
+    width: 25%;
+    margin-left: 15px; }
+
+  .reviews i.fa.fa-chevron-right.slick-arrow {
+    right: 30%; }
+
+  .reviews i.fa.fa-chevron-left.slick-arrow {
+    left: 30%; }
+
+  .reviews__carousel__item {
+    height: 300px !important; }
+
+  .cookathome h3 {
+    text-align: center;
+    text-shadow: 0px 0px 5px black; }
+
+  .footer__copyright {
+    padding-bottom: 30px; }
+
+  .main__carousel--item--content h2 {
+    font-size: 23px; }
+
+  .navigation--logo {
+    width: 15%; } }
 
 /*# sourceMappingURL=style.css.map */

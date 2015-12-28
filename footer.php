@@ -1,7 +1,7 @@
 				<footer class="footer">
-					<div class="row">
+					<div class="">
 						<div class="col-lg-12">
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 								<p>Меню</p>
 								<ul class="footer__menu">
 									<li><a href="#">Роллы</a></li>
@@ -12,7 +12,7 @@
 									<li><a href="#">Напитки</a></li>
 								</ul>
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 								<p>Для клиента</p>
 
 								<ul class="footer__menu">
@@ -21,7 +21,7 @@
 									<li><a href="#">Оплата и доставка</a></li>
 								</ul>
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 								<p>Про «Sushi-Life»</p>
 
 								<ul class="footer__menu">

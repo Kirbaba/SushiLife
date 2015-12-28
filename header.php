@@ -36,11 +36,15 @@
 							</div>
 							<div class="navigation--box--onlinecam">
 								<a href="#"><i class="fa fa-video-camera"></i>On-line камера</a>
-							</div>
-							<div class="navigation--box--menutoggle">
-								<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
-							</div>
+							</div>							
 						</div>
+						<div class="navigation--box--menutoggle">
+							<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
+						</div>
+						<div class="navigation--box--menutoggle">
+							<a href="#" class="showbasket--but"><i class="fa fa-shopping-cart"></i>Заказ</a>
+						</div>
+
 						<div class="navigation--navline">
 							<ul>
 								<li><a href="#">Роллы</a></li>
