@@ -52,7 +52,7 @@
     transition: all .3s linear;
     border: 1px solid #fff;
     border-radius: 10px;
-    font-family: 'ProximaNovaLight';
+    font-family: 'ProximaNovaRegular';
     font-size: 10px;
     color: #f14036;
     text-transform: uppercase;
@@ -162,7 +162,7 @@
     transition: all .3s linear;
     line-height: 1;
     outline: none;
-    font-family: 'ProximaNovaLight';
+    font-family: 'ProximaNovaRegular';
     font-weight: 700;
     font-size: 13px;
     border: 1px solid #F14036;
@@ -185,7 +185,7 @@
 }
 
 .categoryitems__item--composition{
-    font-family: 'ProximaNovaLight';
+    font-family: 'ProximaNovaRegular';
     font-size: 10px;
     color: #A0A0A0;
 }
@@ -328,7 +328,7 @@
     display: inline-block;
     background-color: #fff;
     padding: 0 10px;
-    font-family: 'ProximaNovaLight';
+    font-family: 'ProximaNovaRegular';
     font-size: 14px;
     font-weight: 700;
 }
@@ -347,7 +347,7 @@
 }
 
 .product--ingredients--item p{
-    font-family: 'ProximaNovaLight';
+    font-family: 'ProximaNovaRegular';
     font-size: 10px;
     color: #a0a0a0;
     width: 100%;
