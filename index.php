@@ -75,10 +75,10 @@
 				</section>
 
 				<section class="social-media">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 						<h3>Следите за нами в соцсетях</h3>
 					</div>
-					<div class="col-lg-3 col-lg-offset-6 col-md-3 col-md-offset-6 col-sm-6 col-xs-12">
+					<div class="col-lg-3 col-lg-offset-6 col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
 						<div class="social-media--icon-wrap">
 							<a href="#"><i class="fa fa-vk"></i></a>
 							<a href="#"><i class="fa fa-facebook"></i></a>
@@ -139,7 +139,7 @@
 				</section>
 
 				<section class="cookathome">
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
 						<h3>Как приготовить суши в домашних условиях?</h3>
 					</div>
 					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-12">

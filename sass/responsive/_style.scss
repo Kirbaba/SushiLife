@@ -1,3 +1,17 @@
+@media only screen and (max-width: 1025px) {
+	.basket__content--item {
+    	height: 165px;
+    }
+    .navigation--box--topline {
+    	margin-bottom: 5px;
+	}
+	.navigation--box--contacts a {
+		margin-right: 5px;
+	}
+	.navigation--box--contacts h4 {
+		margin-left: 5px;
+	}
+}
 @media only screen and (max-width: 980px) {
 	
 }
@@ -9,11 +23,80 @@
 	.align-right {
 		text-align: center;
 	}
-	.basket--width {
+
+	.navigation--box--contacts {
+		width: 28%;
+		p {
+			display: none;
+		}
+		h4 {
+		    margin-left: 0;
+		    text-align: center;
+		    display: block;
+		}
+	}
+	.navigation--box--delivery {
+		width: 25%;
+	}
+	.navigation--box--onlinecam {
 		display: none;
+	}
+	.navigation--box--menutoggle {
+		display: block;
+	}
+	.navigation--navline {
+		display: none;
+	}
+	.navigation {
+		height: auto;
+	    margin-bottom: 0;
+	}
+	.navigation--box {
+		margin-left: 15%;
+	}
+	.navigation--logo {
+		position: absolute;
+	}
+	.navigation--box--topline {
+	    margin-bottom: 0;
+	    border-bottom: 0;
+	    padding-bottom: 5px;
+	}
+	.navigation--navline--active {
+		display: block;
+	}
+	.navigation--navline ul li:after {
+		content: none;
+	}
+	.reviews i.fa.fa-chevron-right.slick-arrow {
+		right: 40%;
+	}
+	.reviews i.fa.fa-chevron-left.slick-arrow {
+		left: 40%;
+	}
+	.basket__head {
+		height: 72px;
+		h3 {
+			margin-top: 15px;
+			sup {
+				top: -15px;
+			}
+		}
+	}
+	.main__carousel--item--content h2 {
+		font-size: 30px;
+	}
+	.main__carousel--item--content h3 {
+		font-size: 25px;
+	}
+	.main__carousel--item--content p.sushi--title {
+		margin-bottom: 15px;
+		font-size: 12px;
 	}
 }
 
 @media only screen and (max-width: 500px) {
-	
+	.basket--width {
+		display: none;
+	}
 }

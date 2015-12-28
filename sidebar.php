@@ -1,4 +1,4 @@
-<div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 basket--width">
+<div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 col-sm-4 col-sm-push-8 basket--width">
 	<aside class="basket">
 		<div class="basket__head">
 			<h3>Ваш заказ<sup>10</sup></h3>

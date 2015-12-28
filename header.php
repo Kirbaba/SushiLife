@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-   <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
@@ -36,6 +36,9 @@
 							</div>
 							<div class="navigation--box--onlinecam">
 								<a href="#"><i class="fa fa-video-camera"></i>On-line камера</a>
+							</div>
+							<div class="navigation--box--menutoggle">
+								<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
 							</div>
 						</div>
 						<div class="navigation--navline">

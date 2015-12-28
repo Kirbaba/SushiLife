@@ -239,13 +239,13 @@ ul {
         color: #FFF;
         font-family: "ProximaNovaBold";
         margin-bottom: 0; }
-    .navigation--box--onlinecam {
+    .navigation--box--onlinecam, .navigation--box--menutoggle {
       display: block;
       float: left;
       width: 22%;
       padding-top: 5px;
       position: relative; }
-      .navigation--box--onlinecam a {
+      .navigation--box--onlinecam a, .navigation--box--menutoggle a {
         display: block;
         text-decoration: none;
         width: 127px;
@@ -254,8 +254,6 @@ ul {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         border-radius: 10px;
-        -o-background-clip: padding-box;
-        background-clip: padding-box;
         border: 1px solid #ef3f35;
         text-transform: uppercase;
         font-size: 10px;
@@ -268,11 +266,18 @@ ul {
         -ms-transition: all 0.2s linear;
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-        .navigation--box--onlinecam a i {
+        .navigation--box--onlinecam a i, .navigation--box--menutoggle a i {
           margin-right: 5px; }
-        .navigation--box--onlinecam a:hover, .navigation--box--onlinecam a:active, .navigation--box--onlinecam a:focus {
+        .navigation--box--onlinecam a:hover, .navigation--box--menutoggle a:hover, .navigation--box--onlinecam a:active, .navigation--box--menutoggle a:active, .navigation--box--onlinecam a:focus, .navigation--box--menutoggle a:focus {
           background-color: #EF3F35;
+          border: 1px solid #ef3f35;
           color: #fff; }
+    .navigation--box--menutoggle {
+      display: none;
+      width: 11%; }
+      .navigation--box--menutoggle a {
+        font-weight: 700;
+        width: 100%; }
   .navigation--navline {
     display: block;
     float: left;
@@ -316,6 +321,21 @@ ul {
           right: 7px;
           top: 45%; }
         .navigation--navline ul li:last-of-type:after {
+          content: none; }
+    .navigation--navline--active {
+      display: none;
+      width: 50%;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+      .navigation--navline--active ul li {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        text-align: center; }
+        .navigation--navline--active ul li a:after {
           content: none; }
 
 .main__wrapper {
@@ -997,6 +1017,18 @@ ul {
       font-size: 14px;
       font-family: "ProximaNovaRegular"; }
 
+@media only screen and (max-width: 1025px) {
+  .basket__content--item {
+    height: 165px; }
+
+  .navigation--box--topline {
+    margin-bottom: 5px; }
+
+  .navigation--box--contacts a {
+    margin-right: 5px; }
+
+  .navigation--box--contacts h4 {
+    margin-left: 5px; } }
 @media only screen and (max-width: 770px) {
   .align-left {
     text-align: center; }
@@ -1004,6 +1036,71 @@ ul {
   .align-right {
     text-align: center; }
 
+  .navigation--box--contacts {
+    width: 28%; }
+    .navigation--box--contacts p {
+      display: none; }
+    .navigation--box--contacts h4 {
+      margin-left: 0;
+      text-align: center;
+      display: block; }
+
+  .navigation--box--delivery {
+    width: 25%; }
+
+  .navigation--box--onlinecam, .navigation--box--menutoggle {
+    display: none; }
+
+  .navigation--box--menutoggle {
+    display: block; }
+
+  .navigation--navline {
+    display: none; }
+
+  .navigation {
+    height: auto;
+    margin-bottom: 0; }
+
+  .navigation--box {
+    margin-left: 15%; }
+
+  .navigation--logo {
+    position: absolute; }
+
+  .navigation--box--topline {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 5px; }
+
+  .navigation--navline--active {
+    display: block; }
+
+  .navigation--navline ul li:after {
+    content: none; }
+
+  .reviews i.fa.fa-chevron-right.slick-arrow {
+    right: 40%; }
+
+  .reviews i.fa.fa-chevron-left.slick-arrow {
+    left: 40%; }
+
+  .basket__head {
+    height: 72px; }
+    .basket__head h3 {
+      margin-top: 15px; }
+      .basket__head h3 sup {
+        top: -15px; }
+
+  .main__carousel--item--content h2 {
+    font-size: 30px; }
+
+  .main__carousel--item--content h3 {
+    font-size: 25px; }
+
+  .main__carousel--item--content p.sushi--title {
+    margin-bottom: 15px;
+    font-size: 12px; } }
+@media only screen and (max-width: 500px) {
   .basket--width {
     display: none; } }
 
