@@ -36,6 +36,7 @@
 							</div>
 							<div class="navigation--box--onlinecam">
 								<a href="#"><i class="fa fa-video-camera"></i>On-line камера</a>
+<<<<<<< HEAD
 							</div>							
 						</div>
 						<div class="navigation--box--menutoggle">
@@ -43,8 +44,13 @@
 						</div>
 						<div class="navigation--box--menutoggle navigation--box--baskettoggle">
 							<a href="#" class="showbasket--but"><i class="fa fa-shopping-cart"></i>Заказ</a>
+=======
+							</div>
+							<div class="navigation--box--menutoggle">
+								<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
+							</div>
+>>>>>>> parent of 84ecef7... iPhone 6+
 						</div>
-
 						<div class="navigation--navline">
 							<ul>
 								<li><a href="#">Роллы</a></li>

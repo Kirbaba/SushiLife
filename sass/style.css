@@ -340,9 +340,6 @@ ul {
         .navigation--navline--active ul li a:after {
           content: none; }
 
-.navigation--box--topline--basket {
-  display: none; }
-
 .main__wrapper {
   width: 100%;
   display: block;
@@ -990,9 +987,6 @@ ul {
       .basket--flipper:hover img {
         display: none; }
 
-.basket--width--active {
-  display: block; }
-
 .footer {
   display: block;
   float: left;
@@ -1047,7 +1041,7 @@ ul {
     text-align: center; }
 
   .navigation--box--contacts {
-    width: 50%; }
+    width: 28%; }
     .navigation--box--contacts p {
       display: none; }
     .navigation--box--contacts h4 {
@@ -1056,15 +1050,14 @@ ul {
       display: block; }
 
   .navigation--box--delivery {
-    width: 40%; }
+    width: 25%; }
 
   .navigation--navline {
     display: none; }
 
   .navigation {
     height: auto;
-    margin-bottom: 0;
-    z-index: 9999; }
+    margin-bottom: 0; }
 
   .navigation--box {
     margin-left: 15%; }
@@ -1104,6 +1097,7 @@ ul {
 
   .main__carousel--item--content p.sushi--title {
     margin-bottom: 15px;
+<<<<<<< HEAD
     font-size: 12px; }
 
   .footer__menu {
@@ -1241,5 +1235,11 @@ ul {
 
   .navigation--navline--active {
     margin-left: -10px; } }
+=======
+    font-size: 12px; } }
+@media only screen and (max-width: 500px) {
+  .basket--width {
+    display: none; } }
+>>>>>>> parent of 84ecef7... iPhone 6+
 
 /*# sourceMappingURL=style.css.map */
