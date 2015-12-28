@@ -71,9 +71,180 @@ function excerpt_readmore($more) {
 }
 add_filter('excerpt_more', 'excerpt_readmore');
 
-
 if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
 
+/*-------------------------------------------------PRODUCTION---------------------------------------------------------*/
 
+// Review Post type
 
+add_action('init', 'product_register');
+
+function product_register() {
+
+    $labels = array(
+        'name' => _x('Товары', 'post type general name'),
+        'singular_name' => _x('Товар', 'post type singular name'),
+        'add_new' => _x('Добавить товар', 'review'),
+        'add_new_item' => __('Добавить новый товар'),
+        'edit_item' => __('Редактировать товар'),
+        'new_item' => __('Новый товар'),
+        'view_item' => __('Посмотреть товар'),
+        'search_items' => __('Найти товар'),
+        'not_found' =>  __('Ничего не найдено'),
+        'not_found_in_trash' => __('В корзине пусто'),
+        'parent_item_colon' => ''
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'menu_icon' => null,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title','editor','thumbnail')
+    );
+
+    register_post_type( 'product' , $args );
+}
+
+// Custom menu
+
+function add_menu_taxonomies() {
+
+    register_taxonomy('menu', 'product', array(
+        // Hierarchical taxonomy (like categories)
+        'hierarchical' => true,
+        // This array of options controls the labels displayed in the WordPress Admin UI
+        'labels' => array(
+            'name' => _x( 'Категории товаров', 'taxonomy general name' ),
+            'singular_name' => _x( 'Категория товаров', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Поиск категорий' ),
+            'all_items' => __( 'Все категории' ),
+            'parent_item' => __( 'Родитель' ),
+            'parent_item_colon' => __( 'Родитель:' ),
+            'edit_item' => __( 'Редактировать категорию' ),
+            'update_item' => __( 'Обновить категорию' ),
+            'add_new_item' => __( 'Добавить новую категорию' ),
+            'new_item_name' => __( 'Новое название категории' ),
+            'menu_name' => __( 'Категории товаров' ),
+        ),
+
+        // Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'menu', // This controls the base slug that will display before each term
+            'with_front' => false, // Don't display the category base before "/locations/"
+            'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+        ),
+    ));
+}
+add_action( 'init', 'add_menu_taxonomies', 0 );
+
+// Custom ingredients taxonomy
+
+function add_ingredients_taxonomies() {
+
+    register_taxonomy('ingredients', 'product', array(
+        // Hierarchical taxonomy (like categories)
+        'hierarchical' => true,
+        // This array of options controls the labels displayed in the WordPress Admin UI
+        'labels' => array(
+            'name' => _x( 'Ингредиенты', 'taxonomy general name' ),
+            'singular_name' => _x( 'Ингредиенты', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Поиск ингредиентов' ),
+            'all_items' => __( 'Все ингредиенты' ),
+            'parent_item' => __( 'Родитель' ),
+            'parent_item_colon' => __( 'Родитель:' ),
+            'edit_item' => __( 'Редактировать ингредиент' ),
+            'update_item' => __( 'Обновить ингредиент' ),
+            'add_new_item' => __( 'Добавить новый ингредиент' ),
+            'new_item_name' => __( 'Новое название ингредиента' ),
+            'menu_name' => __( 'Ингредиенты' ),
+        ),
+
+        // Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'ingredients', // This controls the base slug that will display before each term
+            'with_front' => false, // Don't display the category base before "/locations/"
+            'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+        ),
+    ));
+}
+add_action( 'init', 'add_ingredients_taxonomies', 0 );
+
+function extraFieldsMenuWeight($post)
+{
+    ?>
+    <p>
+        <span>Вес: </span>
+        <input type="text" name='extra[weight]' value="<?php echo get_post_meta($post->ID, "weight", 1); ?>">
+    </p>
+    <?php
+}
+
+function extraFieldsMenuCount($post)
+{
+    ?>
+    <p>
+        <span>Количество: </span>
+        <input type="text" name='extra[count]' value="<?php echo get_post_meta($post->ID, "count", 1); ?>">
+    </p>
+    <?php
+}
+
+function extraFieldsMenuPrice($post)
+{
+    ?>
+    <p>
+        <span>Цена (только цифры): </span>
+        <input type="text" name='extra[price]' value="<?php echo get_post_meta($post->ID, "price", 1); ?>">
+    </p>
+    <?php
+}
+
+function myExtraFieldsMenu()
+{
+    add_meta_box('extra_weight', 'Вес', 'extraFieldsMenuWeight', 'product', 'normal', 'high');
+    add_meta_box('extra_count', 'Количество', 'extraFieldsMenuCount', 'product', 'normal', 'high');
+    add_meta_box('extra_price', 'Цена', 'extraFieldsMenuPrice', 'product', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'myExtraFieldsMenu', 1);
+
+add_action('save_post', 'myExtraFieldsUpdate', 10, 1);
+
+/* Сохраняем данные, при сохранении поста */
+function myExtraFieldsUpdate($post_id)
+{
+    if (!isset($_POST['extra'])) return false;
+    foreach ($_POST['extra'] as $key => $value) {
+        if (empty($value)) {
+            delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+            continue;
+        }
+
+        update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+    }
+    return $post_id;
+}
+
+/*CUSTOM SINGLES*/
+function get_custom_single_template($single_template) {
+    global $post;
+
+    $terms = get_the_terms($post->ID, 'menu');
+    if($terms && !is_wp_error( $terms )) {
+        //Make a foreach because $terms is an array but it supposed to be only one term
+        $single_template = TM_DIR . '/single-menu.php';
+    }
+
+    return $single_template;
+}
+add_filter( "single_template", "get_custom_single_template" ) ;
+
+/*---------------------------------------------END PRODUCTION---------------------------------------------------------*/
