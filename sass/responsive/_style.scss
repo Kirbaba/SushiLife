@@ -37,13 +37,7 @@
 	}
 	.navigation--box--delivery {
 		width: 40%;
-	}
-	.navigation--box--onlinecam {
-		display: none;
-	}
-	.navigation--box--menutoggle {
-		display: block;
-	}
+	}	
 	.navigation--navline {
 		display: none;
 	}
@@ -119,6 +113,12 @@
 	.navigation--box--topline--basket {
 		display: none;
 	}
+	.navigation--box--onlinecam {
+		display: none;
+	}
+	.navigation--box--menutoggle {
+		display: block;
+	}
 	.navigation--box--topline {	    
 	    position: fixed;
 	    bottom: 0;
@@ -183,7 +183,17 @@
 	.basket__content--item {
 	    height: 120px;
 	}
+	.navigation--box--menutoggle {
+		width: 15%;
+	}
+	.basket__head {
+		display: none;
+	}
+	.basket__content {
+		margin-top: 15px;
+	}
 }
+
 
 @media only screen and (max-width: 500px) {
 	.navigation--box--menutoggle {
@@ -212,5 +222,26 @@
 	}
 	.navigation--logo {
 		width: 15%;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.social-media {
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+	}
+	.main__carousel--item--content h2 {
+		font-size: 30px;
+	}
+	.navigation--logo {
+	    width: 20%;
+	}
+
+	.navigation--box {
+	    margin-left: 20%;
+	}
+	.navigation--navline--active {
+		margin-left: -10px;
 	}
 }

@@ -41,7 +41,7 @@
 						<div class="navigation--box--menutoggle">
 							<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
 						</div>
-						<div class="navigation--box--menutoggle">
+						<div class="navigation--box--menutoggle navigation--box--baskettoggle">
 							<a href="#" class="showbasket--but"><i class="fa fa-shopping-cart"></i>Заказ</a>
 						</div>
 

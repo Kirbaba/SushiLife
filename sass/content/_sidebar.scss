@@ -56,6 +56,8 @@
 	}
 	&__foot {
 		position: absolute;
+		display: block;
+	    float: left;
 		left: 0;
 		right: 0;
 		bottom: 0;
