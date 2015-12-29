@@ -63,6 +63,12 @@
 }
 
 .navigationtabs--tabs li a:hover{
+    border: 1px solid #f14036;
+    background-color: #fff;
+    color: #F14036;
+}
+
+.navigationtabs--tabs li.active a, .navigationtabs--tabs li.active a:focus{
     -webkit-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
@@ -71,12 +77,6 @@
     border: 1px solid #f14036;
     background-color: #F14036;
     color: #fff;
-}
-
-.navigationtabs--tabs li.active a{
-    border: 1px solid #f14036;
-    background-color: #fff;
-    color: #F14036;
 }
 
 .navigationtabs--tabs li.active a:hover{

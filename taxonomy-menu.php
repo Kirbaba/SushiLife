@@ -12,12 +12,15 @@
                 <li><a href="#">Все</a></li>
             </ul>-->
             <?= do_shortcode('[terms id='.get_queried_object()->term_id.']'); ?>
+
         </div>
     </section>
 
     <section class="categoryitems">
+        <?= do_shortcode('[tabsposts id='.get_queried_object()->term_id.']'); ?>
 
-    <?= do_shortcode('[termsposts id='.get_queried_object()->term_id.']'); ?>
+
+<!--    --><?//= do_shortcode('[termsposts id='.get_queried_object()->term_id.']'); ?>
 
     <!--<div class="categoryitems__item">
         <a href="#">Калифорния с угрем</a>

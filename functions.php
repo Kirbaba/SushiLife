@@ -244,14 +244,14 @@ add_filter( "single_template", "get_custom_single_template" ) ;
 //navigation menu for terms
 function termsMenu($id){
     //prn($id);
-    $term = get_term($id['id']);
+    $term = get_term($id['id'], 'menu');
    // prn($term);
     $cat_terms = get_term_children( $id['id'], 'menu' );
     //prn($cat_terms);
     $childTerms = [];
 
     foreach($cat_terms as $termId){
-        $childTerms[] = get_term($termId);
+        $childTerms[] = get_term($termId, 'menu');
     }
     //prn($childTerms);
     $num = 0;
@@ -269,7 +269,9 @@ add_shortcode('terms', 'termsMenu');
 function getTermPosts($id){
     //prn($id);
     $taxonomies = get_term_children( $id['id'], get_queried_object()->taxonomy);
-
+    //prn($taxonomies);
+    $taxonomies[] = $id['id'];
+   // prn($taxonomies);
     $myposts = get_posts(array(
             'post_type' => 'product',
             'tax_query' => array(
@@ -285,4 +287,19 @@ function getTermPosts($id){
 }
 
 add_shortcode('termsposts', 'getTermPosts');
+
+//navigation menu for terms
+function tabsPosts($id){
+    //prn($id);
+    $taxonomies = get_term_children( $id['id'], get_queried_object()->taxonomy);
+    //prn($taxonomies);
+    $all = $taxonomies;
+    $all[] = $id['id'];
+
+    // prn($num);
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/tabs.php', ['terms' => $taxonomies, 'all' => $all]);
+}
+
+add_shortcode('tabsposts', 'tabsPosts');
 /*---------------------------------------------END PRODUCTION---------------------------------------------------------*/
