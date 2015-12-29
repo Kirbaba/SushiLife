@@ -148,6 +148,9 @@
 				width: 100%;
 			}
 		}
+		&--showbasket {
+			@extend .navigation--box--menutoggle;
+		}
 	}
 	&--navline {
 		display: block;

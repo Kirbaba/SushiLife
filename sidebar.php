@@ -121,9 +121,11 @@
 
 
 		</div>
-		<div class="basket__foot">
-			<h3>Итого <span class="basket__foot--price">308 грн</span></h3>
-			<a href="#" class="basket__foot--order">Оформить заказ</a>
+		<div class="basket__foot" id="basket__foot">
+			<aricle class="basket__foot--wrap">
+				<h3>Итого <span class="basket__foot--price">308 грн</span></h3>
+				<a href="#" class="basket__foot--order">Оформить заказ</a>
+			</aricle>
 		</div>
 		<div class="basket--flipper">
 			<img src="<?php bloginfo('template_directory'); ?>/img/sushi-rolls-03-32.png" alt="">

@@ -11,7 +11,32 @@
 	.navigation--box--contacts h4 {
 		margin-left: 5px;
 	}
+	.categoryitems__item {
+	    margin: 0 auto 25px!important;
+	}
+	.nav-pills > li {
+	    float: none;
+	}
+	.nav > li {
+	    position: relative;
+	    display: inline-block;
+	    float: none;
+	}
+	.navigationtabs--tabs {
+	    text-align: center!important;
+	}
+	.navigation--box--contacts h4 {
+		margin: 0 0px 5px 0;
+	}
+
+	.navigation--box--contacts a {
+		    margin: 0 0 0 10px;
+	}
+	.navigation--box--contacts--city {
+		display: none!important;
+	}
 }
+
 @media only screen and (max-width: 980px) {
 	
 }
@@ -97,6 +122,12 @@
 	    float: left;
 	    display: block;
 	    width: 54%;
+	}
+	.navigation--box--menutoggle {
+		display: block;
+	}
+	.navigation--box--showbasket {
+		display: none !important;
 	}
 
 }
@@ -220,6 +251,19 @@
 	.basket__content {
 		margin-top: 15px;
 	    padding-bottom: 185px;
+	}
+	.navigation--box--showbasket {
+		display: block !important;
+	}
+	.categoryitems__item {
+	    margin: 0 auto 50px!important;
+	    width: 100%;
+	}
+	.navigationtabs--tabs li {
+	    margin-right: 0;
+	}
+	.navigationtabs--tabs li {
+	    margin-right: 0!important;
 	}
 }
 

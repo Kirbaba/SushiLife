@@ -239,13 +239,13 @@ ul {
         color: #FFF;
         font-family: "ProximaNovaBold";
         margin-bottom: 0; }
-    .navigation--box--onlinecam, .navigation--box--menutoggle {
+    .navigation--box--onlinecam, .navigation--box--menutoggle, .navigation--box--showbasket {
       display: block;
       float: left;
       width: 22%;
       padding-top: 5px;
       position: relative; }
-      .navigation--box--onlinecam a, .navigation--box--menutoggle a {
+      .navigation--box--onlinecam a, .navigation--box--menutoggle a, .navigation--box--showbasket a {
         display: block;
         text-decoration: none;
         width: 127px;
@@ -266,16 +266,16 @@ ul {
         -ms-transition: all 0.2s linear;
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-        .navigation--box--onlinecam a i, .navigation--box--menutoggle a i {
+        .navigation--box--onlinecam a i, .navigation--box--menutoggle a i, .navigation--box--showbasket a i {
           margin-right: 5px; }
-        .navigation--box--onlinecam a:hover, .navigation--box--menutoggle a:hover, .navigation--box--onlinecam a:active, .navigation--box--menutoggle a:active, .navigation--box--onlinecam a:focus, .navigation--box--menutoggle a:focus {
+        .navigation--box--onlinecam a:hover, .navigation--box--menutoggle a:hover, .navigation--box--showbasket a:hover, .navigation--box--onlinecam a:active, .navigation--box--menutoggle a:active, .navigation--box--showbasket a:active, .navigation--box--onlinecam a:focus, .navigation--box--menutoggle a:focus, .navigation--box--showbasket a:focus {
           background-color: #EF3F35;
           border: 1px solid #ef3f35;
           color: #fff; }
-    .navigation--box--menutoggle {
+    .navigation--box--menutoggle, .navigation--box--showbasket {
       display: none;
       width: 11%; }
-      .navigation--box--menutoggle a {
+      .navigation--box--menutoggle a, .navigation--box--showbasket a {
         font-weight: 700;
         width: 100%; }
   .navigation--navline {
@@ -1034,7 +1034,30 @@ ul {
     margin-right: 5px; }
 
   .navigation--box--contacts h4 {
-    margin-left: 5px; } }
+    margin-left: 5px; }
+
+  .categoryitems__item {
+    margin: 0 auto 25px !important; }
+
+  .nav-pills > li {
+    float: none; }
+
+  .nav > li {
+    position: relative;
+    display: inline-block;
+    float: none; }
+
+  .navigationtabs--tabs {
+    text-align: center !important; }
+
+  .navigation--box--contacts h4 {
+    margin: 0 0px 5px 0; }
+
+  .navigation--box--contacts a {
+    margin: 0 0 0 10px; }
+
+  .navigation--box--contacts--city {
+    display: none !important; } }
 @media only screen and (max-width: 770px) {
   .align-left {
     text-align: center; }
@@ -1054,7 +1077,7 @@ ul {
   .navigation--box--delivery {
     width: 40%; }
 
-  .navigation--box--onlinecam, .navigation--box--menutoggle {
+  .navigation--box--onlinecam, .navigation--box--menutoggle, .navigation--box--showbasket {
     display: none; }
 
   .navigation--navline {
@@ -1110,7 +1133,13 @@ ul {
   .navigation--box--topline {
     float: left;
     display: block;
-    width: 54%; } }
+    width: 54%; }
+
+  .navigation--box--menutoggle, .navigation--box--showbasket {
+    display: block; }
+
+  .navigation--box--showbasket {
+    display: none !important; } }
 @media only screen and (max-width: 737px) {
   .basket--width {
     display: none; }
@@ -1140,7 +1169,7 @@ ul {
   .navigation {
     z-index: 9999; }
 
-  .navigation--box--menutoggle {
+  .navigation--box--menutoggle, .navigation--box--showbasket {
     display: block; }
 
   .slick-next, .slick-prev {
@@ -1188,7 +1217,7 @@ ul {
   .basket__content--item {
     height: 120px; }
 
-  .navigation--box--menutoggle {
+  .navigation--box--menutoggle, .navigation--box--showbasket {
     width: 25%;
     margin-left: 15px; }
 
@@ -1219,7 +1248,20 @@ ul {
 
   .basket__content {
     margin-top: 15px;
-    padding-bottom: 185px; } }
+    padding-bottom: 185px; }
+
+  .navigation--box--showbasket {
+    display: block !important; }
+
+  .categoryitems__item {
+    margin: 0 auto 50px !important;
+    width: 100%; }
+
+  .navigationtabs--tabs li {
+    margin-right: 0; }
+
+  .navigationtabs--tabs li {
+    margin-right: 0 !important; } }
 @media only screen and (max-width: 500px) {
   .basket--width {
     display: none; }
