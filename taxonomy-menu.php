@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div class="col-lg-12">
     <section class="navigationtabs">
         <div class="col-lg-12">
             <?php $terms = get_the_terms(get_the_ID(), 'menu'); ?>
@@ -135,8 +136,8 @@
                 <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
                 <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
             </div>
-
     </section>
+</div>
 
     <section class="reviews">
         <div class="col-lg-12">

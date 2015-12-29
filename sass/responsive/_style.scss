@@ -1,4 +1,10 @@
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1111px) {
+	.navigation--box--contacts--city {
+		display: none!important;
+	}
+}
+
+@media only screen and (max-width: 1040px) {
 	.basket__content--item {
     	height: 165px;
     }
@@ -32,9 +38,7 @@
 	.navigation--box--contacts a {
 		    margin: 0 0 0 10px;
 	}
-	.navigation--box--contacts--city {
-		display: none!important;
-	}
+	
 }
 
 @media only screen and (max-width: 980px) {

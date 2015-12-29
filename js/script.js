@@ -63,7 +63,14 @@ function setRightBasket(){
     var doc_w = $(window).width();
     if (doc_w > 737) {
         $('.basket').width(basket_width);
+         $('.basket').css({
+            top: 0
+        });
         $('.basket__content').height($(window).height() - basket__foot_height - basket__head_height);
+        $('.main__wrapper').css({
+            paddingRight: basket_width - 5,
+            paddingTop: $('.navigation').height()
+        } );
     }
     if (doc_w < 737) {
         $('.basket').css({
@@ -74,10 +81,7 @@ function setRightBasket(){
     }
     
    
-    $('.main__wrapper').css({
-        paddingRight: basket_width - 5,
-        paddingTop: $('.navigation').height()
-    } );
+    
 }
 
 jQuery(function ($) {
