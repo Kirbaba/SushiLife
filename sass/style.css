@@ -1043,7 +1043,8 @@ ul {
     margin-left: 5px; }
 
   .categoryitems__item {
-    margin: 0 auto 25px !important; }
+    margin: 0 auto 25px !important;
+    width: 49% !important; }
 
   .nav-pills > li {
     float: none; }
@@ -1143,10 +1144,10 @@ ul {
 
   .navigation--box--showbasket {
     display: none !important; } }
-@media only screen and (max-width: 737px) {
+@media only screen and (max-width: 770px) {
   .basket--width {
-    display: none; }
-
+    display: none; } }
+@media only screen and (max-width: 737px) {
   .basket--width--active {
     display: block;
     z-index: 999; }

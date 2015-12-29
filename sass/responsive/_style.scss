@@ -19,6 +19,7 @@
 	}
 	.categoryitems__item {
 	    margin: 0 auto 25px!important;
+	    width: 49%!important;
 	}
 	.nav-pills > li {
 	    float: none;
@@ -136,10 +137,14 @@
 
 }
 
-@media only screen and (max-width: 737px) {
+@media only screen and (max-width: 770px) { 
 	.basket--width {
 		display: none;
 	}
+}
+
+@media only screen and (max-width: 737px) {
+	
 	.basket--width--active {
 		display: block;
 		z-index: 999;

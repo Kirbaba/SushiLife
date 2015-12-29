@@ -1,11 +1,13 @@
-.navigationtabs{
+.navigationtabs {
     text-align: center;
-}
-
-.navigationtabs .col-lg-12{
+    display: block;
+    float: left;
+    width: 100%;
+    /*padding: 0 15px;*/
     border-bottom: 1px solid #A0A0A0;
     margin-bottom: 50px;
 }
+
 
 .navigationtabs--title{
     font-family: "ProximaNovaRegular";
@@ -129,10 +131,11 @@
     display: block;
 }
 
-.categoryitems__item img{
+.categoryitems__item img {
     margin: 0 auto;
     max-height: 150px;
     display: block;
+    max-width: 100%;
 }
 
 .categoryitems__item--price{
