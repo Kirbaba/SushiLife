@@ -1,5 +1,4 @@
 $(function() {
-
     $(window).scroll(function() {
         if($(this).scrollTop() != 0) {
             $('#toTop').fadeIn();
@@ -22,6 +21,11 @@ $(function() {
     });
 });
 $( document ).ready(function() {
+    var fh = $('.basket__foot--wrap').height();
+    var fhi = $('#basket__foot').innerHeight();
+
+    console.log(fh);
+    console.log(fhi);
     setRightBasket();
     $( window ).resize(function() {
         setRightBasket();
@@ -43,22 +47,42 @@ $( document ).ready(function() {
         $('.navigation--navline').toggleClass('navigation--navline--active');;
     });
 
-    // $('article').readmore({speed: 500});
+     $('.showbasket--but').on('click', function (e) {
+        e.preventDefault();
+        $('.basket--width').toggleClass('basket--width--active');
+        $('.navigation--box--topline').toggleClass('navigation--box--topline--basket');
+    });
 
+    // $('article').readmore({speed: 500});
+});
 
 function setRightBasket(){
     var basket_width = $('.basket--width').width();
     var basket__foot_height = $('.basket__foot').height() + 25 + 40;
     var basket__head_height = $('.basket__head').height();
-    $('.basket').width(basket_width);
-    $('.basket__content').height($(window).height() - basket__foot_height - basket__head_height);
-    $('.main__wrapper').css({
-        paddingRight: basket_width - 5,
-        paddingTop: $('.navigation').height()
-    } );
+    var doc_w = $(window).width();
+    if (doc_w > 737) {
+        $('.basket').width(basket_width);
+         $('.basket').css({
+            top: 0
+        });
+        $('.basket__content').height($(window).height() - basket__foot_height - basket__head_height);
+        $('.main__wrapper').css({
+            paddingRight: basket_width - 5,
+            paddingTop: $('.navigation').height()
+        } );
+    }
+    if (doc_w < 737) {
+        $('.basket').css({
+            top: $('.navigation').height()
+        });
+        
+        $('.basket__content').height($(window).height() - 110 - 55);
+    }
+    
+   
+    
 }
-});
-
 
 jQuery(function ($) {
 

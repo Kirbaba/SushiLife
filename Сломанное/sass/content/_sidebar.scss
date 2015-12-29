@@ -1,0 +1,284 @@
+.basket {
+	display: block;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #F6F6F6;
+	z-index: 2;
+	@include box-shadow(-8px, 0, 12px, rgba(0,0,0,.11));
+	&--width {
+		padding: 0 0 0 30px;
+	}
+	&__head {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 109px;
+		background-color: #F13f35;
+		text-align: center;
+		h3 {
+			text-align: center;
+			color: #FFF;
+			text-transform: uppercase;
+			font-family: $b;
+			font-weight: 600;
+			margin-top: 40px;
+			margin-bottom: 0;
+			sup {
+				font-family: $r;
+				font-size: 12px;
+				color: #F14036;
+				background-color: #FFF;
+				@include border-radius(50%);
+				width: 22px;
+				height: 22px;
+				display: inline-block;
+				line-height: 22px;
+				top: -22px;
+				right: -5px;
+			}
+		}	
+		&--clear {
+			color: #FFF;
+			font-size: 12px;
+			font-family: $r;
+			margin-top: 0;
+			font-weight: 600;
+			margin-right: 5px;
+			&:hover {
+				color: #FFF;
+			}
+		}	
+	}
+	&__foot {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 25px 15px 40px;
+		background-color: #FFF;
+		border-top: 1px solid #E9EBEC;
+		h3 {
+			text-transform: uppercase;
+			font-family: $b;
+			color: #444;
+			margin: 0 0 5px;
+			font-size: 16px;
+			span {
+				text-transform: lowercase;
+				float: right;
+			}
+		}
+		&--order {
+			width: 100%;
+			font-size: 15px;
+			color: #FFF;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 10px 0;
+			@include border-radius(12px);
+			@include background-clip(padding-box);
+			background-color: #ef3f35;
+			display: block;
+			text-decoration: none;
+			margin-top: 20px;
+			font-weight: 700;
+			@include transition(0.2s);
+			&:hover {
+				background-color: darken(#EF3F35, 10%);
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+	&__content {
+		display: block;
+		float: left;
+		width: 100%;
+		-ms-overflow-x: hidden;
+		    overflow-x: hidden;
+		-ms-overflow-y: auto;
+		    overflow-y: auto;
+		margin: 109px 0 145px;
+		&--item {
+		    height: 135px;
+		    padding: 10px 61px 16px 24px;
+		    border-bottom: 1px solid rgba(0,0,0,.1);
+		    position: relative;
+		    overflow: hidden;
+		    img {
+				position: absolute;
+				right: -45px;
+				top: 15px;
+				border-radius: 50% 0 0 50%;
+				max-height: 90px;
+				max-width: 90px;
+		    }
+		    &--title {
+		    	font-size: 16px;
+		    	font-family: $r;
+		    	font-weight: 600;
+		    	color: #F14036;
+		    	display: block;
+		    	margin-bottom: 10px;
+		    	&:hover {
+		    		color: #F14036;
+		    	}
+		    }
+		    &--weight {
+		    	display: block;
+		    	float: left;
+		    	margin-right: 10px;
+		    	font-size: 11px;
+		    	font-family: $r;
+		    	font-weight: 600;
+		    	padding-left: 20px;
+		    	background-image: url('../img/44-16.png');
+		    	background-repeat: no-repeat;
+		    	background-position: 0 50%;
+		    	color: #A0A0A0;
+		    }
+		    &--qt {
+		    	display: block;
+		    	float: left;
+		    	margin-right: 10px;
+		    	font-size: 11px;
+		    	font-family: $r;
+		    	font-weight: 600;
+		    	background-image: url('../img/food-drink-26-16.png');
+		    	background-repeat: no-repeat;
+		    	padding-left: 20px;
+		    	background-position: 0 50%;
+		    	color: #A0A0A0;
+		    }
+		    &--pricebox {
+		    	display: block;
+		    	margin-top: 10px;
+		    	float: left;
+		    	width: 100%;
+		    	&--price {
+		    		display: block;
+		    		float: left;
+		    		margin-right: 20px;
+		    		font-family: $b;
+		    		color: #444;
+	    		    line-height: 22px;
+		    	}
+		    	&--counter {
+			    	display: block;
+			    	float: left;
+			    	margin-right: 10px;
+			    	padding: 0 10px;
+					@include border-radius(5px);
+					@include background-clip(padding-box);
+					border: 1px solid #caced1;
+					font-family: $b;
+					@include transition(.2s);
+					.plus {
+						display: block;
+						float: left;
+						text-decoration: none;
+						color: #F14036;	
+						padding-left: 10px;
+						font-size: 12px;
+					    line-height: 22px;
+						&:hover {
+							color: #F14036;	
+						}
+					}
+					.minus {
+						text-decoration: none;
+						display: block;
+						float: left;
+						color: #F14036;	
+						padding-right: 10px;
+						font-size: 12px;
+						    line-height: 22px;
+						&:hover {
+							color: #fff;	
+						}
+					}
+					p {
+						color: #444;
+						font-size: 14px;
+						float: left;
+						display: block;
+						margin: 0;
+					    line-height: 20px;
+					}
+					&:hover, &:active, &:focus {
+						background-color: #F14036;
+						border: 1px solid #F14036;
+						p, .minus, .plus {
+							color: #fff;
+						}
+					}
+			    }
+		    }
+			&--clear {
+				display: block;
+		    	float: left;
+		    	margin-right: 10px;
+		    	padding: 0 10px;
+				@include border-radius(5px);
+				@include background-clip(padding-box);
+				border: 1px solid #caced1;
+				font-family: $b;
+				@include transition(.2s);
+				line-height: 22px;
+				color: #F14036;
+				text-align: center;
+				text-decoration: none;
+				&:hover, &:active, &:focus {
+					background-color: #F14036;
+					border: 1px solid #F14036;
+					color: #fff;					
+				}
+			}
+		}
+	}
+	&--flipper {
+		display: block;
+		width: 60px;
+		height: 60px;
+		@include border-radius(30px);
+		@include background-clip(padding-box);
+		background-color: #f13f35;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		margin-top: -30px;
+		@include transition(0.2s);    
+		-webkit-perspective: 1000;
+		perspective: 1000;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		    transform-style: preserve-3d;
+			-webkit-transform: translate(-50%, -50%);
+			   -moz-transform: translate(-50%, -50%);
+			    -ms-transform: translate(-50%, -50%);
+			     -o-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+		}
+		&:hover {
+			@include transition(0.2s);
+			-webkit-transform: rotateY(180deg);
+			   -moz-transform: rotateY(180deg);
+			    -ms-transform: rotateY(180deg);
+			     -o-transform: rotateY(180deg);
+			        transform: rotateY(180deg);
+		    img {
+		    	display: none;
+		    }
+		}
+	}
+}
+

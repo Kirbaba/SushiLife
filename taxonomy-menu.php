@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div class="col-lg-12">
     <section class="navigationtabs">
         <div class="col-lg-12">
             <!--<h1 class="navigationtabs--title"><sup></sup></h1>
@@ -31,9 +32,24 @@
         </div>
         <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
         <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-    </div>-->
+    </div>
 
+            <div class="categoryitems__item">
+                <a href="#">Калифорния с угрем</a>
+                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
+                <div class="categoryitems__item--numbs">
+                    <span class="categoryitems__item--weight">210 гр.</span>
+                    <span class="categoryitems__item--qt">6 шт.</span>
+                </div>
+                <div class="categoryitems__item--price">
+                    <span class="categoryitems__item--price--num">75</span>
+                    <span>грн</span>
+                </div>
+                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
+                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
+            </div>-->
     </section>
+</div>
 
     <section class="reviews">
         <div class="col-lg-12">

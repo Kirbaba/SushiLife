@@ -1,0 +1,240 @@
+@media only screen and (max-width: 1025px) {
+	.basket__content--item {
+    	height: 165px;
+    }
+    .navigation--box--topline {
+    	margin-bottom: 5px;
+	}
+	.navigation--box--contacts a {
+		margin-right: 5px;
+	}
+	.navigation--box--contacts h4 {
+		margin-left: 5px;
+	}
+}
+@media only screen and (max-width: 980px) {
+	
+}
+
+@media only screen and (max-width: 770px) {
+	.align-left {
+		text-align: center;
+	}
+	.align-right {
+		text-align: center;
+	}
+
+	.navigation--box--contacts {
+		width: 28%;
+		p {
+			display: none;
+		}
+		h4 {
+		    margin-left: 0;
+		    text-align: center;
+		    display: block;
+		}
+	}
+	.navigation--box--delivery {
+<<<<<<< HEAD
+		width: 40%;
+<<<<<<< HEAD
+	}	
+=======
+		width: 25%;
+=======
+>>>>>>> parent of 4633702... Crashed tablet
+	}
+	.navigation--box--onlinecam {
+		display: none;
+	}
+	.navigation--box--menutoggle {
+		display: block;
+	}
+<<<<<<< HEAD
+>>>>>>> parent of 84ecef7... iPhone 6+
+=======
+>>>>>>> parent of 4633702... Crashed tablet
+	.navigation--navline {
+		display: none;
+	}
+	.navigation {
+		height: auto;
+	    margin-bottom: 0;
+	}
+	.navigation--box {
+		margin-left: 15%;
+	}
+	.navigation--logo {
+		position: absolute;
+	}
+	.navigation--box--topline {
+	    margin-bottom: 0;
+	    border-bottom: 0;
+	    padding-bottom: 5px;
+	}
+	.navigation--navline--active {
+		display: block;
+	}
+	.navigation--navline ul li:after {
+		content: none;
+	}
+	.reviews i.fa.fa-chevron-right.slick-arrow {
+		right: 40%;
+	}
+	.reviews i.fa.fa-chevron-left.slick-arrow {
+		left: 40%;
+	}
+	.basket__head {
+		height: 72px;
+		h3 {
+			margin-top: 15px;
+			sup {
+				top: -15px;
+			}
+		}
+	}
+	.main__carousel--item--content h2 {
+		font-size: 30px;
+	}
+	.main__carousel--item--content h3 {
+		font-size: 25px;
+	}
+	.main__carousel--item--content p.sushi--title {
+		margin-bottom: 15px;
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.basket--width {
+		display: none;
+	}
+
+	.basket--width--active {
+		display: block;
+		z-index: 999;
+	}
+	.basket--flipper {
+		display: none;
+	}
+	.navigation--box--topline--basket {
+		display: none;
+	}
+	.navigation--box--topline {	    
+	    position: fixed;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    background-color: #2C2C2C;
+	    padding: 10px 0;
+	    width: 100%;
+	}
+	.basket--width {
+	    padding: 0;
+	}
+
+	.slick-next, .slick-prev {
+		display: none !important;
+	}
+	.sitedescription .showmore--but {
+		position: relative;		
+	}
+	.main__carousel--item img {
+	    max-height: 100%;
+	    width: auto;
+	    max-width: inherit;
+	    height: 100%;
+	}
+	.navigation--box--contacts {
+		text-align: center;
+		h4 {
+			margin: 0;
+		}
+		a {
+			margin: 0;
+		}
+	}
+	.navigation--navline--active {
+	    display: block;
+	    width: 100%;
+	    margin-left: -5%;
+	    margin-top: 25px;
+	}
+	.social-media {
+		h3 {
+			display: none;
+		}
+		&--icon-wrap {
+		    display: block;
+		    float: left;
+		    position: relative;
+		    width: 100%;
+		    text-align: center;
+		}
+		a {
+			display: inline-block;
+			float: none;
+			background-color: #263A47;
+			color: #fff;
+		}
+	}
+	.basket__foot {
+		padding: 15px;
+	}
+	.basket__content--item {
+	    height: 120px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.navigation--box--menutoggle {
+		width: 25%;
+		margin-left: 15px;
+	}
+	
+	.reviews i.fa.fa-chevron-right.slick-arrow {
+		right: 30%;
+	}
+	.reviews i.fa.fa-chevron-left.slick-arrow {
+	    left: 30%;
+	}
+	.reviews__carousel__item {
+		height: 300px !important;
+	}
+	.cookathome h3 {
+		text-align: center;
+		text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+	}
+	.footer__copyright {
+		padding-bottom: 30px;
+	}
+	.main__carousel--item--content h2 {
+	    font-size: 23px;
+	}
+	.navigation--logo {
+		width: 15%;
+	}
+}
+
+
+@media only screen and (max-width: 320px) {
+	.social-media {
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+	}
+	.main__carousel--item--content h2 {
+		font-size: 30px;
+	}
+	.navigation--logo {
+	    width: 20%;
+	}
+
+	.navigation--box {
+	    margin-left: 20%;
+	}
+	.navigation--navline--active {
+		margin-left: -10px;
+	}
+}

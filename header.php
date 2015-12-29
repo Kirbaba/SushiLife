@@ -28,7 +28,7 @@
 								<a href="#"><i class="fa fa-repeat"></i><span>обратный звонок</span></a>	
 								<p>Пн-Чт з 10:00 до 24:00</p>
 								<p>Пт-Сб с 11:00 до 00:00</p>
-								<p>Николаев</p>							
+								<p class="navigation--box--contacts--city">Николаев</p>							
 							</div>
 							<div class="navigation--box--delivery">
 								<h3>бесплатная</h3>
@@ -36,11 +36,15 @@
 							</div>
 							<div class="navigation--box--onlinecam">
 								<a href="#"><i class="fa fa-video-camera"></i>On-line камера</a>
-							</div>
-							<div class="navigation--box--menutoggle">
-								<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
-							</div>
+							</div>							
 						</div>
+						<div class="navigation--box--menutoggle">
+							<a href="#" class="menutoggle--but"><i class="fa fa-bars"></i>Меню</a>
+						</div>
+						<div class="navigation--box--showbasket">
+							<a href="#" class="showbasket--but"><i class="fa fa-shopping-cart"></i>Заказ</a>
+						</div>
+
 						<div class="navigation--navline">
 							<ul>
 								<li><a href="#">Роллы</a></li>

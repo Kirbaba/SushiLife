@@ -21,7 +21,7 @@ function add_script(){
     wp_enqueue_script( 'jq', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), '1');
     wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.js', array(), '1');
     wp_enqueue_script( 'readmore', get_template_directory_uri() . '/js/readmore.min.js', array(), '1');
-    wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
+    wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1', 1);
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
     wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '1');
     wp_enqueue_script( 'carouFredSel-js', 'jquery.carouFredSel.js', array(), '1');
