@@ -87,10 +87,11 @@
     color: #fff;
 }
 
-.categoryitems__item{
+.categoryitems__item {
     display: inline-block;
     text-align: center;
-    margin: 0 40px 65px 40px;
+    width: 33%;
+    margin: 25px 0;
 }
 
 .categoryitems__item--weight {

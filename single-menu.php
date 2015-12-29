@@ -1,7 +1,11 @@
 <?php get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <section class="navigationtabs">
         <div class="col-lg-12">
-            <h1 class="navigationtabs--title">Сеты <sup>10</sup></h1>
+            <?php $term = get_the_terms(get_the_ID(),'menu'); ?>
+
+            <?= do_shortcode('[terms id='.$term[0]->parent.']'); ?>
+            <!--<h1 class="navigationtabs--title">Сеты <sup>10</sup></h1>
             <ul class="nav nav-pills navigationtabs--tabs">
                 <li class="active"><a href="#">С угрем</a></li>
                 <li><a href="#">Традиционные</a></li>
@@ -9,30 +13,41 @@
                 <li><a href="#">Горячие</a></li>
                 <li><a href="#">Филадельфия</a></li>
                 <li><a href="#">Все</a></li>
-            </ul>
+            </ul>-->
         </div>
     </section>
 
     <section class="product">
         <div class="col-lg-12">
-            <h1>Калифорния с угрем</h1>
+            <h1><?php the_title(); ?></h1>
             <div class="product--item">
-                <img class="product--item__thumb" src="<?php bloginfo('template_directory'); ?>/img/single-item.png" alt="">
+                <?php the_post_thumbnail('full',array('class' => "product--item__thumb")); ?>
                 <div class="product--item--info">
                     <div class="product--item--info--numbs">
-                        <span class="product--item--info--numbs__weight">210 гр.</span>
-                        <span class="product--item--info--numbs__qt">6 шт.</span>
+                        <span class="product--item--info--numbs__weight"><?php echo get_post_meta(get_the_ID(), "weight", 1); ?></span>
+                        <span class="product--item--info--numbs__qt"><?php echo get_post_meta(get_the_ID(), "count", 1); ?></span>
                     </div>
                     <div class="product--item--info--price">
-                        <span class="product--item--info--price__num">75</span>
+                        <span class="product--item--info--price__num"><?php echo get_post_meta(get_the_ID(), "price", 1); ?></span>
                         <span>грн</span>
                     </div>
-                    <button class="product--item--info__buybtn" data-id="">Заказать</button>
+                    <button class="product--item--info__buybtn" data-id="<?php get_the_ID(); ?>">Заказать</button>
                 </div>
             </div>
             <div class="product--ingredients">
                 <p><span>Ингредиенты</span></p>
-                <div class="product--ingredients--item">
+                <?php
+
+                $ingredients = get_the_terms($post->ID,'ingredients');
+                foreach($ingredients as $key => $item){ ?>
+                    <div class="product--ingredients--item">
+                        <img src="<?php echo z_taxonomy_image_url($item->term_id); ?>" alt="">
+                        <p><?= $item->name; ?></p>
+                    </div>
+                <?php }
+
+                ?>
+                <!--<div class="product--ingredients--item">
                     <img src="<?php bloginfo('template_directory'); ?>/img/cheese.png" alt="">
                     <p>Сыр Филадельфия</p>
                 </div>
@@ -55,11 +70,12 @@
                 <div class="product--ingredients--item">
                     <img src="<?php bloginfo('template_directory'); ?>/img/masago.png" alt="">
                     <p>Масаго красная</p>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
-
+<?php endwhile; ?>
+<?php  endif;?>
     <section class="recomend">
         <h1>Рекомендуем</h1>
         <div class="categoryitems__item">

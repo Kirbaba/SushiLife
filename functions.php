@@ -77,9 +77,7 @@ if ( function_exists( 'add_theme_support' ) )
 /*-------------------------------------------------PRODUCTION---------------------------------------------------------*/
 
 // Review Post type
-
 add_action('init', 'product_register');
-
 function product_register() {
 
     $labels = array(
@@ -112,9 +110,7 @@ function product_register() {
 
     register_post_type( 'product' , $args );
 }
-
 // Custom menu
-
 function add_menu_taxonomies() {
 
     register_taxonomy('menu', 'product', array(
@@ -144,9 +140,7 @@ function add_menu_taxonomies() {
     ));
 }
 add_action( 'init', 'add_menu_taxonomies', 0 );
-
 // Custom ingredients taxonomy
-
 function add_ingredients_taxonomies() {
 
     register_taxonomy('ingredients', 'product', array(
@@ -247,4 +241,48 @@ function get_custom_single_template($single_template) {
 }
 add_filter( "single_template", "get_custom_single_template" ) ;
 
+//navigation menu for terms
+function termsMenu($id){
+    //prn($id);
+    $term = get_term($id['id']);
+   // prn($term);
+    $cat_terms = get_term_children( $id['id'], 'menu' );
+    //prn($cat_terms);
+    $childTerms = [];
+
+    foreach($cat_terms as $termId){
+        $childTerms[] = get_term($termId);
+    }
+    //prn($childTerms);
+    $num = 0;
+
+    foreach($childTerms as $t){
+       $num += $t->count;
+    }
+   // prn($num);
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/navigation.php', ['term' => $term, 'childs' => $childTerms, 'count' => $num]);
+}
+
+add_shortcode('terms', 'termsMenu');
+
+function getTermPosts($id){
+    //prn($id);
+    $taxonomies = get_term_children( $id['id'], get_queried_object()->taxonomy);
+
+    $myposts = get_posts(array(
+            'post_type' => 'product',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => get_queried_object()->taxonomy,
+                    'field' => 'id',
+                    'terms' => $taxonomies)
+            ))
+    );
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/termsposts.php', ['myposts' => $myposts]);
+}
+
+add_shortcode('termsposts', 'getTermPosts');
 /*---------------------------------------------END PRODUCTION---------------------------------------------------------*/

@@ -1,8 +1,7 @@
 <?php get_header(); ?>
     <section class="navigationtabs">
         <div class="col-lg-12">
-            <?php $terms = get_the_terms(get_the_ID(), 'menu'); ?>
-            <h1 class="navigationtabs--title"><?= $terms[0]->name; ?><sup><?= $terms[0]->count; ?></sup></h1>
+            <!--<h1 class="navigationtabs--title"><sup></sup></h1>
             <ul class="nav nav-pills navigationtabs--tabs">
                 <li class="active"><a href="#">С угрем</a></li>
                 <li><a href="#">Традиционные</a></li>
@@ -10,131 +9,29 @@
                 <li><a href="#">Горячие</a></li>
                 <li><a href="#">Филадельфия</a></li>
                 <li><a href="#">Все</a></li>
-            </ul>
+            </ul>-->
+            <?= do_shortcode('[terms id='.get_queried_object()->term_id.']'); ?>
         </div>
     </section>
 
     <section class="categoryitems">
 
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
+    <?= do_shortcode('[termsposts id='.get_queried_object()->term_id.']'); ?>
 
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
-
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
-
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
-
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
-
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
-
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
-
-            <div class="categoryitems__item">
-                <a href="#">Калифорния с угрем</a>
-                <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
-                <div class="categoryitems__item--numbs">
-                    <span class="categoryitems__item--weight">210 гр.</span>
-                    <span class="categoryitems__item--qt">6 шт.</span>
-                </div>
-                <div class="categoryitems__item--price">
-                    <span class="categoryitems__item--price--num">75</span>
-                    <span>грн</span>
-                </div>
-                <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
-                <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
-            </div>
+    <!--<div class="categoryitems__item">
+        <a href="#">Калифорния с угрем</a>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sushi-item.png" alt="">
+        <div class="categoryitems__item--numbs">
+            <span class="categoryitems__item--weight">210 гр.</span>
+            <span class="categoryitems__item--qt">6 шт.</span>
+        </div>
+        <div class="categoryitems__item--price">
+            <span class="categoryitems__item--price--num">75</span>
+            <span>грн</span>
+        </div>
+        <button class="categoryitems__item--buybtn" data-id="">Заказать</button>
+        <p class="categoryitems__item--composition">Рис, угорь, тобико красный, авокадо.</p>
+    </div>-->
 
     </section>
 
