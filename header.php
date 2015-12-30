@@ -24,10 +24,10 @@
 					<div class="navigation--box">
 						<div class="navigation--box--topline">
 							<div class="navigation--box--contacts">
-								<h4>067 681 22 66</h4>
+								<h4><?php echo get_theme_mod('phone_textbox'); ?></h4>
 								<a href="#"><i class="fa fa-repeat"></i><span>обратный звонок</span></a>	
-								<p>Пн-Чт з 10:00 до 24:00</p>
-								<p>Пт-Сб с 11:00 до 00:00</p>
+								<p><?php echo get_theme_mod('works_textbox'); ?></p>
+								<p><?php echo get_theme_mod('weekend_textbox'); ?></p>
 								<p class="navigation--box--contacts--city">Николаев</p>							
 							</div>
 							<div class="navigation--box--delivery">
@@ -44,8 +44,15 @@
 						<div class="navigation--box--showbasket">
 							<a href="#" class="showbasket--but"><i class="fa fa-shopping-cart"></i>Заказ</a>
 						</div>
-
-						<div class="navigation--navline">
+						<?php
+						wp_nav_menu( array(
+								'theme_location'    => 'primary',
+								'menu_class'        => '',
+								'container'         => 'div',
+								'container_class'   => 'navigation--navline',
+						));
+						?>
+						<!--<div class="navigation--navline">
 							<ul>
 								<li><a href="#">Роллы</a></li>
 								<li><a href="#">Сеты</a></li>
@@ -54,7 +61,7 @@
 								<li><a href="#">Горячая кухня</a></li>
 								<li><a href="#">Напитки</a></li>
 							</ul>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>

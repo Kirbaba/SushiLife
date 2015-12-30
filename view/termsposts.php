@@ -11,7 +11,7 @@
         <span class="categoryitems__item--price--num"><?php echo get_post_meta($post->ID, "price", 1); ?></span>
         <span>грн</span>
     </div>
-    <button class="categoryitems__item--buybtn" data-id="<?= $post->ID ?>">Заказать</button>
+    <button class="categoryitems__item--buybtn" data-id="<?= $post->ID ?>" data-price="<?php echo get_post_meta($post->ID, "price", 1); ?>">Заказать</button>
     <p class="categoryitems__item--composition">
         <?php
         $ingredients = get_the_terms($post->ID,'ingredients');

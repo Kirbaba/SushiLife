@@ -80,9 +80,9 @@
 					</div>
 					<div class="col-lg-3 col-lg-offset-6 col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
 						<div class="social-media--icon-wrap">
-							<a href="#"><i class="fa fa-vk"></i></a>
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="<?php echo get_theme_mod('vk_textbox'); ?>"><i class="fa fa-vk"></i></a>
+							<a href="<?php echo get_theme_mod('fb_textbox'); ?>"><i class="fa fa-facebook"></i></a>
+							<a href="<?php echo get_theme_mod('inst_textbox'); ?>"><i class="fa fa-instagram"></i></a>
 						</div>
 					</div>
 				</section>

@@ -25,7 +25,7 @@ function add_script(){
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
     wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '1');
     wp_enqueue_script( 'carouFredSel-js', 'jquery.carouFredSel.js', array(), '1');
-    
+    wp_enqueue_script( 'cart-js', get_template_directory_uri() . '/js/cart.js', array(), '1');
 }
 
 function add_admin_script(){
@@ -73,6 +73,126 @@ add_filter('excerpt_more', 'excerpt_readmore');
 
 if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
+/*--------------------------------------------- МЕНЮ НАВИГАЦИИ -------------------------------------------------------*/
+
+function theme_register_nav_menu() {
+    register_nav_menus( array(
+        'primary' => 'Меню в шапке',
+        'footer_menu' => 'Меню в подвале',
+        'footer_client' => 'Для клиента в подвале',
+        'footer_about' => 'Про Суши в подвале',
+
+    ) );
+    //register_nav_menu( 'primary', 'Главное меню' );
+}
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
+
+/*-------------------------------------------- КОНЕЦ МЕНЮ НАВИГАЦИИ --------------------------------------------------*/
+
+/*------------------------------------------------ НАСТРОЙКИ ТЕМЫ ----------------------------------------------------*/
+/*3 телеофна*/
+add_action('customize_register', function($customizer){
+    /*Меню настройки контактов*/
+    $customizer->add_section(
+        'contacts_section',
+        array(
+            'title' => 'Настройки контактов',
+            'description' => 'Контакты',
+            'priority' => 35,
+        )
+    );
+
+    $customizer->add_setting(
+        'phone_textbox',
+        array('default' => '067 681 22 66')
+    );
+    $customizer->add_setting(
+        'works_textbox',
+        array('default' => 'Пн-Чт с 10:00 до 24:00')
+    );
+    $customizer->add_setting(
+        'weekend_textbox',
+        array('default' => 'Пт-Cб, с 11:00 до 00:00')
+    );
+
+
+    $customizer->add_control(
+        'phone_textbox',
+        array(
+            'label' => 'Телефон',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'works_textbox',
+        array(
+            'label' => 'Время работы (будни)',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'weekend_textbox',
+        array(
+            'label' => 'Время работы (вых.)',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+
+
+    /*Меню настройки контактов*/
+    $customizer->add_section(
+        'social_section',
+        array(
+            'title' => 'Социальные сети',
+            'description' => 'Соц. сети',
+            'priority' => 35,
+        )
+    );
+
+    $customizer->add_setting(
+        'fb_textbox',
+        array('default' => 'fb.com')
+    );
+    $customizer->add_setting(
+        'inst_textbox',
+        array('default' => 'instagram.com')
+    );
+    $customizer->add_setting(
+        'vk_textbox',
+        array('default' => 'vk.com')
+    );
+
+    $customizer->add_control(
+        'fb_textbox',
+        array(
+            'label' => 'Facebook',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'inst_textbox',
+        array(
+            'label' => 'Instagram',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'vk_textbox',
+        array(
+            'label' => 'VK',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+
+});
+
+/*---------------------------------------------- КОНЕЦ НАСТРОЕК ТЕМЫ -------------------------------------------------*/
 
 /*-------------------------------------------------PRODUCTION---------------------------------------------------------*/
 
@@ -292,14 +412,117 @@ add_shortcode('termsposts', 'getTermPosts');
 function tabsPosts($id){
     //prn($id);
     $taxonomies = get_term_children( $id['id'], get_queried_object()->taxonomy);
-    //prn($taxonomies);
-    $all = $taxonomies;
-    $all[] = $id['id'];
 
     // prn($num);
     $parser = new Parser();
-    $parser->render(TM_DIR . '/view/tabs.php', ['terms' => $taxonomies, 'all' => $all]);
+    $parser->render(TM_DIR . '/view/tabs.php', ['terms' => $taxonomies, 'allterm' => $id['id']]);
 }
 
 add_shortcode('tabsposts', 'tabsPosts');
 /*---------------------------------------------END PRODUCTION---------------------------------------------------------*/
+
+/*------------------------------------------------- CART -------------------------------------------------------------*/
+
+add_action('wp_ajax_addToCart', 'addToCart');
+add_action('wp_ajax_nopriv_addToCart', 'addToCart');
+add_action('wp_ajax_delFromCart', 'delFromCart');
+add_action('wp_ajax_nopriv_delFromCart', 'delFromCart');
+add_action('wp_ajax_getFromCart', 'getFromCart');
+add_action('wp_ajax_nopriv_getFromCart', 'getFromCart');
+add_action('wp_ajax_sendOrder', 'sendOrder');
+add_action('wp_ajax_nopriv_sendOrder', 'sendOrder');
+
+function addToCart()
+{
+    $id = $_POST['id'];
+    $price = $_POST['price'];
+
+    if (isset($_COOKIE['cartCookie'])) {
+        $cookie = $_COOKIE['cartCookie'];
+        $cookie = stripslashes($cookie);
+        $cookie = json_decode($cookie);
+        //prn($cookie);
+        if (!empty($cookie->$id)) {
+            $cookie->$id->count = $cookie->$id->count + 1;
+            $cookie->$id->price = $cookie->$id->price + $price;
+        } else {
+            $cookie->$id = array('count' => 1, 'price' => $price);
+        }
+        // prn($cookie);
+        $jsonData = json_encode($cookie);
+    } else {
+        $newCookie = array(
+            $id => array('count' => 1, 'price' => $price)
+        );
+        //prn($newCookie);
+        $jsonData = json_encode($newCookie);
+    }
+
+    setcookie("cartCookie", $jsonData, time() + 86400, '/');
+    // prn($newCookie);
+    die();
+}
+
+function delFromCart()
+{
+    $id = $_POST['id'];
+    //prn($id);
+    if (isset($_COOKIE['cartCookie'])) {
+        if(isset($_POST['all'])){
+            setcookie("cartCookie", '', time() + 86400, '/');
+        }else{
+            $cookie = $_COOKIE['cartCookie'];
+            $cookie = stripslashes($cookie);
+            $cookie = json_decode($cookie);
+            //prn($cookie);
+
+            if (isset($cookie->{$id})) {
+                unset($cookie->{$id});
+            }
+            // prn($cookie);
+            $arr = (array) $cookie;
+            $jsonData = json_encode($cookie);
+            if(!empty($arr)){
+                // echo "not empty";
+                setcookie("cartCookie", $jsonData, time() + 86400, '/');
+            }else{
+                // echo "empty";
+                setcookie("cartCookie", '', time() + 86400, '/');
+            }
+
+
+        }
+    }
+    // prn($newCookie);
+    die();
+}
+
+function getFromCart(){
+    if (isset($_COOKIE['cartCookie'])) {
+
+        $cookie = $_COOKIE['cartCookie'];
+        $cookie = stripslashes($cookie);
+        $cookie = json_decode($cookie);
+         //prn($cookie);
+
+        $postIds = [];
+        foreach($cookie as $key => $product){
+            $postIds[] = $key;
+        }
+
+        $postIds  = implode(',',$postIds );
+        //prn($postIds);
+        $posts = get_posts(array(
+            'post_type' => 'product',
+            'include'         => $postIds,
+        ));
+         //prn($posts);
+
+        $parser = new Parser();
+        echo $parser->render(TM_DIR . '/view/cartproducts.php', ['products' => $cookie,'posts' => $posts]);
+
+        die();
+    }
+}
+
+/*----------------------------------------------- END CART -----------------------------------------------------------*/

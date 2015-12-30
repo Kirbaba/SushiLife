@@ -32,7 +32,7 @@
                         <span class="product--item--info--price__num"><?php echo get_post_meta(get_the_ID(), "price", 1); ?></span>
                         <span>грн</span>
                     </div>
-                    <button class="product--item--info__buybtn" data-id="<?php get_the_ID(); ?>">Заказать</button>
+                    <button class="product--item--info__buybtn" data-id="<?php echo get_the_ID(); ?>" data-price="<?php echo get_post_meta(get_the_ID(), "price", 1); ?>">Заказать</button>
                 </div>
             </div>
             <div class="product--ingredients">
