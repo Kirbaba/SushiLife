@@ -376,4 +376,10 @@
 	.navigation--navline--active {
 		margin-left: -10%;
 	}
+	.categoryitems__item {
+		vertical-align: top;
+	}
+	.categoryitems__item a {
+	    height: 62px;
+	}
 }

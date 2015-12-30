@@ -1352,6 +1352,12 @@ ul {
     margin-left: 20%; }
 
   .navigation--navline--active {
-    margin-left: -10%; } }
+    margin-left: -10%; }
+
+  .categoryitems__item {
+    vertical-align: top; }
+
+  .categoryitems__item a {
+    height: 62px; } }
 
 /*# sourceMappingURL=style.css.map */
