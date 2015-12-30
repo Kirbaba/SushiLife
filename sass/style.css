@@ -1335,7 +1335,13 @@ ul {
     padding: 15px; }
 
   .basket__content--item {
-    height: 120px; } }
+    height: 120px; }
+
+  .categoryitems__item {
+    vertical-align: top; }
+
+  .categoryitems__item a {
+    height: 62px; } }
 @media only screen and (max-width: 320px) {
   .social-media {
     -webkit-background-size: cover;
@@ -1352,12 +1358,6 @@ ul {
     margin-left: 20%; }
 
   .navigation--navline--active {
-    margin-left: -10%; }
-
-  .categoryitems__item {
-    vertical-align: top; }
-
-  .categoryitems__item a {
-    height: 62px; } }
+    margin-left: -10%; } }
 
 /*# sourceMappingURL=style.css.map */

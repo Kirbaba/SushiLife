@@ -355,6 +355,13 @@
 	.basket__content--item {
 	    height: 120px;
 	}
+	
+	.categoryitems__item {
+		vertical-align: top;
+	}
+	.categoryitems__item a {
+	    height: 62px;
+	}
 }
 
 @media only screen and (max-width: 320px) {
@@ -375,11 +382,5 @@
 	}
 	.navigation--navline--active {
 		margin-left: -10%;
-	}
-	.categoryitems__item {
-		vertical-align: top;
-	}
-	.categoryitems__item a {
-	    height: 62px;
 	}
 }
