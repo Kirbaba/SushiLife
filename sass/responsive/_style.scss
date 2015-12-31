@@ -2,6 +2,33 @@
 	.navigation--box--contacts--city {
 		display: none!important;
 	}
+	.product {
+	    text-align: center;
+	    display: block;
+	    float: left;
+	    width: 100%;
+	}
+	.product h1 {
+	    font-weight: 700;
+	    text-transform: uppercase;
+	    font-family: "ProximaNovaRegular";
+	    font-size: 30px;
+	    color: #000;
+	    display: block;
+	    float: left;
+	    width: 100%;
+	}
+	.product--item,.recomend, .recomend h1 {
+	    display: block;
+	    float: left;
+	    width: 100%;
+	}
+	.product--ingredients {
+	    display: block;
+	    margin-bottom: 30px;
+	    float: left;
+	    width: 100%;
+	}
 }
 
 @media only screen and (max-width: 1040px) {
@@ -362,6 +389,13 @@
 	.categoryitems__item a {
 	    height: 62px;
 	}
+	.categoryitems__item img {
+	    height: auto!important;
+	}
+	.product--item__thumb {
+	    max-width: 100%!important;
+	    height: auto;
+	}
 }
 
 @media only screen and (max-width: 320px) {
@@ -382,5 +416,8 @@
 	}
 	.navigation--navline--active {
 		margin-left: -10%;
+	}
+	.categoryitems__item a {
+	    font-size: 18px !important;
 	}
 }
