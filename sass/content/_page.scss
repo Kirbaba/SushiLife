@@ -1,0 +1,77 @@
+.templatepage {
+	@extend .reviews;
+	&__input--small {
+		display: block;
+		float: left;
+		position: relative;
+		@include inside-pad;
+		padding: 10px 15px;
+		@include border-radius(11px);
+		margin: 15px 2%;
+		width: 46%;
+		font-size: 16px;
+		font-weight: 700;
+    	color: #7F7F7F;
+    	font-family: $r;
+    	outline: none;
+    	border: 1px solid #7F7F7F;
+	}
+	&__text {
+		display: block;
+		float: left;
+		position: relative;
+		@include inside-pad;
+		padding: 10px 15px;
+		@include border-radius(11px);
+		margin: 15px 2%;
+		width: 96%;
+		font-size: 16px;
+		font-weight: 700;
+    	color: #7F7F7F;
+    	font-family: $r;
+    	outline: none;
+    	border: 1px solid #7F7F7F;
+    	height: 150px;
+    	resize: none;
+	}
+	p {
+		font-family: $r;
+		font-size: 14px;
+		font-weight: 700;
+		color: #7F7F7F;
+	}
+	&__input--submit {
+		display: block;
+		font-size: 15px;
+		color: #FFF;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 10px 15px;
+		@include border-radius(12px);
+		@include background-clip(padding-box);
+		background-color: #ef3f35;
+		text-decoration: none;
+		margin: 15px auto;
+		font-weight: 700;
+		@include transition(0.2s);
+		&:hover {
+			background-color: darken(#EF3F35, 10%);
+			text-decoration: none;
+			color: #fff;
+		}
+    	outline: none;
+    	border: none;    	
+	}
+	&__form {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+	div.wpcf7 {
+		margin: 0 -2%;
+	}
+	h1 {
+		margin-bottom: 15px;
+	}
+}
