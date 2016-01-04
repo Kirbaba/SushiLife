@@ -91,7 +91,8 @@
 					<div class="col-lg-12">
 						<h1>Отзывы</h1>
 						<div class="reviews__carousel">
-							<div class="reviews__carousel__item">
+							<?= do_shortcode('[reviews]'); ?>
+							<!--<div class="reviews__carousel__item">
 								<div class="reviews__carousel__item--img">
 									<img src="<?php bloginfo('template_directory'); ?>/img/Layer-8.png" alt="">
 								</div>
@@ -130,7 +131,7 @@
 								<h3>Дикий</h3>
 								<p>очень вкусно!!!, быстро готовят, доброжелательный и внимательный персонал!! советую всем своим друзьям!</p>
 								<small>17.08.2015</small>
-							</div>
+							</div>-->
 						</div>
 					</div>
 					<div class="reviews__all">

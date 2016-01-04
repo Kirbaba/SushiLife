@@ -58,6 +58,7 @@
         <div class="col-lg-12">
             <h1>Отзывы</h1>
             <div class="reviews__carousel">
+                <?= do_shortcode('[reviews]'); ?>
                 <div class="reviews__carousel__item">
                     <div class="reviews__carousel__item--img">
                         <img src="<?php bloginfo('template_directory'); ?>/img/Layer-8.png" alt="">

@@ -555,3 +555,59 @@ function updateCart(){
 }
 
 /*----------------------------------------------- END CART -----------------------------------------------------------*/
+
+/*------------------------------------------------ REVIEWS -----------------------------------------------------------*/
+
+add_action('init', 'myCustomInitReviews');
+
+function myCustomInitReviews()
+{
+    $labels = array(
+        'name' => 'Отзывы', // Основное название типа записи
+        'singular_name' => 'Отзывы', // отдельное название записи типа Book
+        'add_new' => 'Добавить отзыв',
+        'add_new_item' => 'Добавить новый отзыв',
+        'edit_item' => 'Редактировать отзыв',
+        'new_item' => 'Новый отзыв',
+        'view_item' => 'Посмотреть отзыв',
+        'search_items' => 'Найти отзыв',
+        'not_found' => 'Отзывов не найдено',
+        'not_found_in_trash' => 'В корзине отзывов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Отзывы'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor','thumbnail')
+    );
+    register_post_type('reviews', $args);
+}
+
+function reviewShortcode()
+{
+    $args = array(
+        'post_type' => 'reviews',
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/reviews.php', ['my_query' => $my_query]);
+}
+
+add_shortcode('reviews', 'reviewShortcode');
+
+/*----------------------------------------------- END REVIEWS --------------------------------------------------------*/
