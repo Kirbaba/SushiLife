@@ -180,8 +180,8 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">                 
             <div class="sitedescription--desc" id="demo">
                 <article>
-                    <h2><?php echo get_the_title(46); ?></h2>
-                    <?php echo apply_filters('the_content', get_post_field('post_content', 46)); ?>
+                    <h2><?php echo get_the_title(374); ?></h2>
+                    <?php echo apply_filters('the_content', get_post_field('post_content', 374)); ?>
                  </article>
             </div>                          
         </div>
