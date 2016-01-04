@@ -26,6 +26,10 @@ function add_script(){
     wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '1');
     wp_enqueue_script( 'carouFredSel-js', 'jquery.carouFredSel.js', array(), '1');
     wp_enqueue_script( 'cart-js', get_template_directory_uri() . '/js/cart.js', array(), '1');
+
+    $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
+//after wp_enqueue_script
+    wp_localize_script( 'jquery', 'path', $translation_array );
 }
 
 function add_admin_script(){
@@ -431,6 +435,8 @@ add_action('wp_ajax_getFromCart', 'getFromCart');
 add_action('wp_ajax_nopriv_getFromCart', 'getFromCart');
 add_action('wp_ajax_sendOrder', 'sendOrder');
 add_action('wp_ajax_nopriv_sendOrder', 'sendOrder');
+add_action('wp_ajax_updateCount', 'updateCart');
+add_action('wp_ajax_nopriv_updateCount', 'updateCart');
 
 function addToCart()
 {
@@ -523,6 +529,29 @@ function getFromCart(){
 
         die();
     }
+}
+
+function updateCart(){
+    $id = $_POST['id'];
+    $price = $_POST['price'];
+    $count = $_POST['count'];
+
+    if (isset($_COOKIE['cartCookie'])) {
+        $cookie = $_COOKIE['cartCookie'];
+        $cookie = stripslashes($cookie);
+        $cookie = json_decode($cookie);
+        //prn($cookie);
+        if (!empty($cookie->$id)) {
+            $cookie->{$id}->count = $count;
+            $cookie->{$id}->price = $price;
+        }
+        //prn($cookie);
+        $jsonData = json_encode($cookie);
+    }
+
+    setcookie("cartCookie", $jsonData, time() + 86400, '/');
+    //prn($_COOKIE['cartCookie']);
+    die();
 }
 
 /*----------------------------------------------- END CART -----------------------------------------------------------*/

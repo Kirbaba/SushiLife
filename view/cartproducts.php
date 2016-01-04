@@ -8,10 +8,10 @@
             <p class="basket__content--item--pricebox--price"><span class="cart_price"><?= $products->{$post->ID}->price ?></span> грн</p>
             <div class="basket__content--item--pricebox--counter">
                 <a href="#" class="minus"><i class="fa fa-minus"></i></a>
-                <p class="counter" data-value="<?= $products->{$post->ID}->count ?>"><?= $products->{$post->ID}->count ?></p>
+                <p class="counter" data-value="<?= $products->{$post->ID}->count ?>" data-id="<?= $post->ID; ?>"><?= $products->{$post->ID}->count ?></p>
                 <a href="#" class="plus"><i class="fa fa-plus"></i></a>
             </div>
-            <a href="#" class="basket__content--item--clear"><i class="fa fa-times"></i></a>
+            <a href="#" class="basket__content--item--clear" data-id="<?= $post->ID; ?>"><i class="fa fa-times"></i></a>
         </div>
         <?= get_the_post_thumbnail($post->ID); ?>
     </div>
