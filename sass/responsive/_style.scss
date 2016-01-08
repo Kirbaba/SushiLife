@@ -66,11 +66,35 @@
 	.navigation--box--contacts a {
 		    margin: 0 0 0 10px;
 	}
+	.main__carousel--item img {
+		width: auto;
+		height: 100%;
+		
+	}
 	
 }
 
 @media only screen and (max-width: 980px) {
-	
+	.navigation--navline ul li a {
+		font-size: 14px;
+	}
+	.basket__content--item--pricebox--counter p {
+		font-size: 12px;
+	}
+	.basket__content--item--pricebox--counter .minus {
+		font-size: 8px;
+		padding-right: 8px;
+	}
+	.basket__content--item--pricebox--counter .plus {
+		font-size: 8px;
+		padding-left: 8px;
+	}
+	.basket__content--item--clear {
+		font-size: 10px;
+	}
+	.basket__content--item--pricebox--price {
+		margin-right: 10px;
+	}
 }
 
 @media only screen and (max-width: 770px) {
@@ -79,6 +103,25 @@
 	}
 	.align-right {
 		text-align: center;
+	}
+	.basket__content--item--pricebox--price {
+		margin-right: 20px;
+	}
+	.basket__content--item--pricebox--counter .plus {
+		font-size: 12px;
+		padding-left: 10px;
+	}
+	
+	.basket__content--item--clear {
+		font-size: 14px;
+	}
+	.basket__content--item--pricebox--counter .minus {
+		font-size: 12px;
+		padding-right: 10px;
+	}
+
+	.basket__content--item--pricebox--counter p {
+		font-size: 14px;
 	}
 
 	.navigation--box--contacts {

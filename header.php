@@ -24,11 +24,15 @@
 					<div class="navigation--box">
 						<div class="navigation--box--topline">
 							<div class="navigation--box--contacts">
-								<h4><?php echo get_theme_mod('phone_textbox'); ?></h4>
-								<a href="<?php echo get_permalink(372); ?>"><i class="fa fa-repeat"></i><span>обратный звонок</span></a>	
-								<p><?php echo get_theme_mod('works_textbox'); ?></p>
-								<p><?php echo get_theme_mod('weekend_textbox'); ?></p>
-								<p class="navigation--box--contacts--city">Николаев</p>							
+								<div class="content--row">
+									<h4><?php echo get_theme_mod('phone_textbox'); ?></h4>
+									<a href="<?php echo get_permalink(372); ?>"><i class="fa fa-repeat"></i><span>обратный звонок</span></a>	
+								</div>
+								<div class="content--row">
+									<p><?php echo get_theme_mod('works_textbox'); ?></p>
+									<p><?php echo get_theme_mod('weekend_textbox'); ?></p>
+									<p class="navigation--box--contacts--city">Николаев</p>	
+								</div>						
 							</div>
 							<div class="navigation--box--delivery">
 								<h3>бесплатная</h3>

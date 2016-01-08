@@ -16,10 +16,10 @@
 		position: relative;
 		@include overflow-img;
 		 img {
-		 	max-width: 150%;
-		 	max-height: 150%;
-		    width: auto;
-		    height: 100%;		    
+			max-width: 300%;
+			max-height: 300%;
+			width: auto;
+			height: auto;	    
 		}
 		&--content {
 			display: block;

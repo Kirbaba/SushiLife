@@ -62,7 +62,17 @@ function setRightBasket(){
     var basket__head_height = $('.basket__head').height();
     var doc_w = $(window).width();
     if (doc_w > 737) {
-        $('.basket').width(basket_width);
+         if (doc_w < 1100) {
+            $('.basket').css({
+                width: '25%'
+            });
+            $('.basket--width').css({
+                width: '25%'
+            });
+         }
+         else {
+            $('.basket').width(basket_width);
+        }        
          $('.basket').css({
             top: 0
         });
@@ -71,14 +81,26 @@ function setRightBasket(){
             paddingRight: basket_width - 5,
             paddingTop: $('.navigation').height()
         } );
+        if ((doc_w < 1080)&&(doc_w > 770)) {
+            $('.main__wrapper').css({
+                paddingRight: basket_width - 30,
+            });
+        }
+        if (doc_w < 770) {
+             $('.main__wrapper').css({
+                paddingRight: 0,
+            });
+        }
     }
     if (doc_w < 737) {
         $('.basket').css({
             top: $('.navigation').height()
         });
         
-        $('.basket__content').height($(window).height() - 110 - 55);
+        $('.basket__content').height($(window).height() - 110 - 55);       
     }
+
+
     
    
     

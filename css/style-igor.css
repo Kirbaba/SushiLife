@@ -136,6 +136,7 @@
     max-height: 150px;
     display: block;
     max-width: 100%;
+    width: 80%;
 }
 
 .categoryitems__item--price{
