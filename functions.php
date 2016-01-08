@@ -449,8 +449,8 @@ function addToCart()
         $cookie = json_decode($cookie);
         //prn($cookie);
         if (!empty($cookie->$id)) {
-            $cookie->$id->count = $cookie->$id->count + 1;
-            $cookie->$id->price = $cookie->$id->price + $price;
+            $cookie->{$id}->count = $cookie->{$id}->count + 1;
+            //$cookie->{$id}->price = $cookie->$id->price + $price;
         } else {
             $cookie->$id = array('count' => 1, 'price' => $price);
         }
@@ -520,7 +520,7 @@ function getFromCart(){
         //prn($postIds);
         $posts = get_posts(array(
             'post_type' => 'product',
-            'include'         => $postIds,
+            'include'   => $postIds,
         ));
          //prn($posts);
 
@@ -533,7 +533,6 @@ function getFromCart(){
 
 function updateCart(){
     $id = $_POST['id'];
-    $price = $_POST['price'];
     $count = $_POST['count'];
 
     if (isset($_COOKIE['cartCookie'])) {
@@ -543,7 +542,7 @@ function updateCart(){
         //prn($cookie);
         if (!empty($cookie->$id)) {
             $cookie->{$id}->count = $count;
-            $cookie->{$id}->price = $price;
+            //$cookie->{$id}->price = $price;
         }
         //prn($cookie);
         $jsonData = json_encode($cookie);

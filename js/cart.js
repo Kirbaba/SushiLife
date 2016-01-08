@@ -24,31 +24,30 @@ $(function () {
     $(document).on('click','.plus, .minus', function(){
         var templateUrl = path.templateUrl;
         var block = $(this).parent();
-        var container = block.parent();
+        //var container = block.parent();
 
         var count = block.children('.counter').attr('data-value');
         var id = block.children('.counter').attr('data-id');
-        var price = container.children().children('.cart_price').text();
+        //var price = container.children().children('.cart_price').text();
 
-
-        onePrice = parseInt(price)/parseInt(count);
+        //onePrice = parseInt(price)/parseInt(count);
 
         if($(this).attr('class') == 'plus'){
             count = parseInt(count)+1;
-            price = onePrice*parseInt(count);
+         //   price = onePrice*parseInt(count);
 
             block.children('.counter').attr('data-value', count);
             block.children('.counter').text(count);
-            container.children().children('.cart_price').text(price);
+         //   container.children().children('.cart_price').text(price);
         }else{
             console.log('minus');
             if(count != 1){
                 count = parseInt(count)-1;
-                price = onePrice*parseInt(count);
+               // price = onePrice*parseInt(count);
 
                 block.children('.counter').attr('data-value', count);
                 block.children('.counter').text(count);
-                container.children().children('.cart_price').text(price);
+              //  container.children().children('.cart_price').text(price);
             }
         }
 
@@ -57,7 +56,7 @@ $(function () {
         jQuery.ajax({
             url: ajaxurl, //url, к которому обращаемся
             type: "POST",
-            data: "action=updateCount&id=" + id + "&price=" + price + "&count=" + count, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            data: "action=updateCount&id=" + id + "&count=" + count, //данные, которые передаем. Обязательно для action указываем имя нашего хука
             success: function (data) {
                 updateCart();
             }
@@ -106,7 +105,11 @@ function updateCount(){
     //total price
     var total = 0;
     $('.cart_price').each(function(){
-        total = total + parseInt($(this).text());
+        var price =  parseInt($(this).text());
+        var container = $(this).parent().parent();
+        var count = parseInt(container.children().children('.counter').attr('data-value'));
+
+        total += price*count;
     });
     $('.total_price').text(total);
 
