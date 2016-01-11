@@ -580,6 +580,7 @@ function sendOrder(){
 
         $postIds  = implode(',',$postIds );
         $posts = get_posts(array(
+            'post_type' => 'product',
             'include'         => $postIds,
         ));
 
