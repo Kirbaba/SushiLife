@@ -1,11 +1,26 @@
 <div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 col-sm-4 col-sm-push-8 basket--width">
 	<aside class="basket">
 		<div class="basket__head">
-			<h3>Ваш заказ<sup class="total__count">10</sup></h3>
+			<h3>Ваш заказ<sup class="total__count"></sup></h3>
 			<a href="#" class="basket__head--clear">Очистить заказ</a>
 		</div>
-
-		<div class="basket__content">
+		<div class="basket__content orderBody">
+			<div class="basket__content__order--standart">
+				<input type="text" name="order-phone" placeholder="Укажите свой телефон">
+				<button class="add-address-btn">Добавить адрес доставки</button>
+				<span class="not-required">(не обязательно)</span>
+			</div>
+			<div class="basket__content__order--advanced">
+				<input type="text" name="order-address" placeholder="Адрес доставки">
+				<input type="number" name="order-homenum" placeholder="№ дома">
+				<input type="number" name="order-porchnum" placeholder="№ подъезда">
+				<input type="text" name="order-housing" placeholder="Корпус">
+				<input type="number" name="order-aptnum" placeholder="№ квартиры">
+				<input type="number" name="order-floor" placeholder="Этаж">
+				<textarea name="order-comment" placeholder="Комментарий"></textarea>
+			</div>
+		</div>
+		<div class="basket__content cartBody">
 			
 			 <!--<div class="basket__content--item">
 				<a href="#" class="basket__content--item--title">Калифорния с угрем</a>
@@ -125,6 +140,7 @@
 			<aricle class="basket__foot--wrap">
 				<h3>Итого <span class="basket__foot--price"><span class="total_price">308</span> грн</span></h3>
 				<a href="#" class="basket__foot--order">Оформить заказ</a>
+				<a href="#" class="basket__foot--order--success">Подтвердить заказ</a>
 			</aricle>
 		</div>
 		<div class="basket--flipper">

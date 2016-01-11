@@ -366,3 +366,15 @@
     font-weight: 700;
     padding: 10px 0;
 }
+
+.orderBody{
+    display: none;
+}
+
+.basket__content__order--advanced{
+    display: none;
+}
+
+.basket__foot--order--success{
+    display: none;
+}
