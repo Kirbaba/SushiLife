@@ -17,23 +17,23 @@
 					<span class="basket__content__order--advanced--label">Улица</span>
 					<input type="text" name="order-address">
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="col-lg-4">
 					<span class="basket__content__order--advanced--label">№ дома</span>
 					<input type="number" name="order-homenum">
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
+				<div class="col-lg-4 p0">
 					<span class="basket__content__order--advanced--label">№ подъезда</span>
 					<input type="number" name="order-porchnum">
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="col-lg-4 ">
 					<span class="basket__content__order--advanced--label">корпус</span>
 					<input type="text" name="order-housing" >
 				</div>
-				<div class="col-lg-6 col-dm-6 col-sm-6 col-xs-12">
+				<div class="col-lg-6 ">
 					<span class="basket__content__order--advanced--label">№ квартиры</span>
 					<input type="number" name="order-aptnum" >
 				</div>
-				<div class="col-lg-6 col-dm-6 col-sm-6 col-xs-12">
+				<div class="col-lg-6 ">
 					<span class="basket__content__order--advanced--label">этаж</span>
 					<input type="number" name="order-floor">
 				</div>
