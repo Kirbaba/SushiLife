@@ -77,6 +77,17 @@ add_filter('excerpt_more', 'excerpt_readmore');
 
 if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
+
+
+function generateNumber($length = 8){
+    $chars = '0123456789';
+    $numChars = strlen($chars);
+    $string = '';
+    for ($i = 0; $i < $length; $i++) {
+        $string .= substr($chars, rand(1, $numChars) - 1, 1);
+    }
+    return $string;
+}
 /*--------------------------------------------- МЕНЮ НАВИГАЦИИ -------------------------------------------------------*/
 
 function theme_register_nav_menu() {
@@ -553,6 +564,90 @@ function updateCart(){
     die();
 }
 
+function sendOrder(){
+    global $wpdb;
+    if (isset($_COOKIE['cartCookie'])) {
+        $cookie = $_COOKIE['cartCookie'];
+        $cookie = stripslashes($cookie);
+        //идшники, кол-во и цена
+        $cookie = json_decode($cookie);
+
+        //вытаскиваем товары
+        $postIds = [];
+        foreach($cookie as $key => $product){
+            $postIds[] = $key;
+        }
+
+        $postIds  = implode(',',$postIds );
+        $posts = get_posts(array(
+            'post_type' => 'product',
+            'include'         => $postIds,
+        ));
+
+        $admin_email = get_option('admin_email');
+
+        //вытаскиваем данные о заказчике
+        $date = time();
+        $phone = $_POST['phone'];
+        $total = $_POST['total'];
+        $orderdata = '';
+
+        if(isset($_POST['adv'])){
+            $address = $_POST['address'];
+            $homenum = $_POST['homenum'];
+            $porchnum = $_POST['porchnum'];
+            $housing = $_POST['housing'];
+            $aptnum = $_POST['porchnum'];
+            $floor = $_POST['floor'];
+            $comment = $_POST['comment'];
+
+            $orderdata = 'Адрес: '.$address.'; № дома: '.$homenum.'; № подъезда: '.$porchnum.'; Корпус: '.$housing.'; № квартиры: '.$aptnum.'; № этажа: '.$floor.'; Коментарий: '.$comment;
+        }
+
+        $orderId = generateNumber(5);
+        $product = [];
+
+        foreach($posts as $key => $item){
+            $product[] = array(
+                'id' => $item->ID,
+                'name' => $item->post_title,
+                'count' => $cookie->{$item->ID}->count,
+                'price' => $cookie->{$item->ID}->price,
+            );
+        };
+
+
+        $wpdb->insert('orders',array(
+            'order_key' => $orderId,
+            'product' => json_encode($product),
+            'total' => $total,
+            'phone' => $phone,
+            'data' => $orderdata,
+            'order_dt' => $date,
+        ));
+
+        $str = 'Номер заказа: ' . $orderId . ' <br>';
+        $str .= 'Телефон для связи: ' . $phone . ' <br>';
+        $str .= 'Товары : ';
+
+        $total = 0;
+        foreach($product as $item){
+            $str .= "<br>".$item['name'];
+            $str .= "<br>".$item['count'];
+            $str .= "<br>".$item['price']."<br>";
+        };
+
+        if(!empty($orderdata)){
+            $str .= 'О доставке: '.$orderdata.' </br>';
+        }
+
+        $str .= 'Итого : '.$total;
+
+        mail($admin_email, "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
+        die();
+    }
+
+}
 /*----------------------------------------------- END CART -----------------------------------------------------------*/
 
 /*------------------------------------------------ REVIEWS -----------------------------------------------------------*/

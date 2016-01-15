@@ -19,7 +19,7 @@ $(function () {
             }
         });
         return false;
-    })
+    });
 
     $(document).on('click','.plus, .minus', function(){
         var templateUrl = path.templateUrl;
@@ -52,7 +52,7 @@ $(function () {
         }
 
         //preloader
-        $('.basket__content').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
+        $('.cartBody').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
         jQuery.ajax({
             url: ajaxurl, //url, к которому обращаемся
             type: "POST",
@@ -67,7 +67,7 @@ $(function () {
         var templateUrl = path.templateUrl;
         var id = $(this).attr('data-id');
 
-        $('.basket__content').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
+        $('.cartBody').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
 
         jQuery.ajax({
             url: ajaxurl, //url, к которому обращаемся
@@ -78,7 +78,92 @@ $(function () {
             }
         });
         return false;
-    })
+    });
+
+    $(document).on('click','.basket__foot--order', function(){
+        var total = parseInt($('.total_price').text());
+
+        if(total >= 90){
+           // active( $(this),0);
+           // $(this).removeClass('basket__foot--order--noactive');
+
+            $('.cartBody').hide();
+            $('.orderBody').show();
+
+            if($('.orderBody').is(':visible')){
+                $('.basket__foot--order--success').show();
+                $('.basket__foot--order').hide();
+            }
+
+            if($('input[name="order-phone"]').val().length >= 10){
+                active($('.basket__foot--order--success'),0);
+            }else{
+                active($('.basket__foot--order--success'),1);
+            }
+
+        }else{
+            //active( $(this),1);
+            //$(this).addClass('basket__foot--order--noactive');
+        }
+    });
+
+    $(document).on('click', '.add-address-btn', function(){
+
+        if($('.basket__content__order--advanced').is(':visible')){
+            $('.basket__content__order--advanced').hide();
+        }else{
+            $('.basket__content__order--advanced').show();
+        }
+
+    });
+
+    $(document).on('click','.basket__foot--order--success',function(){
+        var phone = $('input[name="order-phone"]').val();
+        var total = $('.total_price').text();
+        if( phone.length >=10 ){
+            var data = 'action=sendOrder&phone='+phone+'&total='+total;
+
+            if($('.basket__content__order--advanced').is(':visible')){
+                var address = $('input[name="order-address"]').val();
+                var homenum = $('input[name="order-homenum"]').val();
+                var porchnum = $('input[name="order-porchnum"]').val();
+                var housing = $('input[name="order-housing"]').val();
+                var aptnum = $('input[name="order-aptnum"]').val();
+                var floor = $('input[name="order-floor"]').val();
+                var comment = $('textarea[name="order-comment"]').val();
+
+                data += '&adv=1&address='+address+'&homenum='+homenum+'&porchnum='+porchnum+'&housing='+housing+'&aptnum='+aptnum+'&floor='+floor+'&comment='+comment;
+            }
+
+            jQuery.ajax({
+                url: ajaxurl, //url, к которому обращаемся
+                type: "POST",
+                data: data, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+            return false;
+        }
+    });
+
+    $(document).on('input','input[name="order-phone"]',function(){
+       if($(this).val().length >= 10){
+           active($('.basket__foot--order--success'),0);
+       }else{
+           active($('.basket__foot--order--success'),1);
+       }
+    });
+
+    $(document).on('click','.return', function(){
+        $('.cartBody').show();
+        $('.orderBody').hide();
+        $('.basket__foot--order--success').hide();
+        $('.basket__foot--order').show();
+
+        updateCart();
+        return false;
+    });
 });
 
 function updateCart(){
@@ -92,11 +177,12 @@ function updateCart(){
            // console.log(data);
             //модалка если понадобится
             if(data != 0){
-                $('.basket__content').html(data);
+                $('.cartBody').html(data);
             }else{
-                $('.basket__content').html("");
+                $('.cartBody').html("");
             }
             updateCount();
+            updateButtons();
         }
     });
 }
@@ -119,6 +205,27 @@ function updateCount(){
         count = count + parseInt($(this).text());
     });
     $('.total__count').text(count);
+}
+
+function active(obj,attr){
+    if(attr){
+        obj.addClass('basket__foot--order--noactive');
+    }else{
+        obj.removeClass('basket__foot--order--noactive');
+    }
+}
+
+function updateButtons(){
+
+    var total = parseInt($('.total_price').text());
+
+    if(total >= 90){
+        active( $('.basket__foot--order'),0);
+
+    }else{
+        active( $('.basket__foot--order'),1);
+        //$(this).addClass('basket__foot--order--noactive');
+    }
 }
 
 
