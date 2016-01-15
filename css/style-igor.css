@@ -387,6 +387,7 @@ a.basket__foot--order--noactive {
 }
 
 .basket__foot--order--success{
+    min-height: 40px;
     display: none;
     width: 100%;
     font-size: 15px;

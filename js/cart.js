@@ -1,6 +1,7 @@
 $(function () {
     $(document).ready(function(){
        updateCart();
+        $('.basket__foot--order--success').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
     });
 
     $(document).on('click','.categoryitems__item--buybtn, .product--item--info__buybtn', function(){
@@ -8,7 +9,7 @@ $(function () {
         var id = $(this).attr('data-id');
         var price = $(this).attr('data-price');
 
-        $('.basket__content').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
+        $('.cartBody').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
 
         jQuery.ajax({
             url: ajaxurl, //url, к которому обращаемся
@@ -40,7 +41,7 @@ $(function () {
             block.children('.counter').text(count);
          //   container.children().children('.cart_price').text(price);
         }else{
-            console.log('minus');
+           // console.log('minus');
             if(count != 1){
                 count = parseInt(count)-1;
                // price = onePrice*parseInt(count);
@@ -95,7 +96,7 @@ $(function () {
                 $('.basket__foot--order').hide();
             }
 
-            if($('input[name="order-phone"]').val().length >= 10){
+            if($('input[name="order-phone"]').val().length == 10){
                 active($('.basket__foot--order--success'),0);
                 $('.basket__foot--wrap--required').css('display','none');
             }else{
@@ -146,12 +147,40 @@ $(function () {
                 data += '&adv=1&address='+address+'&homenum='+homenum+'&porchnum='+porchnum+'&housing='+housing+'&aptnum='+aptnum+'&floor='+floor+'&comment='+comment;
             }
 
+            active($('.basket__foot--order--success'),1);
+
+            $('input[name="order-phone"]').val('');
+            if($('.basket__content__order--advanced').is(':visible')) {
+                $('input[name="order-address"]').val('');
+                $('input[name="order-homenum"]').val('');
+                $('input[name="order-porchnum"]').val('');
+                $('input[name="order-housing"]').val('');
+                $('input[name="order-aptnum"]').val('');
+                $('input[name="order-floor"]').val('');
+                $('textarea[name="order-comment"]').val('');
+            }
+
             jQuery.ajax({
                 url: ajaxurl, //url, к которому обращаемся
                 type: "POST",
                 data: data, //данные, которые передаем. Обязательно для action указываем имя нашего хука
                 success: function (data) {
-                    console.log(data);
+                    //console.log(data);
+                    jQuery.ajax({
+                        url: ajaxurl, //url, к которому обращаемся
+                        type: "POST",
+                        data: "action=delFromCart&all=1", //данные, которые передаем. Обязательно для action указываем имя нашего хука
+                        success: function (data) {
+                            updateCart();
+                            updateButtons();
+
+                            $('.orderBody').hide();
+                            $('.basket__foot--order--success').css('display','none');
+                            active($('.basket__foot--order--success'),0);
+                            $('.basket__foot--order').show();
+                            $('.cartBody').show();
+                        }
+                    });
                 }
             });
             return false;
@@ -159,7 +188,7 @@ $(function () {
     });
 
     $(document).on('input','input[name="order-phone"]',function(){
-       if($(this).val().length >= 10){
+       if($(this).val().length == 10){
            active($('.basket__foot--order--success'),0);
            $('.basket__foot--wrap--required').css('display','none');
        }else{
@@ -233,14 +262,13 @@ function updateButtons(){
 
     var total = parseInt($('.total_price').text());
 
-    if(total >= 90){
+    if(total >= 80){
         active( $('.basket__foot--order'),0);
         $('.basket__foot--wrap--required').css('display','none');
     }else{
         active( $('.basket__foot--order'),1);
         $('.basket__foot--wrap--required').html('<p>Минимальный заказ 80 грн.</p>');
         $('.basket__foot--wrap--required').css('display','block');
-        //$(this).addClass('basket__foot--order--noactive');
     }
 }
 
