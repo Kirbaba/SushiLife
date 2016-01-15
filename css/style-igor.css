@@ -473,3 +473,7 @@ a.basket__foot--order--noactive {
 .p0{
     padding: 0;
 }
+
+.basket__content__order--advanced .row{
+    margin: 0;
+}

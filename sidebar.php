@@ -12,36 +12,45 @@
 				<span class="not-required">Вы можете не указывать адрес, с вами свяжется менеджер для уточнения заказа</span>
 			</div>
 			<div class="basket__content__order--advanced">
-				<span class="basket__content__order--advanced--addresstitle">Адрес доставки</span><button class="basket__content__order--advanced--closeaddress"><i class="fa fa-times"></i></button>
-				<div class="col-lg-12">
-					<span class="basket__content__order--advanced--label">Улица</span>
-					<input type="text" name="order-address">
+				<div class="row">
+					<span class="basket__content__order--advanced--addresstitle">Адрес доставки</span><button class="basket__content__order--advanced--closeaddress"><i class="fa fa-times"></i></button>
 				</div>
-				<div class="col-lg-4">
-					<span class="basket__content__order--advanced--label">№ дома</span>
-					<input type="number" name="order-homenum">
+				<div class="row">
+					<div class="col-xs-12">
+						<span class="basket__content__order--advanced--label">Улица</span>
+						<input type="text" name="order-address">
+					</div>
 				</div>
-				<div class="col-lg-4 p0">
-					<span class="basket__content__order--advanced--label">№ подъезда</span>
-					<input type="number" name="order-porchnum">
+				<div class="row">
+					<div class="col-xs-4">
+						<span class="basket__content__order--advanced--label">№ дома</span>
+						<input type="number" name="order-homenum">
+					</div>
+					<div class="col-xs-4 p0">
+						<span class="basket__content__order--advanced--label">№ подъезда</span>
+						<input type="number" name="order-porchnum">
+					</div>
+					<div class="col-xs-4 ">
+						<span class="basket__content__order--advanced--label">корпус</span>
+						<input type="text" name="order-housing" >
+					</div>
 				</div>
-				<div class="col-lg-4 ">
-					<span class="basket__content__order--advanced--label">корпус</span>
-					<input type="text" name="order-housing" >
+				<div class="row">
+					<div class="col-xs-6 ">
+						<span class="basket__content__order--advanced--label">№ квартиры</span>
+						<input type="number" name="order-aptnum" >
+					</div>
+					<div class="col-xs-6 ">
+						<span class="basket__content__order--advanced--label">этаж</span>
+						<input type="number" name="order-floor">
+					</div>
 				</div>
-				<div class="col-lg-6 ">
-					<span class="basket__content__order--advanced--label">№ квартиры</span>
-					<input type="number" name="order-aptnum" >
+				<div class="row">
+					<div class="col-xs-12">
+						<span class="basket__content__order--advanced--label">комментарий</span>
+						<textarea name="order-comment" rows="5" placeholder="Тут можете указать сумму с которой нужна сдача и тип палочек (учебные или обычные)"></textarea>
+					</div>
 				</div>
-				<div class="col-lg-6 ">
-					<span class="basket__content__order--advanced--label">этаж</span>
-					<input type="number" name="order-floor">
-				</div>
-				<div class="col-lg-12">
-					<span class="basket__content__order--advanced--label">комментарий</span>
-					<textarea name="order-comment" rows="5" placeholder="Тут можете указать сумму с которой нужна сдача и тип палочек (учебные или обычные)"></textarea>
-				</div>
-
 			</div>
 		</div>
 		<div class="basket__content cartBody">
