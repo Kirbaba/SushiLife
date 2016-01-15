@@ -7,9 +7,10 @@
 		<div class="basket__content orderBody">
 			<div class="basket__content__order--standart">
 				<a href="#" class="return">Изменить заказ</a>
-				<input type="text" name="order-phone" placeholder="Укажите свой телефон">
+				<input type="text" name="order-phone" class="order-phone" placeholder="Телефон: 063 123 45 67">
 				<button class="add-address-btn">Добавить адрес доставки</button>
-				<span class="not-required">(не обязательно)</span>
+				<span class="not-required">Вы можете не указывать адрес, с вами
+свяжется менеджер для уточнения заказа</span>
 			</div>
 			<div class="basket__content__order--advanced">
 				<input type="text" name="order-address" placeholder="Адрес доставки">

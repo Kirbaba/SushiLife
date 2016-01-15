@@ -756,7 +756,7 @@ ul {
       margin-top: 0;
       font-weight: 600;
       margin-right: 5px; }
-      .basket__head--clear:hover {
+      .basket__head--clear:hover, .basket__head--clear:active, .basket__head--clear:focus {
         color: #FFF; }
   .basket__foot {
     position: absolute;
@@ -945,6 +945,104 @@ ul {
           background-color: #F14036;
           border: 1px solid #F14036;
           color: #fff; }
+    .basket__content__order--standart {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 20px 0; }
+      .basket__content__order--standart:before, .basket__content__order--standart:after {
+        display: table;
+        content: " "; }
+      .basket__content__order--standart:after {
+        clear: both; }
+      .basket__content__order--standart .return {
+        font-size: 10px;
+        color: #F14036;
+        display: block;
+        width: calc(100% - 40px);
+        margin: 15px 20px; }
+        .basket__content__order--standart .return:hover, .basket__content__order--standart .return:active, .basket__content__order--standart .return:focus {
+          color: #F14036; }
+      .basket__content__order--standart .order-phone {
+        display: block;
+        float: left;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 35px;
+        line-height: 35px;
+        padding: 0 15px 0 35px;
+        background-image: url("../img/phone.png");
+        background-repeat: no-repeat;
+        background-position: 10px 50%;
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-border-radius: 11px;
+        -moz-border-radius: 11px;
+        -ms-border-radius: 11px;
+        border-radius: 11px;
+        margin: 5px 20px 15px 20px;
+        width: calc(100% - 40px);
+        font-size: 12px;
+        color: #7F7F7F;
+        font-family: "ProximaNovaRegular";
+        font-weight: lighter;
+        outline: none;
+        border: 1px solid #7F7F7F; }
+        .basket__content__order--standart .order-phone:before, .basket__content__order--standart .order-phone:after {
+          display: table;
+          content: " "; }
+        .basket__content__order--standart .order-phone:after {
+          clear: both; }
+      .basket__content__order--standart .add-address-btn {
+        display: block;
+        float: left;
+        position: relative;
+        margin: 5px 20px 15px 20px;
+        width: calc(100% - 40px);
+        height: 35px;
+        line-height: 35px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        -o-background-clip: padding-box;
+        background-clip: padding-box;
+        background-color: rgba(255, 255, 255, 0);
+        color: #F14036;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-family: "ProximaNovaRegular";
+        font-weight: lighter;
+        outline: none;
+        border: 1px solid #f14036;
+        text-decoration: none;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+        .basket__content__order--standart .add-address-btn:hover, .basket__content__order--standart .add-address-btn:active, .basket__content__order--standart .add-address-btn:focus {
+          color: #fff;
+          background-color: #f14036; }
+      .basket__content__order--standart .not-required {
+        display: block;
+        float: left;
+        position: relative;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 15px 20px;
+        background-color: #FFDBDB;
+        font-size: 10px;
+        color: #F14036; }
+        .basket__content__order--standart .not-required:before, .basket__content__order--standart .not-required:after {
+          display: table;
+          content: " "; }
+        .basket__content__order--standart .not-required:after {
+          clear: both; }
   .basket--flipper {
     display: block;
     width: 60px;

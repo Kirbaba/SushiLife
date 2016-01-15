@@ -49,7 +49,7 @@
 			margin-top: 0;
 			font-weight: 600;
 			margin-right: 5px;
-			&:hover {
+			&:hover, &:active, &:focus {
 				color: #FFF;
 			}
 		}	
@@ -240,6 +240,79 @@
 				}
 			}
 		}
+		&__order--standart {
+			@include inside-pad;
+			padding: 20px 0;
+			.return {
+				font-size: 10px;
+				color: #F14036;
+				display: block;
+				width: calc(100% - 40px);
+				margin: 15px 20px;
+				&:hover,&:active, &:focus {
+					color: #F14036;
+				}
+			}	
+			.order-phone {
+				display: block;
+				float: left;
+				position: relative;
+				@include inside-pad;
+				height: 35px;
+				line-height: 35px;
+				padding: 0 15px 0 35px;
+				background-image: url('../img/phone.png');
+				background-repeat: no-repeat;
+				background-position: 10px 50%;
+				background-color: rgba(255, 255, 255, 0);
+				@include border-radius(11px);
+				margin: 5px 20px 15px 20px;
+				width: calc(100% - 40px);
+				font-size: 12px;
+		    	color: #7F7F7F;
+		    	font-family: $r;
+		    	font-weight: lighter;
+		    	outline: none;
+		    	border: 1px solid #7F7F7F;
+			}		
+			.add-address-btn {
+				display: block;
+				float: left;
+				position: relative;
+				margin: 5px 20px 15px 20px;
+				width: calc(100% - 40px);
+				height: 35px;
+				line-height: 35px;
+				@include border-radius(10px);
+				@include background-clip(padding-box);
+				background-color: rgba(255, 255, 255, 0);
+				color: #F14036;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 10px;
+				font-family: $r;
+		    	font-weight: lighter;
+		    	outline: none;
+		    	border: 1px solid #f14036;
+		    	text-decoration: none;
+		    	@include transition(.3s);
+		    	&:hover,&:active, &:focus {
+					color: #fff;
+					background-color: #f14036;
+				}
+			}
+			.not-required {
+				display: block;
+				float: left;
+				position: relative;
+				width: 100%;
+				@include inside-pad;
+				padding: 15px 20px;
+				background-color: #FFDBDB;
+				font-size: 10px;
+				color: #F14036;
+			}
+		}		
 	}
 	&--flipper {
 		display: block;
