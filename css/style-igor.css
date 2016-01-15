@@ -377,4 +377,88 @@
 
 .basket__foot--order--success{
     display: none;
+    width: 100%;
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-radius: 12px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #ef3f35;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 700;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.total_price {
+    float: left!important;
+    margin-right: 5px;
+}
+
+.basket__content__order--advanced--addresstitle{
+    font-family: "ProximaNovaBold";
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px;
+    float: left;
+}
+
+.basket__content__order--advanced--closeaddress{
+    float: right;
+    border: 1px solid #c4c9cc;
+    border-radius: 5px;
+    margin: 7.5px 15px;
+    background-color: transparent;
+    padding: 1px 2px;
+
+}
+
+.basket__content__order--advanced--closeaddress i{
+    color: #f14036;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.basket__content__order--advanced--label{
+    display: block;
+    font-family: 'ProximaNovaLight';
+    margin-bottom: 7px;
+    padding-left: 14px;
+    font-size: 10px;
+    color: #000;
+}
+
+.basket__content__order--advanced input, .basket__content__order--advanced textarea{
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.5);
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.basket__content__order--advanced input{
+    padding: 9px 13px 9px 26px;
+}
+
+.basket__content__order--advanced textarea{
+    padding: 9px;
+}
+
+.p0{
+    padding: 0;
 }

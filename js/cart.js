@@ -91,7 +91,7 @@ $(function () {
             $('.orderBody').show();
 
             if($('.orderBody').is(':visible')){
-                $('.basket__foot--order--success').show();
+                $('.basket__foot--order--success').css('display','block');
                 $('.basket__foot--order').hide();
             }
 
@@ -115,6 +115,14 @@ $(function () {
             $('.basket__content__order--advanced').show();
         }
 
+    });
+
+    $(document).on('click','.basket__content__order--advanced--closeaddress', function(){
+        if($('.basket__content__order--advanced').is(':visible')){
+            $('.basket__content__order--advanced').hide();
+        }else{
+            $('.basket__content__order--advanced').show();
+        }
     });
 
     $(document).on('click','.basket__foot--order--success',function(){
