@@ -367,7 +367,6 @@
     padding: 10px 0;
 }
 
-<<<<<<< HEAD
 a.basket__foot--order--noactive {
     -webkit-filter: grayscale(50%);
     -moz-filter: grayscale(50%);
@@ -376,7 +375,8 @@ a.basket__foot--order--noactive {
     filter: grayscale(50%);
     filter: gray; /* IE 6-9 */  
     opacity: 0.5;
-=======
+}
+
 .orderBody{
     display: none;
 }
@@ -387,5 +387,4 @@ a.basket__foot--order--noactive {
 
 .basket__foot--order--success{
     display: none;
->>>>>>> origin/master
 }
