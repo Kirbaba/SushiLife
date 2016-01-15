@@ -382,7 +382,7 @@ function termsMenu($id){
     $term = get_term($id['id'], 'menu');
    // prn($term);
     $cat_terms = get_term_children( $id['id'], 'menu' );
-    //prn($cat_terms);
+   // prn($cat_terms);
     $childTerms = [];
 
     foreach($cat_terms as $termId){
@@ -391,9 +391,14 @@ function termsMenu($id){
     //prn($childTerms);
     $num = 0;
 
-    foreach($childTerms as $t){
-       $num += $t->count;
+    if(!empty($childTerms)){
+        foreach($childTerms as $t){
+            $num += $t->count;
+        }
+    }else{
+        $num = $term->count;
     }
+
    // prn($num);
     $parser = new Parser();
     $parser->render(TM_DIR . '/view/navigation.php', ['term' => $term, 'childs' => $childTerms, 'count' => $num]);

@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <?php $term = get_the_terms(get_the_ID(),'menu'); ?>
 
-            <?= do_shortcode('[terms id='.$term[0]->parent.']'); ?>
+            <?= do_shortcode('[terms id='.$term[0]->term_id.']'); ?>
             <!--<h1 class="navigationtabs--title">Сеты <sup>10</sup></h1>
             <ul class="nav nav-pills navigationtabs--tabs">
                 <li class="active"><a href="#">С угрем</a></li>
@@ -36,17 +36,21 @@
                 </div>
             </div>
             <div class="product--ingredients">
-                <p><span>Ингредиенты</span></p>
                 <?php
 
                 $ingredients = get_the_terms($post->ID,'ingredients');
+                if(!empty($ingredients)){
+
+                ?>
+                <p><span>Ингредиенты</span></p>
+                <?php
+
                 foreach($ingredients as $key => $item){ ?>
                     <div class="product--ingredients--item">
                         <img src="<?php echo z_taxonomy_image_url($item->term_id); ?>" alt="">
                         <p><?= $item->name; ?></p>
                     </div>
-                <?php }
-
+                <?php }}
                 ?>
                 <!--<div class="product--ingredients--item">
                     <img src="<?php bloginfo('template_directory'); ?>/img/cheese.png" alt="">
