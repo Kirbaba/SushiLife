@@ -154,6 +154,16 @@ $(function () {
            active($('.basket__foot--order--success'),1);
        }
     });
+
+    $(document).on('click','.return', function(){
+        $('.cartBody').show();
+        $('.orderBody').hide();
+        $('.basket__foot--order--success').hide();
+        $('.basket__foot--order').show();
+
+        updateCart();
+        return false;
+    });
 });
 
 function updateCart(){

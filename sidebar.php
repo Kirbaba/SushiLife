@@ -6,6 +6,7 @@
 		</div>
 		<div class="basket__content orderBody">
 			<div class="basket__content__order--standart">
+				<a href="#" class="return">Изменить заказ</a>
 				<input type="text" name="order-phone" placeholder="Укажите свой телефон">
 				<button class="add-address-btn">Добавить адрес доставки</button>
 				<span class="not-required">(не обязательно)</span>
