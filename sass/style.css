@@ -817,13 +817,25 @@ ul {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       position: relative;
       overflow: hidden; }
-      .basket__content--item img {
+      .basket__content--item--thumb {
         position: absolute;
         right: -45px;
         top: 15px;
         border-radius: 50% 0 0 50%;
-        max-height: 90px;
-        max-width: 90px; }
+        height: 90px;
+        width: 90px;
+        overflow: hidden;
+        background-color: #FFF; }
+        .basket__content--item--thumb img {
+          min-width: 100%;
+          height: auto;
+          position: relative;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%); }
+        .basket__content--item--thumb img {
+          max-width: 100%;
+          height: auto; }
       .basket__content--item--title {
         font-size: 16px;
         font-family: "ProximaNovaRegular";
