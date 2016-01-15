@@ -1,7 +1,6 @@
 $(function () {
     $(document).ready(function(){
        updateCart();
-        $('.basket__foot--order--success').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
     });
 
     $(document).on('click','.categoryitems__item--buybtn, .product--item--info__buybtn', function(){
@@ -84,7 +83,7 @@ $(function () {
     $(document).on('click','.basket__foot--order', function(){
         var total = parseInt($('.total_price').text());
 
-        if(total >= 90){
+        if(total >= 80){
            // active( $(this),0);
            // $(this).removeClass('basket__foot--order--noactive');
 
@@ -165,7 +164,12 @@ $(function () {
                 type: "POST",
                 data: data, //данные, которые передаем. Обязательно для action указываем имя нашего хука
                 success: function (data) {
+                    $('.orderNum').text(data);
                     //console.log(data);
+                    $('.basket__foot').hide();
+                    $('.orderBody').hide();
+                    $('.thankBody').show();
+
                     jQuery.ajax({
                         url: ajaxurl, //url, к которому обращаемся
                         type: "POST",
@@ -174,17 +178,21 @@ $(function () {
                             updateCart();
                             updateButtons();
 
-                            $('.orderBody').hide();
                             $('.basket__foot--order--success').css('display','none');
                             active($('.basket__foot--order--success'),0);
                             $('.basket__foot--order').show();
-                            $('.cartBody').show();
                         }
                     });
                 }
             });
             return false;
         }
+    });
+
+    $(document).on('click','.basket__content--movenext', function(){
+        $('.basket__foot').show();
+        $('.thankBody').hide();
+        $('.cartBody').show();
     });
 
     $(document).on('input','input[name="order-phone"]',function(){

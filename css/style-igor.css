@@ -491,3 +491,65 @@ a.basket__foot--order--noactive {
     background-color: #F52837;
 }
 
+.thankBody{
+    display: none;
+    text-align: center;
+    float: left;
+    width: 100%;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    -ms-overflow-y: auto;
+    overflow-y: auto;
+    margin: 109px 0 0 0;
+}
+
+.thankBody h4{
+    font-family: "ProximaNovaBold";
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.thankBody p{
+    width: 70%;
+    font-family: "ProximaNovaRegular";
+    font-weight: 500;
+    font-size: 12px;
+    margin: 10px auto;
+}
+
+.thankBody img{
+    width: 150px;
+    height: auto;
+    margin: 10px auto;
+}
+
+.thankBody button{
+    width: 90%;
+    display: block;
+    position: relative;
+    margin: 15px auto;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #F14036;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: "ProximaNovaRegular";
+    font-weight: lighter;
+    outline: none;
+    border: 1px solid #f14036;
+    text-decoration: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}

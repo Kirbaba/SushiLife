@@ -605,6 +605,7 @@ function sendOrder(){
         }
 
         $orderId = generateNumber(5);
+
         $product = [];
 
         foreach($posts as $key => $item){
@@ -632,9 +633,10 @@ function sendOrder(){
 
         $total = 0;
         foreach($product as $item){
-            $str .= "<br>".$item['name'];
-            $str .= "<br>".$item['count'];
-            $str .= "<br>".$item['price']."<br>";
+            $total += $item['price'];
+            $str .= "<br>Название: ".$item['name'];
+            $str .= "<br>Количество: ".$item['count'];
+            $str .= "<br>Цена: ".$item['price']."<br>";
         };
 
         if(!empty($orderdata)){
@@ -644,6 +646,8 @@ function sendOrder(){
         $str .= 'Итого : '.$total;
 
         mail($admin_email, "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
+       // mail('sushilife2@gmail.com', "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
+        echo $orderId;
         die();
     }
 

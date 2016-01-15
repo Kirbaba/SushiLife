@@ -72,6 +72,16 @@
 			</div> -->
 
 		</div>
+		<div class="thankBody">
+			<h4>Ваш заказ: №<span class="orderNum"></span></h4>
+			<p>Поздравляем, заказ оформлен</p>
+			<p>В течении 10 минут мы вам позвоним для уточнения заказа</p>
+			<p>Если с вами не связалист, пожалуйста, позвоните нам</p>
+			<p><b><?php echo get_theme_mod('phone_textbox'); ?></b></p>
+			<img src="<?php bloginfo('template_directory'); ?>/img/sushi-rolls-03-33.png" alt="">
+			<p>Ваш заказ будет передан в работу только после телефонного подтверждения</p>
+			<button class="basket__content--movenext">Продолжить покупки</button>
+		</div>
 		<div class="basket__foot" id="basket__foot">
 			<aricle class="basket__foot--wrap">
 				<h3>Итого <span class="basket__foot--price"><span class="total_price">308</span><span> грн</span></span></h3>
