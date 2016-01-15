@@ -1104,6 +1104,13 @@ ul {
 .basket--width--active {
   display: block; }
 
+img.preLoader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 .templatepage__input--small {
   display: block;
   float: left;

@@ -121,8 +121,7 @@
 				background-color: #FFF;
 		    	img {
 					max-width: 100%;
-					height: auto;
-					
+					height: auto;				
 			    }
 		    }
 		    
@@ -364,5 +363,13 @@
 
 .basket--width--active {
 	display: block;
+}
+
+img.preLoader {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
