@@ -76,7 +76,8 @@
 		&--order {
 			width: 100%;
 			font-size: 15px;
-			color: #FFF;
+			color: #FFF!important;
+			text-decoration: none;
 			text-align: center;
 			text-transform: uppercase;
 			padding: 10px 0;
@@ -88,10 +89,10 @@
 			margin-top: 20px;
 			font-weight: 700;
 			@include transition(0.2s);
-			&:hover {
+			&:hover, &:active, &:focus {
 				background-color: darken(#EF3F35, 10%);
 				text-decoration: none;
-				color: #fff;
+				color: #fff!important;
 			}
 		}
 	}

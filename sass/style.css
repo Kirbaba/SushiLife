@@ -778,7 +778,8 @@ ul {
     .basket__foot--order {
       width: 100%;
       font-size: 15px;
-      color: #FFF;
+      color: #FFF !important;
+      text-decoration: none;
       text-align: center;
       text-transform: uppercase;
       padding: 10px 0;
@@ -798,10 +799,10 @@ ul {
       -ms-transition: all 0.2s linear;
       -o-transition: all 0.2s linear;
       transition: all 0.2s linear; }
-      .basket__foot--order:hover {
+      .basket__foot--order:hover, .basket__foot--order:active, .basket__foot--order:focus {
         background-color: #df1d12;
         text-decoration: none;
-        color: #fff; }
+        color: #fff !important; }
   .basket__content {
     display: block;
     float: left;
