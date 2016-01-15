@@ -654,6 +654,31 @@ function sendOrder(){
 }
 /*----------------------------------------------- END CART -----------------------------------------------------------*/
 
+/*------------------------------------------- СТРАНИЦА ЗАКАЗОВ -------------------------------------------------------*/
+
+function registerOrdersPage(){
+    add_menu_page(
+        'Заказы', 'Заказы', 'manage_options', 'orders', 'adminOrdersPage', '', 190
+    );
+}
+
+function adminOrdersPage(){
+    global $wpdb;
+    $parser = new Parser();
+
+    if(isset($_GET['del'])){
+        $wpdb->delete( 'orders', ['id'=>$_GET['del']] );
+    }
+
+    $orders = $wpdb->get_results("SELECT * FROM `orders`", ARRAY_A);
+
+    $parser->render(TM_DIR . '/view/admin/orders.php', ['orders' => $orders]);
+}
+
+add_action( 'admin_menu', 'registerOrdersPage' );
+
+/*----------------------------------------- КОНЕЦ СТРАНИЦЫ ЗАКАЗОВ ---------------------------------------------------*/
+
 /*------------------------------------------------ REVIEWS -----------------------------------------------------------*/
 
 add_action('init', 'myCustomInitReviews');
