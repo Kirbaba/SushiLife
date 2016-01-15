@@ -13,7 +13,9 @@
             </div>
             <a href="#" class="basket__content--item--clear" data-id="<?= $post->ID; ?>"><i class="fa fa-times"></i></a>
         </div>
-        <?= get_the_post_thumbnail($post->ID); ?>
+        <div class="basket__content--item--thumb">
+            <?= get_the_post_thumbnail($post->ID); ?>
+        </div>
     </div>
 
 <?php } ?>
