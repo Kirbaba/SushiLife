@@ -97,8 +97,11 @@ $(function () {
 
             if($('input[name="order-phone"]').val().length >= 10){
                 active($('.basket__foot--order--success'),0);
+                $('.basket__foot--wrap--required').css('display','none');
             }else{
                 active($('.basket__foot--order--success'),1);
+                $('.basket__foot--wrap--required').html('<p>Для подтверждения заказа укажите свой телефон.</p>');
+                $('.basket__foot--wrap--required').css('display','block');
             }
 
         }else{
@@ -158,8 +161,11 @@ $(function () {
     $(document).on('input','input[name="order-phone"]',function(){
        if($(this).val().length >= 10){
            active($('.basket__foot--order--success'),0);
+           $('.basket__foot--wrap--required').css('display','none');
        }else{
            active($('.basket__foot--order--success'),1);
+           $('.basket__foot--wrap--required').html('<p>Для подтверждения заказа укажите свой телефон.</p>');
+           $('.basket__foot--wrap--required').css('display','block');
        }
     });
 
@@ -229,9 +235,11 @@ function updateButtons(){
 
     if(total >= 90){
         active( $('.basket__foot--order'),0);
-
+        $('.basket__foot--wrap--required').css('display','none');
     }else{
         active( $('.basket__foot--order'),1);
+        $('.basket__foot--wrap--required').html('<p>Минимальный заказ 80 грн.</p>');
+        $('.basket__foot--wrap--required').css('display','block');
         //$(this).addClass('basket__foot--order--noactive');
     }
 }

@@ -393,7 +393,7 @@ a.basket__foot--order--noactive {
     color: #FFF!important;
     text-align: center;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none!important;
     padding: 10px 0;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -479,3 +479,14 @@ a.basket__foot--order--noactive {
 .basket__content__order--advanced .row{
     margin: 0;
 }
+
+.basket__foot--wrap--required{
+    display: none;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    background-color: #F52837;
+}
+
