@@ -390,9 +390,10 @@ a.basket__foot--order--noactive {
     display: none;
     width: 100%;
     font-size: 15px;
-    color: #FFF;
+    color: #FFF!important;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     padding: 10px 0;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -453,6 +454,7 @@ a.basket__foot--order--noactive {
 
 .basket__content__order--advanced input, .basket__content__order--advanced textarea{
     display: block;
+    outline: none;
     width: 100%;
     font-size: 12px;
     line-height: 14px;
