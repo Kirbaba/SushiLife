@@ -82,12 +82,12 @@
 			<p>Ваш заказ будет передан в работу только после телефонного подтверждения</p>
 			<button class="basket__content--movenext">Продолжить покупки</button>
 		</div>
+		<div class="basket__foot--wrap--required">
+			<p>Минимальный заказ 80 грн</p>
+		</div>
 		<div class="basket__foot" id="basket__foot">
 			<aricle class="basket__foot--wrap">
 				<h3>Итого <span class="basket__foot--price"><span class="total_price">308</span><span> грн</span></span></h3>
-				<div class="basket__foot--wrap--required">
-					<p>Минимальный заказ 80 грн</p>
-				</div>
 				<a href="#" class="basket__foot--order">Оформить заказ</a>
 				<a href="#" class="basket__foot--order--success">Подтвердить заказ</a>
 			</aricle>

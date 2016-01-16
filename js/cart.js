@@ -120,6 +120,16 @@ $(function () {
 
     });
 
+    $(".add-address-btn").on({
+        mouseenter: function () {
+            $('.not-required').fadeIn(300);
+        },
+        mouseleave: function () {
+            $('.not-required').fadeOut(300);
+        }
+    });
+
+
     $(document).on('click','.basket__content__order--advanced--closeaddress', function(){
         if($('.basket__content__order--advanced').is(':visible')){
             $('.basket__content__order--advanced').hide();
@@ -198,11 +208,11 @@ $(function () {
     $(document).on('input','input[name="order-phone"]',function(){
        if($(this).val().length == 10){
            active($('.basket__foot--order--success'),0);
-           $('.basket__foot--wrap--required').css('display','none');
+           $('.basket__foot--wrap--required').fadeOut(300);
        }else{
            active($('.basket__foot--order--success'),1);
            $('.basket__foot--wrap--required').html('<p>Для подтверждения заказа укажите свой телефон.</p>');
-           $('.basket__foot--wrap--required').css('display','block');
+           $('.basket__foot--wrap--required').fadeIn(300);
        }
     });
 
@@ -272,11 +282,11 @@ function updateButtons(){
 
     if(total >= 80){
         active( $('.basket__foot--order'),0);
-        $('.basket__foot--wrap--required').css('display','none');
+        $('.basket__foot--wrap--required').fadeOut(300);
     }else{
         active( $('.basket__foot--order'),1);
         $('.basket__foot--wrap--required').html('<p>Минимальный заказ 80 грн.</p>');
-        $('.basket__foot--wrap--required').css('display','block');
+        $('.basket__foot--wrap--required').fadeIn(300);
     }
 }
 

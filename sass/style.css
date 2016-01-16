@@ -1039,7 +1039,7 @@ ul {
           color: #fff;
           background-color: #f14036; }
       .basket__content__order--standart .not-required {
-        display: block;
+        display: none;
         float: left;
         position: relative;
         width: 100%;

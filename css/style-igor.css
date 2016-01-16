@@ -543,3 +543,15 @@ a.basket__foot--order--noactive {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
+
+.basket__foot--wrap--required p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 145px;
+}
+
+.not-required{
+    display: none;
+}
+
