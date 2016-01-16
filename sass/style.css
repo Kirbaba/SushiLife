@@ -783,6 +783,7 @@ ul {
       text-align: center;
       text-transform: uppercase;
       padding: 10px 0;
+      float: left;
       -webkit-border-radius: 12px;
       -moz-border-radius: 12px;
       -ms-border-radius: 12px;
@@ -792,7 +793,7 @@ ul {
       background-color: #ef3f35;
       display: block;
       text-decoration: none;
-      margin-top: 20px;
+      margin-top: 10px;
       font-weight: 700;
       -webkit-transition: all 0.2s linear;
       -moz-transition: all 0.2s linear;
@@ -1112,6 +1113,29 @@ img.preLoader {
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.basket__foot--wrap--required {
+  margin: 0 -15px; }
+  .basket__foot--wrap--required p {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background-color: #FFDBDB;
+    font-size: 10px;
+    color: #F14036; }
+    .basket__foot--wrap--required p:before, .basket__foot--wrap--required p:after {
+      display: table;
+      content: " "; }
+    .basket__foot--wrap--required p:after {
+      clear: both; }
+
+.basket__foot--wrap--required p {
+  margin: 0; }
+
 .templatepage__input--small {
   display: block;
   float: left;
@@ -1206,6 +1230,50 @@ img.preLoader {
   margin: 0 -2%; }
 .templatepage h1 {
   margin-bottom: 15px; }
+
+.page-coments {
+  display: block;
+  float: left;
+  position: relative; }
+  .page-coments__item {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 25px 0; }
+  .page-coments--title {
+    display: block;
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5; }
+    .page-coments--title h3 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 30px;
+      text-align: center;
+      font-family: "ProximaNovaRegular";
+      margin-bottom: 0; }
+  .page-coments--text {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 15px 0; }
+    .page-coments--text p {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      font-family: "ProximaNovaRegular"; }
+  .page-coments--date {
+    display: block;
+    float: left;
+    width: 100%; }
+    .page-coments--date small {
+      display: block;
+      text-align: center;
+      font-size: 10px;
+      color: #A0A0A0;
+      font-family: "ProximaNovaRegular"; }
 
 .footer {
   display: block;

@@ -81,12 +81,13 @@
 			text-align: center;
 			text-transform: uppercase;
 			padding: 10px 0;
+			float: left;
 			@include border-radius(12px);
 			@include background-clip(padding-box);
 			background-color: #ef3f35;
 			display: block;
 			text-decoration: none;
-			margin-top: 20px;
+			margin-top: 10px;
 			font-weight: 700;
 			@include transition(0.2s);
 			&:hover, &:active, &:focus {
@@ -374,3 +375,23 @@ img.preLoader {
     transform: translate(-50%, -50%);
 }
 
+
+.basket__foot--wrap--required {
+	margin: 0 -15px;
+	p {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		@include inside-pad;
+		padding: 15px 20px;
+		background-color: #FFDBDB;
+		font-size: 10px;
+		color: #F14036;
+		
+	}
+}
+
+.basket__foot--wrap--required p {
+    margin: 0;
+}

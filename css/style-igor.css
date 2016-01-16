@@ -481,16 +481,6 @@ a.basket__foot--order--noactive {
     margin: 0;
 }
 
-.basket__foot--wrap--required{
-    display: none;
-    padding: 5px;
-    font-size: 13px;
-    font-weight: normal;
-    color: #fff;
-    text-align: center;
-    background-color: #F52837;
-}
-
 .thankBody{
     display: none;
     text-align: center;

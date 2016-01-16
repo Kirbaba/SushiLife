@@ -75,3 +75,55 @@
 		margin-bottom: 15px;
 	}
 }
+
+.page-coments {
+	display: block;
+	float: left;
+	position: relative;
+	&__item {
+		display: block;
+		float: left;
+		position: relative;
+		margin: 25px 0;
+	}
+	&--title {
+		display: block;
+		float: left;
+		width: 100%;
+		position: relative;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #e5e5e5;
+		h3 {
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 30px;
+			text-align: center;
+			font-family: $r;
+			margin-bottom: 0;
+		}
+	}
+	&--text {
+		display: block;
+		float: left;
+		width: 100%;
+		padding: 15px 0;
+		p {
+			font-size: 18px;
+			font-weight: 500;
+			text-align: center;
+			font-family: $r;
+		}
+	}
+	&--date {
+		display: block;
+		float: left;
+		width: 100%;
+		small {
+			display: block;
+			text-align: center;
+			font-size: 10px;
+    		color: #A0A0A0;
+    		font-family: $r;
+		}
+	}
+}
