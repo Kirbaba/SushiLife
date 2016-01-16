@@ -164,14 +164,16 @@
 	}
 	.navigation {
 		height: auto;
+		min-height: 110px;
 	    margin-bottom: 0;	    
 	}
-	.navigation--box {
-		margin-left: 15%;
-	}
-	.navigation--logo {
-		position: absolute;
-	}
+	// .navigation--box {
+	// 	margin-left: 80px;
+	// }
+	// .navigation--logo {
+	// 	position: absolute;
+	// 	width: 60px;
+	// }
 	.navigation--box--topline {
 	    margin-bottom: 0;
 	    border-bottom: 0;
@@ -229,10 +231,20 @@
 	.basket--width {
 		display: none;
 	}
+	.navigation--box {
+		margin-left: 150px;
+	}
+	.navigation--logo {
+		position: absolute;
+		//width: 60px;
+	}
+
 }
 
 @media only screen and (max-width: 737px) {
-	
+	// .basket--width {
+	// 	display: none;
+	// }
 	.basket--width--active {
 		display: block;
 		z-index: 999;
@@ -343,9 +355,9 @@
 	.main__carousel--item--content h2 {
 	    font-size: 23px;
 	}
-	.navigation--logo {
-		width: 15%;
-	}
+	// .navigation--logo {
+	// 	width: 15%;
+	// }
 	.basket__head {
 		display: none;
 	}
@@ -368,6 +380,21 @@
 	}
 	.templatepage__input--small {
 		width: 96%;
+	}	
+
+	.navigation--box--menutoggle, .navigation--box--showbasket {
+		width: auto;
+	}
+	a.menutoggle--but {
+		    padding: 0 10px;
+	}
+	.navigation--box--menutoggle a, 
+	.navigation--box--showbasket a {
+	    padding: 0 10px;
+	    font-size: 15px;
+	    height: 50px;
+	    line-height: 50px;
+	    margin-top: 15px;
 	}
 }
 
@@ -423,7 +450,7 @@
 	.navigation--navline--active {
 	    display: block;
 	    width: 100%;
-	    margin-left: -5%;
+	    margin-left: -100px;
 	    margin-top: 25px;
 	}
 	.social-media {
@@ -464,6 +491,9 @@
 	    max-width: 100%!important;
 	    height: auto;
 	}
+	.navigation--box {
+	    width: 100%;
+	}
 }
 
 @media only screen and (max-width: 320px) {
@@ -476,16 +506,32 @@
 		font-size: 30px;
 	}
 	.navigation--logo {
-	    width: 20%;
+	    width: 80px;
 	}
-
-	.navigation--box {
-	    margin-left: 20%;
+	.navigation {
+	    min-height: 55px;
+	}
+	.main__wrapper {
+		padding-top: 55px;
 	}
 	.navigation--navline--active {
-		margin-left: -10%;
+	    margin-left: -100px;
 	}
 	.categoryitems__item a {
 	    font-size: 18px !important;
+	}
+
+	.navigation--box--menutoggle a, 
+	.navigation--box--showbasket a {
+	    padding: 0 10px;
+	    font-size: 10px;
+	    height: 30px;
+	    line-height: 30px;
+	    margin-top: 0;
+	}
+
+	.navigation--box {
+	    width: 100%;
+	    margin-left: 100px;
 	}
 }

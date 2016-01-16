@@ -10,7 +10,8 @@
 		display: block;
 		float: left;
 		margin-right: 15px;
-		width: 12%;
+		width: 120px;
+		//height: 140px;
 		img {
 			width: 100%;
 		}
@@ -20,8 +21,8 @@
 		float: left;
 		position: relative;
 		margin-left: 15px;
-		width: 100%;
-		width: 83%;
+		width: calc(100% - 150px);
+		//width: 83%;
 		padding: 10px 0;	
 		&--topline {
 			display: block;
