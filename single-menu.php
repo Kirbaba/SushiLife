@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <?php $term = get_the_terms(get_the_ID(),'menu'); ?>
 
-            <?= do_shortcode('[terms id='.$term[0]->term_id.']'); ?>
+            <?= do_shortcode('[terms id='.$term[0]->term_id.' single="1"]'); ?>
             <!--<h1 class="navigationtabs--title">Сеты <sup>10</sup></h1>
             <ul class="nav nav-pills navigationtabs--tabs">
                 <li class="active"><a href="#">С угрем</a></li>

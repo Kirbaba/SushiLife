@@ -53,6 +53,36 @@ $( document ).ready(function() {
         $('.navigation--box--topline').toggleClass('navigation--box--topline--basket');
     });
 
+    /*tabs*/
+    //grabs the hash tag from the url
+    var hash = window.location.hash;
+    //checks whether or not the hash tag is set
+    if (hash != "") {
+        console.log(hash);
+        //removes all active classes from tabs
+        $('.navigationtabs--tabs li').each(function() {
+            $(this).removeClass('active');
+        });
+        $('.categoryitems div').each(function() {
+            $(this).removeClass('active');
+        });
+        //this will add the active class on the hashtagged value
+        var link = "";
+        $('.navigationtabs--tabs li').each(function() {
+            link = $(this).find('a').attr('href');
+            console.log(link);
+            if (link == hash) {
+                $(this).addClass('active');
+            }
+        });
+        $('.categoryitems div').each(function() {
+            link = $(this).attr('id');
+            if ('#'+link == hash) {
+                $(this).addClass('active');
+            }
+        });
+    }
+
     // $('article').readmore({speed: 500});
 });
 

@@ -377,11 +377,20 @@ function get_custom_single_template($single_template) {
 add_filter( "single_template", "get_custom_single_template" ) ;
 
 //navigation menu for terms
-function termsMenu($id){
-    //prn($id);
-    $term = get_term($id['id'], 'menu');
-   // prn($term);
-    $cat_terms = get_term_children( $id['id'], 'menu' );
+function termsMenu($atts){
+    $scatts = shortcode_atts( array(
+        'id' => '0',
+        'single' => '0',
+    ), $atts );
+    //prn($scatts);
+
+    $term = get_term($scatts['id'], 'menu');
+    //prn($term);
+    if($term->parent != 0){
+        $term = get_term($term->parent,'menu');
+    }
+    //prn($term);
+    $cat_terms = get_term_children( $term->term_id, 'menu' );
    // prn($cat_terms);
     $childTerms = [];
 
@@ -401,7 +410,12 @@ function termsMenu($id){
 
    // prn($num);
     $parser = new Parser();
-    $parser->render(TM_DIR . '/view/navigation.php', ['term' => $term, 'childs' => $childTerms, 'count' => $num]);
+    if($scatts['single']!=0){
+        $parser->render(TM_DIR . '/view/navigation-single.php', ['term' => $term, 'childs' => $childTerms, 'count' => $num]);
+    }else{
+        $parser->render(TM_DIR . '/view/navigation.php', ['term' => $term, 'childs' => $childTerms, 'count' => $num]);
+    }
+
 }
 
 add_shortcode('terms', 'termsMenu');

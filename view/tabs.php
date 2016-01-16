@@ -12,7 +12,7 @@
                 ))
         ); ?>
 
-        <div role="tabpanel" class="tab-pane" id="<?= $tax->slug ?>">
+        <div role="tabpanel" class="tab-pane" id="tab-<?= $tax->term_id ?>">
             <?php
             foreach($myposts as $item){?>
                 <div class="categoryitems__item">
@@ -48,7 +48,7 @@
     }
 ?>
 
-        <div role="tabpanel" class="tab-pane active" id="all">
+        <div role="tabpanel" class="tab-pane active" id="tab-all">
             <?php
            // foreach($all as $term){
                 $tax =  get_term($allterm, 'menu');
