@@ -24,7 +24,7 @@
         <?php endif; ?>
         <span class="news-category__item--desc">
             <h3><?php the_title(); ?></h3>
-            <p> <?php content(25);?></p>
+            <p> <?php content(20);?></p>
             <span class="news-category__item--desc--date"><? echo  the_time('j.m.Y');?></span>            
         </span>        
     </a>

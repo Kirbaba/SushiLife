@@ -113,13 +113,14 @@ function setRightBasket(){
         } );
         if ((doc_w < 1080)&&(doc_w > 770)) {
             $('.main__wrapper').css({
-                paddingRight: basket_width - 30,
+                paddingRight: basket_width + 30,
             });
         }
-        if (doc_w < 770) {
+        if ((doc_w < 770)&&(doc_w > 737)) {
              $('.main__wrapper').css({
-                paddingRight: 0,
+                paddingRight: '256px',
             });
+             $('.basket__head').height($('.navigation').height())
         }
     }
     if (doc_w < 737) {

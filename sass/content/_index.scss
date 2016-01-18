@@ -225,7 +225,9 @@
 				display: block;
 				margin: 15px auto;
 				@include overflow-img;
-
+				img {
+					max-width: 200%;
+				}
 			}
 			h3 {
 				text-align: center;
