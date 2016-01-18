@@ -12,25 +12,23 @@
 </section>
 
 <section class="news-category__wrap">
-    <a href="#" class="news-category__item">
+    <!-- Имеются ли посты для отображения? -->
+    <?php if ( have_posts() ) : ?>
+        <!-- Цикл вывода постов -->
+    <?php while ( have_posts() ) : the_post(); ?>
+    <a href="<? echo get_the_permalink(get_the_ID());?>" class="news-category__item">
+        <?php if ( has_post_thumbnail() ): ?>
         <span class="news-category__item--thumb">
-            <img src="<?php bloginfo('template_directory'); ?>/img/1223956.jpg" alt="">
+             <?php { echo get_the_post_thumbnail( $id, '100%', array('class' => 'alignleft') ); }?>
         </span>
+        <?php endif; ?>
         <span class="news-category__item--desc">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, molestias.</p>
-            <span class="news-category__item--desc--date">01.01.15</span>            
+            <h3><?php the_title(); ?></h3>
+            <p> <?php content(25);?></p>
+            <span class="news-category__item--desc--date"><? echo  the_time('j.m.Y');?></span>            
         </span>        
     </a>
-	<a href="#" class="news-category__item">
-		<span class="news-category__item--thumb">
-			<img src="<?php bloginfo('template_directory'); ?>/img/3583.jpg" alt="">
-        </span>
-		<span class="news-category__item--desc">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, molestias.</p>
-            <span class="news-category__item--desc--date">01.01.15</span>            
-        </span>        
-    </a>
+    <?php endwhile; ?>
+    <?php endif; ?>	
 </section>
 <?php get_footer(); ?>

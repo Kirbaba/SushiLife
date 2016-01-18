@@ -1336,7 +1336,8 @@ img.preLoader {
       font-size: 14px;
       color: #7F7F7F;
       position: absolute;
-      bottom: 35px; }
+      bottom: 35px;
+      display: block; }
   .news-category__item:after {
     content: "";
     pointer-events: none;
