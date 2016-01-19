@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 	<section class="page-coments">
 		<div class="col-lg-8 col-lg-offset-2 col-md-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-			<div class="page-coments__item">
+			<?= do_shortcode('[reviews page="1"]'); ?>
+			<!--<div class="page-coments__item">
 				<div class="page-coments--title">
 					<h3>Александр</h3>
 				</div>
@@ -22,7 +23,7 @@
 				<div class="page-coments--date">
 					<small>24.12.2015</small>
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</section>
 

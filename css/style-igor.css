@@ -63,6 +63,10 @@
     background-color: #fff;
 }
 
+.navigationtabs--tabs li a:focus{
+    background-color: #fff;
+}
+
 .navigationtabs--tabs li a:hover{
     border: 1px solid #f14036;
     background-color: #fff;
@@ -548,7 +552,7 @@ a.basket__foot--order--noactive {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 145px;
+    bottom: 139px;
 }
 
 .not-required{

@@ -736,8 +736,11 @@ function myCustomInitReviews()
     register_post_type('reviews', $args);
 }
 
-function reviewShortcode()
+function reviewShortcode($atts)
 {
+    $scatts = shortcode_atts( array(
+        'page' => '0'
+    ), $atts );
     $args = array(
         'post_type' => 'reviews',
         'post_status' => 'publish',
@@ -747,7 +750,12 @@ function reviewShortcode()
     $my_query = new WP_Query($args);
 
     $parser = new Parser();
-    $parser->render(TM_DIR . '/view/reviews.php', ['my_query' => $my_query]);
+    if($scatts['page'] =='0'){
+        $parser->render(TM_DIR . '/view/reviews.php', ['my_query' => $my_query]);
+    }else{
+        $parser->render(TM_DIR . '/view/reviews-all.php', ['my_query' => $my_query]);
+    }
+
 }
 
 add_shortcode('reviews', 'reviewShortcode');

@@ -1265,6 +1265,18 @@ img.preLoader {
       font-weight: 500;
       text-align: center;
       font-family: "ProximaNovaRegular"; }
+  .page-coments--img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+    margin-top: 15px; }
+    .page-coments--img img {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      border-radius: 50%; }
   .page-coments--date {
     display: block;
     float: left;
