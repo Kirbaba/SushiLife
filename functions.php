@@ -14,6 +14,7 @@ function add_style(){
     wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css', array(), '1');
     wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/css/slick-theme.css', array(), '1');
     wp_enqueue_style( 'igor', get_template_directory_uri() . '/css/style-igor.css', array(), '1');
+    wp_enqueue_style( 'stars', get_template_directory_uri() . '/css/rating.min.css', array(), '1');
 }
 
 function add_script(){
@@ -26,6 +27,8 @@ function add_script(){
     wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '1');
     wp_enqueue_script( 'carouFredSel-js', 'jquery.carouFredSel.js', array(), '1');
     wp_enqueue_script( 'cart-js', get_template_directory_uri() . '/js/cart.js', array(), '1');
+    wp_enqueue_script( 'rating-js', get_template_directory_uri() . '/js/rating.min.js', array(), '1');
+    wp_enqueue_script( 'stars-js', get_template_directory_uri() . '/js/stars.js', array(), '1');
 
     $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
 //after wp_enqueue_script
@@ -736,6 +739,23 @@ function myCustomInitReviews()
     register_post_type('reviews', $args);
 }
 
+function extraFieldsReviewsRating($post)
+{
+    ?>
+    <p>
+        <span>Оценка (от 1 до 5): </span>
+        <input type="text" name='extra[rating]' value="<?php echo get_post_meta($post->ID, "rating", 1); ?>">
+    </p>
+    <?php
+}
+
+function myExtraFieldsReviews()
+{
+    add_meta_box('extra_weight', 'Оценка', 'extraFieldsReviewsRating', 'reviews', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'myExtraFieldsReviews', 1);
+
 function reviewShortcode($atts)
 {
     $scatts = shortcode_atts( array(
@@ -760,6 +780,66 @@ function reviewShortcode($atts)
 
 add_shortcode('reviews', 'reviewShortcode');
 
+add_action( 'wp_ajax_addreview', 'addReview' );
+add_action( 'wp_ajax_nopriv_addreview', 'addReview' );
+
+function addReview()
+{
+    //echo $_POST;
+    //Sanitize input data using PHP filter_var().
+    $name = $_POST["name"];
+    $mail = $_POST["mail"];
+    $phone = $_POST["phone"];
+    $rating = $_POST["rating"];
+    $message = $_POST["message"];
+    $image = wp_upload_bits($_FILES['file_attach']['name'], null, file_get_contents($_FILES['file_attach']['tmp_name']));
+
+    $post_data = array(
+        'post_title'    => $name,
+        'post_content'  => $message,
+        'post_status'   => 'draft',
+        'post_author'   => 1,
+        'post_type'     => 'reviews',
+    );
+    $post_id = wp_insert_post( $post_data );
+    update_post_meta($post_id, 'rating', $rating);
+
+    generate_Featured_Image($image['url'],$post_id);
+
+    $adminMail = get_option('admin_email');
+
+    $str = "С вашего сайта оставили отзыв:<br>";
+    $str .= 'Имя: '.$name.' <br>';
+    $str .= 'Email: '.$mail.' <br>';
+    $str .= 'Телефон: '.$phone.' <br>';
+    $str .= 'Отзыв : '.$message.' <br>';
+
+    mail($adminMail, "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
+
+    die();
+}
+
+function generate_Featured_Image($image_url, $post_id){
+    $upload_dir = wp_upload_dir();
+    $image_data = file_get_contents($image_url);
+    $filename = basename($image_url);
+    if(wp_mkdir_p($upload_dir['path']))     $file = $upload_dir['path'] . '/' . $filename;
+    else                                    $file = $upload_dir['basedir'] . '/' . $filename;
+    file_put_contents($file, $image_data);
+
+    $wp_filetype = wp_check_filetype($filename, null );
+    $attachment = array(
+        'post_mime_type' => $wp_filetype['type'],
+        'post_title' => sanitize_file_name($filename),
+        'post_content' => '',
+        'post_status' => 'inherit'
+    );
+    $attach_id = wp_insert_attachment( $attachment, $file, $post_id );
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+    wp_update_attachment_metadata( $attach_id, $attach_data );
+    set_post_thumbnail( $post_id, $attach_id );
+}
 /*----------------------------------------------- END REVIEWS --------------------------------------------------------*/
 
  /*MINIMIZED CONTENT*/ 

@@ -1,6 +1,39 @@
 <?php get_header(); ?>
+    <section class="page-coments-form">
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div class="page-coments-form__title">
+                <h3>Оставить отзыв</h3>
+            </div>
+            <div class="page-coments-form__form">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <span>Имя </span><input type="text" name="reviewer-name" >
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <span>Телефон </span><input type="text" name="reviewer-phone" >
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <span>Email </span><input type="text" name="reviewer-mail">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <span>Рейтинг </span><ul class="c-rating"></ul>
+                    <input type="hidden" name="reviewer-rating">
+                </div>
+                <div class="col-xs-12">
+                    <span>Сообщение </span><textarea name="reviewer-message" cols="10" rows="5"></textarea>
+                </div>
+                <div class="col-xs-12">
+                    <span>Изображение </span><input type="file" name="reviewer-photo">
+                </div>
+                <div class="col-xs-12">
+                    <input type="submit" class="js-send-review" value="Отправить">
+                </div>
+
+            </div>
+        </div>
+    </section>
 	<section class="page-coments">
 		<div class="col-lg-8 col-lg-offset-2 col-md-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+
 			<?= do_shortcode('[reviews page="1"]'); ?>
 			<!--<div class="page-coments__item">
 				<div class="page-coments--title">
