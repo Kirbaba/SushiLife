@@ -1,10 +1,10 @@
-.page-coments--rating {
+.page-coments--rating, .reviews__carousel__item {
     display: block;
     width: 100%;
     float: left;
 }
 
-.page-coments--rating ul{
+.page-coments--rating ul, .reviews__carousel__item ul{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

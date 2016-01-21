@@ -14,9 +14,12 @@ $(function(){
             var message = $('textarea[name="reviewer-message"]').val();
             var photo = $('input[name="reviewer-photo"]')[0].files[0];
 
-           // if(name == '' || phone == '' || mail == '' || rating == '' || photo == ''){
+            if(name == '' || phone == '' || mail == '' || rating == ''){
                 // не все введено
-           // }else{
+                $('.page-coments-form__form--alert').addClass('alert-red');
+                $('.page-coments-form__form--alert').html('<p>Введите все данные!</p>');
+                $('.page-coments-form__form--alert').show();
+            } else{
                 //data to be sent to server
             var m_data = new FormData();
             m_data.append( 'action', 'addreview');
@@ -37,11 +40,20 @@ $(function(){
                 success: function (data) {
                     //alert('done');
                     //load json data from server and output message
-                   console.log(data.text);
+                    $('input[name="reviewer-name"]').val('');
+                    $('input[name="reviewer-phone"]').val('');
+                    $('input[name="reviewer-mail"]').val('');
+                    $('input[name="reviewer-rating"]').val('');
+                    $('textarea[name="reviewer-message"]').val('');
+                    $('input[name="reviewer-photo"]').val('');
+
+                    $('.page-coments-form__form--alert').addClass('alert-green');
+                    $('.page-coments-form__form--alert').html('<p>'+data.message+'</p>');
+                    $('.page-coments-form__form--alert').show();
                 }
             });
             return false;
-          //  }
+            }
         });
     });
 });

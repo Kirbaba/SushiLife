@@ -559,3 +559,35 @@ a.basket__foot--order--noactive {
     display: none;
 }
 
+.page-coments-form__form--alert{
+    display: none;
+    float: left;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.page-coments-form__form--alert p{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    font-size: 10px;
+
+}
+
+.alert-green{
+    color: #64F136;
+    background-color: #E7FFDB;
+}
+
+.alert-red{
+    color: #F14036;
+    background-color: #FFDBDB;
+}
+
+
+

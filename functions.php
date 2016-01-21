@@ -785,14 +785,12 @@ add_action( 'wp_ajax_nopriv_addreview', 'addReview' );
 
 function addReview()
 {
-    //echo $_POST;
     //Sanitize input data using PHP filter_var().
     $name = $_POST["name"];
     $mail = $_POST["mail"];
     $phone = $_POST["phone"];
     $rating = $_POST["rating"];
     $message = $_POST["message"];
-    $image = wp_upload_bits($_FILES['file_attach']['name'], null, file_get_contents($_FILES['file_attach']['tmp_name']));
 
     $post_data = array(
         'post_title'    => $name,
@@ -804,7 +802,10 @@ function addReview()
     $post_id = wp_insert_post( $post_data );
     update_post_meta($post_id, 'rating', $rating);
 
-    generate_Featured_Image($image['url'],$post_id);
+    if($_FILES['file_attach']){
+        $image = wp_upload_bits($_FILES['file_attach']['name'], null, file_get_contents($_FILES['file_attach']['tmp_name']));
+        generate_Featured_Image($image['url'],$post_id);
+    }
 
     $adminMail = get_option('admin_email');
 
@@ -812,11 +813,13 @@ function addReview()
     $str .= 'Имя: '.$name.' <br>';
     $str .= 'Email: '.$mail.' <br>';
     $str .= 'Телефон: '.$phone.' <br>';
+    $str .= 'Рейтинг: '.$rating.' <br>';
     $str .= 'Отзыв : '.$message.' <br>';
 
     mail($adminMail, "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
 
-    die();
+    $output = json_encode(array('message'=>'Спасибо за отзыв!'));
+    die($output);
 }
 
 function generate_Featured_Image($image_url, $post_id){

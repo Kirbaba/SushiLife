@@ -26,8 +26,9 @@
                 </div>
                 <div class="col-xs-12">
                     <input type="submit" class="js-send-review" value="Отправить">
-                </div>
 
+                </div>
+                <div class="page-coments-form__form--alert"><p>Спасибо за отзыв!</p></div>
             </div>
         </div>
     </section>
