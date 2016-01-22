@@ -764,7 +764,7 @@ function reviewShortcode($atts)
     $args = array(
         'post_type' => 'reviews',
         'post_status' => 'publish',
-        'posts_per_page' => -1);
+        'posts_per_page' => 6);
 
     $my_query = null;
     $my_query = new WP_Query($args);
@@ -858,3 +858,71 @@ function content($num) {
     $content = implode(" ",$content)."..."; 
     echo $content; 
 }
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
+}
+
+/*------------------------------------------- СТРАНИЦА ЗАКАЗОВ -------------------------------------------------------*/
+
+function registerRecommendPage(){
+    add_menu_page(
+        'Рекомендуемые товары', 'Рекомендуемые товары', 'manage_options', 'recommend', 'adminRecommendPage', '', 190
+    );
+}
+
+function adminRecommendPage(){
+    global $wpdb;
+    $parser = new Parser();
+
+
+    if($_POST){
+        $wpdb->query('TRUNCATE TABLE recommend');
+        //prn($_POST);
+        foreach($_POST['recommended'] as $item){
+            $wpdb->insert(
+                'recommend',
+                array( 'post_id' => $item ),
+                array(  '%d' )
+            );
+        }
+    }
+
+    $ids = $wpdb->get_results("SELECT * FROM `recommend`", ARRAY_A);
+
+    $parser->render(TM_DIR . '/view/admin/recommend.php', ['ids' => $ids]);
+}
+
+add_action( 'admin_menu', 'registerRecommendPage' );
+
+function in_array_r($needle, $haystack, $strict = false) {
+    foreach ($haystack as $item) {
+        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function recommendedSC(){
+    global $wpdb;
+
+    $ids = $wpdb->get_results("SELECT * FROM `recommend`", ARRAY_A);
+    //prn($ids);
+    $data = [];
+    foreach ($ids as $id) {
+        $data[] = get_post($id['post_id']);
+    }
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/recommended.php', ['posts' => $data]);
+}
+
+add_shortcode('recommended', 'recommendedSC');
+
+/*----------------------------------------- КОНЕЦ СТРАНИЦЫ ЗАКАЗОВ ---------------------------------------------------*/

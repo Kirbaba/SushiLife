@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 pr-0">
 					<div class="navigation--logo">
-						<a href="#">
+						<a href="/">
 							<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
 						</a>
 					</div>

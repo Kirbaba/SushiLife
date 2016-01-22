@@ -34,9 +34,7 @@
             </div>
             <? }else{ ?>
                 <p>Чтобы оставить отзыв, нужно быть авторизированным.</p>
-                <p>
-                    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_5c1ccd98" data-uloginid="5c1ccd98"></div>
-                </p>
+                <?php echo get_ulogin_panel(); ?>
             <? } ?>
         </div>
     </section>
