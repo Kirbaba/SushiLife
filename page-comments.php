@@ -1,9 +1,11 @@
 <?php get_header(); ?>
+
     <section class="page-coments-form">
         <div class="col-lg-4 col-lg-offset-4 col-md-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-12">
             <div class="page-coments-form__title">
                 <h3>Оставить отзыв</h3>
             </div>
+            <?php if ( is_user_logged_in() ) { ?>
             <div class="page-coments-form__form">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <span>Имя </span><input type="text" name="reviewer-name" >
@@ -30,8 +32,15 @@
                 </div>
                 <div class="page-coments-form__form--alert"><p>Спасибо за отзыв!</p></div>
             </div>
+            <? }else{ ?>
+                <p>Чтобы оставить отзыв, нужно быть авторизированным.</p>
+                <p>
+                    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_5c1ccd98" data-uloginid="5c1ccd98"></div>
+                </p>
+            <? } ?>
         </div>
     </section>
+
 	<section class="page-coments">
 		<div class="col-lg-8 col-lg-offset-2 col-md-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
 

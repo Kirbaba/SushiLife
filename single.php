@@ -15,7 +15,7 @@
                 'hide_empty' => 0,
                 'hierarchical' => 1,
                 'exclude' => '1',
-                'include' => '31,32,33',
+                'include' => '34,39,40',
                 'number' => 0,
                 'taxonomy' => 'category',
                 'pad_counts' => false
@@ -24,9 +24,9 @@
             if ($categories) {
 
                 foreach($categories as $cat){ ?>
-                    <li><a href="<?php echo get_page_link(92); ?>#tab-<?= $cat->term_id ?>" aria-controls="#tab-<?= $cat->term_id ?>"  ><?= $cat->name ?></a></li>
+                    <li><a href="<?php echo get_page_link(424); ?>#tab-<?= $cat->term_id ?>" aria-controls="#tab-<?= $cat->term_id ?>"  ><?= $cat->name ?></a></li>
                 <?php } }?>
-            <li class="active"><a href="<?php echo get_page_link(92); ?>#tab-all" aria-controls="#tab-all"  >Все</a></li>
+            <li class="active"><a href="<?php echo get_page_link(424); ?>#tab-all" aria-controls="#tab-all"  >Все</a></li>
        </ul>
         </div>
     </section>

@@ -13,7 +13,7 @@
                     'hide_empty' => 0,
                     'hierarchical' => 1,
                     'exclude' => '1',
-                    'include' => '31,32,33',
+                    'include' => '34,39,40',
                     'number' => 0,
                     'taxonomy' => 'category',
                     'pad_counts' => false

@@ -848,8 +848,9 @@ function generate_Featured_Image($image_url, $post_id){
  /*MINIMIZED CONTENT*/ 
 function content($num) { 
     $theContent = get_the_content(); 
-    $output = preg_replace('/<img[^>]+./','', $theContent); 
-    $output = preg_replace( '/<blockquote>.*<\/blockquote>/', '', $output ); 
+    $output = preg_replace('/<img[^>]+./','', $theContent);
+    $output = preg_replace('/<a[^>]+./','', $output);
+    $output = preg_replace( '/<blockquote>.*<\/blockquote>/', '', $output );
     $output = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', $output ); 
     $limit = $num+1; 
     $content = explode(' ', $output, $limit); 
