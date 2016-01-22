@@ -59,50 +59,10 @@
             <h1>Отзывы</h1>
             <div class="reviews__carousel">
                 <?= do_shortcode('[reviews]'); ?>
-                <div class="reviews__carousel__item">
-                    <div class="reviews__carousel__item--img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-8.png" alt="">
-                    </div>
-                    <h3>Максим Дикий</h3>
-                    <p>Очень все классно и вкусно,я заказал много Роллы (6 шт.) обошлось приличненько,как и полагается с акцией выше 400 грн дали в подарок ролл Аляска. Доставка быстрая,за один час все сделали и доставили,все очень понравилось Спасибо вам Большое,очень вкусно!)</p>
-                    <small>17.08.2015</small>
-                </div>
-                <div class="reviews__carousel__item">
-                    <div class="reviews__carousel__item--img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-10.png" alt="">
-                    </div>
-                    <h3>Елена Минина</h3>
-                    <p>очень вкусно!!!, быстро готовят, доброжелательный и внимательный персонал!! советую всем своим друзьям!</p>
-                    <small>7.08.2015</small>
-                </div>
-                <div class="reviews__carousel__item">
-                    <div class="reviews__carousel__item--img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-8.png" alt="">
-                    </div>
-                    <h3>Максим</h3>
-                    <p>нам понравились все ролы какие мы пробовали у вас!))....можно сказать что даже в некотором роде лучше чем в Рапонги или Дели, так что вы на высоте,так держать!...посоветовали попробовать ролл Кокаин!!...вы же не ложите туда наркотик?)))))</p>
-                    <small></small>
-                </div>
-                <div class="reviews__carousel__item">
-                    <div class="reviews__carousel__item--img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-10.png" alt="">
-                    </div>
-                    <h3>Максим Дикий</h3>
-                    <p>Очень все классно и вкусно,я заказал много Роллы (6 шт.) обошлось приличненько,как и полагается с акцией выше 400 грн дали в подарок ролл Аляска. Доставка быстрая,за один час все сделали и доставили,все очень понравилось Спасибо вам Большое,очень вкусно!)</p>
-                    <small>17.08.2015</small>
-                </div>
-                <div class="reviews__carousel__item">
-                    <div class="reviews__carousel__item--img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-8.png" alt="">
-                    </div>
-                    <h3>Дикий</h3>
-                    <p>очень вкусно!!!, быстро готовят, доброжелательный и внимательный персонал!! советую всем своим друзьям!</p>
-                    <small>17.08.2015</small>
-                </div>
             </div>
         </div>
         <div class="reviews__all">
-            <a href="#">Все отзывы</a>
+            <a href="/comments">Все отзывы</a>
         </div>
     </section>
 

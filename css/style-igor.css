@@ -234,6 +234,7 @@
 
 .product--item__thumb{
     display: inline-block;
+    height: auto;
     max-width: 450px;
     max-height: 300px;
     margin: 30px auto;
@@ -587,6 +588,11 @@ a.basket__foot--order--noactive {
 .alert-red{
     color: #F14036;
     background-color: #FFDBDB;
+}
+
+.post h1{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 

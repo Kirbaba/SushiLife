@@ -58,7 +58,7 @@ $( document ).ready(function() {
     var hash = window.location.hash;
     //checks whether or not the hash tag is set
     if (hash != "") {
-        console.log(hash);
+        //console.log(hash);
         //removes all active classes from tabs
         $('.navigationtabs--tabs li').each(function() {
             $(this).removeClass('active');
@@ -66,11 +66,14 @@ $( document ).ready(function() {
         $('.categoryitems div').each(function() {
             $(this).removeClass('active');
         });
+        $('.posts-pane').each(function() {
+            $(this).removeClass('active');
+        });
         //this will add the active class on the hashtagged value
         var link = "";
         $('.navigationtabs--tabs li').each(function() {
             link = $(this).find('a').attr('href');
-            console.log(link);
+            //console.log(link);
             if (link == hash) {
                 $(this).addClass('active');
             }
@@ -78,6 +81,15 @@ $( document ).ready(function() {
         $('.categoryitems div').each(function() {
             link = $(this).attr('id');
             if ('#'+link == hash) {
+                $(this).addClass('active');
+            }
+        });
+        $('.posts-pane').each(function() {
+            link = $(this).attr('id');
+
+            if ('#'+link == hash) {
+              // console.log(link);
+               // console.log(hash);
                 $(this).addClass('active');
             }
         });
