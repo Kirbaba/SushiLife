@@ -261,7 +261,7 @@
 			
 		}
 		&:after {
-			content: "";
+			content: none;
 			pointer-events: none;
 			top: 10px;
 			left: 10px;
