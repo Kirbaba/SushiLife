@@ -80,6 +80,22 @@ $(function () {
         return false;
     });
 
+    $(document).on('click','.basket__head--clear', function(){
+        var templateUrl = path.templateUrl;
+
+        $('.cartBody').html('<img class="preLoader" src="'+templateUrl+'/img/ajax-loader.gif">');
+
+        jQuery.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=delFromCart&all=1", //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function (data) {
+                updateCart();
+            }
+        });
+        return false;
+    });
+
     $(document).on('click','.basket__foot--order', function(){
         var total = parseInt($('.total_price').text());
 

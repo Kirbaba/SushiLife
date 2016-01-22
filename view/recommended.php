@@ -1,5 +1,7 @@
 <?php
-foreach($posts as $item){?>
+foreach($posts as $item){
+    ?>
+
     <div class="categoryitems__item">
         <a href="<?= get_the_permalink($item->ID); ?>"><?= get_the_title($item->ID); ?></a>
         <?= get_the_post_thumbnail($item->ID); ?>
@@ -11,7 +13,7 @@ foreach($posts as $item){?>
             <span class="categoryitems__item--price--num"><?php echo get_post_meta($item->ID, "price", 1); ?></span>
             <span>грн</span>
         </div>
-        <button class="categoryitems__item--buybtn" data-id="<?= $item->ID ?>">Заказать</button>
+        <button class="categoryitems__item--buybtn" data-id="<?= $item->ID ?>" data-price="<?php echo get_post_meta($item->ID, "price", 1); ?>">Заказать</button>
         <p class="categoryitems__item--composition">
             <?php
             $ingredients = get_the_terms($item->ID,'ingredients');
@@ -25,4 +27,5 @@ foreach($posts as $item){?>
             ?>
         </p>
     </div>
-<?php } ?>
+<?php }
+?>
