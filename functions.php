@@ -926,3 +926,115 @@ function recommendedSC(){
 add_shortcode('recommended', 'recommendedSC');
 
 /*----------------------------------------- КОНЕЦ СТРАНИЦЫ ЗАКАЗОВ ---------------------------------------------------*/
+/*-------------------------------------------- СЛАЙДЕР НА ГЛАВНОЙ ----------------------------------------------------*/
+
+add_action('init', 'myCustomInitSlider');
+
+function myCustomInitSlider()
+{
+    $labels = array(
+        'name' => 'Картинки на главной', // Основное название типа записи
+        'singular_name' => 'Фотографии', // отдельное название записи типа Book
+        'add_new' => 'Добавить фотографию',
+        'add_new_item' => 'Добавить новую фотографию',
+        'edit_item' => 'Редактировать фотографию',
+        'new_item' => 'Новая фотография',
+        'view_item' => 'Посмотреть фотографию',
+        'search_items' => 'Найти фотографию',
+        'not_found' => 'Фотографий не найдено',
+        'not_found_in_trash' => 'В корзине фотографий не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Слайдер на главной'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('thumbnail')
+    );
+    register_post_type('slider', $args);
+}
+
+//вывод картинок на главной
+function sliderShortcode()
+{
+    $args = array(
+        'post_type' => 'slider',
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/slider.php', ['my_query' => $my_query]);
+}
+
+add_shortcode('slider', 'sliderShortcode');
+
+/*------------------------------------ КОНЕЦ СЛАЙДЕР НА ГЛАВНОЙ ------------------------------------------------------*/
+/*-------------------------------------------- ПРЕИЩМУЩЕСТВА ---------------------------------------------------------*/
+
+add_action('init', 'myCustomInitAdvantages');
+
+function myCustomInitAdvantages()
+{
+    $labels = array(
+        'name' => 'Преимущества', // Основное название типа записи
+        'singular_name' => 'Преимущества', // отдельное название записи типа Book
+        'add_new' => 'Добавить преимущество',
+        'add_new_item' => 'Добавить новое преимущество',
+        'edit_item' => 'Редактировать преимущество',
+        'new_item' => 'Новое преимущество',
+        'view_item' => 'Посмотреть преимущество',
+        'search_items' => 'Найти преимущество',
+        'not_found' => 'Преимуществ не найдено',
+        'not_found_in_trash' => 'В корзине преимуществ не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Преимущества'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('thumbnail','title','editor')
+    );
+    register_post_type('advantages', $args);
+}
+
+//вывод картинок на главной
+function advShortcode()
+{
+    $args = array(
+        'post_type' => 'advantages',
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/advantages.php', ['my_query' => $my_query]);
+}
+
+add_shortcode('advantages', 'advShortcode');
+
+/*-------------------------------------- КОНЕЦ ПРЕИМУЩЕСТВ -----------------------------------------------------------*/

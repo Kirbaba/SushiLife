@@ -1,5 +1,6 @@
 ﻿<?php get_header(); ?>
 	<div class="main__carousel">
+		<?= do_shortcode('[slider]') ?>
 		<div class="main__carousel--item">
 			<img src="<?php bloginfo('template_directory'); ?>/img/Layer-13.jpg" alt="">
 			<div class="main__carousel--item--content">
@@ -24,7 +25,8 @@
 		</div>
 	</div>
 	<section class="advantages">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<?= do_shortcode('[advantages]'); ?>
+		<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="advantages__icon">
 				<img src="<?php bloginfo('template_directory'); ?>/img/fish-128.png" alt="">
 			</div>
@@ -71,7 +73,7 @@
 					производителей и
 					поставщиков</p>
 			</div>
-		</div>
+		</div>-->
 	</section>
 
 	<section class="social-media">
