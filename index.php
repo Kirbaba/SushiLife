@@ -1,7 +1,7 @@
 ﻿<?php get_header(); ?>
 	<div class="main__carousel">
 		<?= do_shortcode('[slider]') ?>
-		<div class="main__carousel--item">
+		<!--<div class="main__carousel--item">
 			<img src="<?php bloginfo('template_directory'); ?>/img/Layer-13.jpg" alt="">
 			<div class="main__carousel--item--content">
 				<h2><span>специальное предложение</span></h2>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="main__carousel--item">
 			<img src="<?php bloginfo('template_directory'); ?>/img/sushi-ryba-ikra-file-assorti.jpg" alt="">
-		</div>
+		</div>-->
 	</div>
 	<section class="advantages">
 		<?= do_shortcode('[advantages]'); ?>
@@ -143,10 +143,10 @@
 
 	<section class="cookathome">
 		<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
-			<h3>Как приготовить суши в домашних условиях?</h3>
+			<h3><?= get_the_title(476); ?></h3>
 		</div>
 		<div class="col-lg-1 col-md-1 col-sm-3 col-xs-12">
-			<a href="#" class="cookathome--link"><i class="fa fa-arrow-right"></i></a>
+			<a href="<?= get_the_permalink(476); ?>" class="cookathome--link"><i class="fa fa-arrow-right"></i></a>
 		</div>
 	</section>
 

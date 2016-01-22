@@ -12,21 +12,21 @@
     list-style: none;
     margin: 10px auto 0 auto;
     padding: 0;
-    width: 120px;
+    width: 60px;
 }
 
 .page-coments--rating__item {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 24px;
-    -ms-flex: 0 0 24px;
-    flex: 0 0 24px;
-    height: 24px;
+    -webkit-flex: 0 0 12px;
+    -ms-flex: 0 0 12px;
+    flex: 0 0 12px;
+    height: 12px;
     background: url(../img/stars.svg);
     cursor: default;
 }
 
 .page-coments--rating__item.is-active {
-    background-position: -24px 0
+    background-position: -12px 0
 }
 
 .c-rating{
@@ -37,19 +37,19 @@
     list-style: none;
     margin: 10px auto 0 auto;
     padding: 0;
-    width: 120px;
+    width: 60px;
 }
 
 .c-rating__item {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 24px;
-    -ms-flex: 0 0 24px;
-    flex: 0 0 24px;
-    height: 24px;
+    -webkit-flex: 0 0 12px;
+    -ms-flex: 0 0 12px;
+    flex: 0 0 12px;
+    height: 12px;
     background: url(../img/stars.svg);
     cursor: pointer
 }
 
 .c-rating__item.is-active, .c-rating__item:hover {
-    background-position: -24px 0
+    background-position: -12px 0
 }
