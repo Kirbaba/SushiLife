@@ -11,12 +11,6 @@
                     <span>Имя </span><input type="text" name="reviewer-name" >
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <span>Телефон </span><input type="text" name="reviewer-phone" >
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <span>Email </span><input type="text" name="reviewer-mail">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <span>Рейтинг </span><ul class="c-rating"></ul>
                     <input type="hidden" name="reviewer-rating">
                 </div>

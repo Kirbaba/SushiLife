@@ -53,3 +53,7 @@
 .c-rating__item.is-active, .c-rating__item:hover {
     background-position: -12px 0
 }
+
+.reviews__carousel__item--rating{
+    margin-bottom: 10px;
+}

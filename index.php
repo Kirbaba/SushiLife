@@ -1,7 +1,7 @@
 ﻿<?php get_header(); ?>
 	<div class="main__carousel">
 		<?= do_shortcode('[slider]') ?>
-		<!--<div class="main__carousel--item">
+		<div class="main__carousel--item">
 			<img src="<?php bloginfo('template_directory'); ?>/img/Layer-13.jpg" alt="">
 			<div class="main__carousel--item--content">
 				<h2><span>специальное предложение</span></h2>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="main__carousel--item">
 			<img src="<?php bloginfo('template_directory'); ?>/img/sushi-ryba-ikra-file-assorti.jpg" alt="">
-		</div>-->
+		</div>
 	</div>
 	<section class="advantages">
 		<?= do_shortcode('[advantages]'); ?>

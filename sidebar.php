@@ -24,11 +24,11 @@
 				<div class="row">
 					<div class="col-xs-4">
 						<span class="basket__content__order--advanced--label">№ дома</span>
-						<input type="number" name="order-homenum">
+						<input type="text" name="order-homenum">
 					</div>
 					<div class="col-xs-4 p0">
 						<span class="basket__content__order--advanced--label">№ подъезда</span>
-						<input type="number" name="order-porchnum">
+						<input type="text" name="order-porchnum">
 					</div>
 					<div class="col-xs-4 ">
 						<span class="basket__content__order--advanced--label">корпус</span>
@@ -38,11 +38,11 @@
 				<div class="row">
 					<div class="col-xs-6 ">
 						<span class="basket__content__order--advanced--label">№ квартиры</span>
-						<input type="number" name="order-aptnum" >
+						<input type="text" name="order-aptnum" >
 					</div>
 					<div class="col-xs-6 ">
 						<span class="basket__content__order--advanced--label">этаж</span>
-						<input type="number" name="order-floor">
+						<input type="text" name="order-floor">
 					</div>
 				</div>
 				<div class="row">

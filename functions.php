@@ -619,7 +619,7 @@ function sendOrder(){
             $homenum = $_POST['homenum'];
             $porchnum = $_POST['porchnum'];
             $housing = $_POST['housing'];
-            $aptnum = $_POST['porchnum'];
+            $aptnum = $_POST['aptnum'];
             $floor = $_POST['floor'];
             $comment = $_POST['comment'];
 
@@ -658,17 +658,17 @@ function sendOrder(){
             $total += $item['price'];
             $str .= "<br>Название: ".$item['name'];
             $str .= "<br>Количество: ".$item['count'];
-            $str .= "<br>Цена: ".$item['price']."<br>";
+            $str .= "<br>Цена: ".$item['price']." грн.<br>";
         };
 
         if(!empty($orderdata)){
             $str .= 'О доставке: '.$orderdata.' </br>';
         }
 
-        $str .= 'Итого : '.$total;
+        $str .= 'Итого : '.$total.' грн.';
 
         mail($admin_email, "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
-       // mail('sushilife2@gmail.com', "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
+        mail('sushilife2@gmail.com', "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
         echo $orderId;
         die();
     }
@@ -787,8 +787,6 @@ function addReview()
 {
     //Sanitize input data using PHP filter_var().
     $name = $_POST["name"];
-    $mail = $_POST["mail"];
-    $phone = $_POST["phone"];
     $rating = $_POST["rating"];
     $message = $_POST["message"];
 
@@ -811,12 +809,11 @@ function addReview()
 
     $str = "С вашего сайта оставили отзыв:<br>";
     $str .= 'Имя: '.$name.' <br>';
-    $str .= 'Email: '.$mail.' <br>';
-    $str .= 'Телефон: '.$phone.' <br>';
     $str .= 'Рейтинг: '.$rating.' <br>';
     $str .= 'Отзыв : '.$message.' <br>';
 
     mail($adminMail, "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
+    mail('sushilife2@gmail.com', "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
 
     $output = json_encode(array('message'=>'Спасибо за отзыв!'));
     die($output);
