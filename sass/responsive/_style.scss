@@ -560,6 +560,16 @@
 	.basket__foot--wrap--required p{
 		bottom: 104px!important;
 	}
+	.reviews__carousel__item {
+		height: auto !important;
+	}
+
+	.reviews__carousel__item small {
+		display: block;
+		float: left;
+		width: 100%;
+		margin-bottom: 15px;
+	}
 
 }
 

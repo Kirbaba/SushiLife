@@ -1315,6 +1315,8 @@ img.preLoader {
   font-family: "ProximaNovaRegular";
   font-weight: 500;
   font-size: 16px; }
+.page-coments-form__title .c-rating {
+  margin-left: 0 !important; }
 .page-coments-form__title h3 {
   text-transform: uppercase;
   font-weight: 700;
@@ -1332,18 +1334,27 @@ img.preLoader {
   font-size: 12px;
   line-height: 14px;
   padding: 9px 13px 9px 26px;
-  border-radius: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 16px;
   color: #444;
   outline: none; }
+.page-coments-form__form input[type="file"] {
+  display: block;
+  margin-bottom: 10px; }
 .page-coments-form__form textarea {
   display: block;
   width: 100%;
   font-size: 12px;
   line-height: 14px;
   padding: 9px 13px 9px 26px;
-  border-radius: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 16px;
   color: #444;
@@ -1352,8 +1363,11 @@ img.preLoader {
 .page-coments-form__form input[type='submit'] {
   display: block;
   margin: 10px auto 0 auto;
-  padding: 2px 30px;
-  border-radius: 15px;
+  padding: 10px 30px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
   border: 1px solid #EF3F35;
   background: transparent;
   color: #EF3F35;
@@ -1982,7 +1996,16 @@ img.preLoader {
     margin-top: 0; }
 
   .basket__foot--wrap--required p {
-    bottom: 104px !important; } }
+    bottom: 104px !important; }
+
+  .reviews__carousel__item {
+    height: auto !important; }
+
+  .reviews__carousel__item small {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px; } }
 @media only screen and (max-width: 320px) {
   .social-media {
     -webkit-background-size: cover;
@@ -2023,6 +2046,9 @@ img.preLoader {
     right: 15%; }
 
   .reviews i.fa.fa-chevron-left.slick-arrow, .templatepage i.fa.fa-chevron-left.slick-arrow {
-    left: 15%; } }
+    left: 15%; }
+
+  .reviews__carousel__item {
+    height: 400px !important; } }
 
 /*# sourceMappingURL=style.css.map */
