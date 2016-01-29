@@ -515,7 +515,7 @@ ul {
     color: #263A47;
     font-family: "ProximaNovaRegular";
     font-weight: 700;
-    margin: 0;
+    margin: 1px 0 0;
     line-height: 25px; }
   .social-media--icon-wrap a {
     display: block;
@@ -1858,7 +1858,23 @@ img.preLoader {
     margin-top: 15px; }
 
   .basket__foot--wrap--required p {
-    bottom: 104px; } }
+    bottom: 104px; }
+
+  .navigation--logo {
+    width: 75px; }
+
+  .navigation {
+    min-height: 48px; }
+
+  .main__wrapper {
+    padding-top: 48px; }
+
+  .navigation--box--menutoggle, .navigation--box--showbasket, .navigation--box--showbasket, .navigation--box--showbasket {
+    padding: 0;
+    margin-top: 0; }
+
+  .navigation--box--menutoggle a, .navigation--box--showbasket a, .navigation--box--showbasket a, .navigation--box--showbasket a {
+    margin-top: 0; } }
 @media only screen and (max-width: 500px) {
   .basket--width {
     display: none; }
@@ -1881,6 +1897,15 @@ img.preLoader {
     background-color: #2C2C2C;
     padding: 10px 0;
     width: 100%; }
+
+  .navigation--logo {
+    width: 75px; }
+
+  .navigation {
+    min-height: 48px; }
+
+  .main__wrapper {
+    padding-top: 48px; }
 
   .basket--width {
     padding: 0; }
@@ -1944,7 +1969,14 @@ img.preLoader {
     height: auto; }
 
   .navigation--box {
-    width: 100%; } }
+    width: 100%; }
+
+  .navigation--box--menutoggle, .navigation--box--showbasket, .navigation--box--showbasket, .navigation--box--showbasket {
+    padding: 0;
+    margin-top: 0; }
+
+  .navigation--box--menutoggle a, .navigation--box--showbasket a, .navigation--box--showbasket a, .navigation--box--showbasket a {
+    margin-top: 0; } }
 @media only screen and (max-width: 320px) {
   .social-media {
     -webkit-background-size: cover;
@@ -1955,13 +1987,13 @@ img.preLoader {
     font-size: 30px; }
 
   .navigation--logo {
-    width: 80px; }
+    width: 60px; }
 
   .navigation {
-    min-height: 55px; }
+    min-height: 48px; }
 
   .main__wrapper {
-    padding-top: 55px; }
+    padding-top: 48px; }
 
   .navigation--navline--active {
     margin-left: -100px; }
