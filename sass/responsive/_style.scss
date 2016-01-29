@@ -601,4 +601,14 @@
 	    width: 100%;
 	    margin-left: 100px;
 	}
+
+	.reviews i.fa.fa-chevron-right.slick-arrow {
+		right: 15%;
+	}
+	.reviews i.fa.fa-chevron-left.slick-arrow {
+	    left: 15%;
+	}
+	.reviews__carousel__item {
+		height: 400px !important;
+	}
 }
