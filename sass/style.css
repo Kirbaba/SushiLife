@@ -1871,7 +1871,13 @@ img.preLoader {
     margin-top: 0; }
 
   .navigation--box--menutoggle a, .navigation--box--showbasket a, .navigation--box--showbasket a, .navigation--box--showbasket a {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .basket__foot--wrap--required p {
+    bottom: 104px; }
+
+  .thankBody {
+    margin: 0 !important; } }
 @media only screen and (max-width: 500px) {
   .basket--width {
     display: none; }
