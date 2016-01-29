@@ -668,7 +668,7 @@ function sendOrder(){
         $str .= 'Итого : '.$total.' грн.';
 
         mail($admin_email, "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
-        mail('sushilife2@gmail.com', "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
+        //mail('sushilife2@gmail.com', "Заказ с сайта", $str, "Content-type: text/html; charset=UTF-8\r\n");
         echo $orderId;
         die();
     }
@@ -813,7 +813,7 @@ function addReview()
     $str .= 'Отзыв : '.$message.' <br>';
 
     mail($adminMail, "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
-    mail('sushilife2@gmail.com', "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
+   // mail('sushilife2@gmail.com', "Письмо с сайта Суши", $str, "Content-type: text/html; charset=UTF-8\r\n");
 
     $output = json_encode(array('message'=>'Спасибо за отзыв!'));
     die($output);

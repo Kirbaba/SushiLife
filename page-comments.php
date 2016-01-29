@@ -18,7 +18,7 @@
                     <span>Сообщение </span><textarea name="reviewer-message" cols="10" rows="5"></textarea>
                 </div>
                 <div class="col-xs-12">
-                    <span>Изображение </span><input type="file" name="reviewer-photo">
+                    <span>Аватар </span><input type="file" name="reviewer-photo">
                 </div>
                 <div class="col-xs-12">
                     <input type="submit" class="js-send-review" value="Отправить">
