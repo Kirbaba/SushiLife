@@ -1,0 +1,611 @@
+.navigationtabs {
+    text-align: center;
+    display: block;
+    float: left;
+    width: 100%;
+    /*padding: 0 15px;*/
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 50px;
+    margin-top: 35px;
+}
+
+
+.navigationtabs--title{
+    font-family: "ProximaNovaRegular";
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.navigationtabs--title sup{
+    font-family: "ProximaNovaRegular";
+    font-size: 12px;
+    color: #A0A0A0;
+    border: 1px solid #A0A0A0;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    line-height: 22px;
+    top: -22px;
+    right: -5px;
+}
+
+.navigationtabs--tabs{
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.navigationtabs--tabs li{
+    margin-right: 30px;
+}
+
+.navigationtabs--tabs li a{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-family: 'ProximaNovaRegular';
+    font-size: 10px;
+    color: #f14036;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    background-color: #fff;
+}
+
+.navigationtabs--tabs li a:focus{
+    background-color: #fff;
+}
+
+.navigationtabs--tabs li a:hover{
+    border: 1px solid #f14036;
+    background-color: #fff;
+    color: #F14036;
+}
+
+.navigationtabs--tabs li.active a, .navigationtabs--tabs li.active a:focus{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    border: 1px solid #f14036;
+    background-color: #F14036;
+    color: #fff;
+}
+
+.navigationtabs--tabs li.active a:hover{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    background-color: #F14036;
+    color: #fff;
+}
+
+.categoryitems__item {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    margin: 25px 0;
+}
+
+.categoryitems__item--weight {
+    display: inline-block;
+   /* float: left;*/
+    font-size: 11px;
+    margin-right: 20px;
+    font-family: "ProximaNovaRegular";
+    font-weight: 600;
+    padding-left: 20px;
+    background-image: url("../img/44-16.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    color: #A0A0A0;
+}
+
+.categoryitems__item--qt {
+    display: inline-block;
+    /*float: left;*/
+    font-size: 11px;
+    font-family: "ProximaNovaRegular";
+    font-weight: 600;
+    background-image: url("../img/food-drink-26-16.png");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-position: 0 50%;
+    color: #A0A0A0;
+}
+
+.categoryitems__item a{
+    font-family: "ProximaNovaRegular";
+    font-weight: 700;
+    font-size: 22px;
+    color: #F14036;
+    display: block;
+}
+
+.categoryitems__item img {
+    margin: 0 auto;
+    max-height: 150px;
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.categoryitems__item--price{
+    font-family: "ProximaNovaBold";
+    color: #000;
+    display: block;
+    font-size: 16px;
+}
+
+.categoryitems__item--numbs{
+    display: inline-block;
+}
+
+.categoryitems__item--price span{
+    display: inline-block;
+    /*float: left;*/
+}
+
+.categoryitems__item--price--num{
+    font-size: 34px;
+}
+
+.categoryitems__item--buybtn{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    line-height: 1;
+    outline: none;
+    font-family: 'ProximaNovaRegular';
+    font-weight: 700;
+    font-size: 13px;
+    border: 1px solid #F14036;
+    color: #F14036;
+    background-color: #fff;
+    border-radius: 11px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.categoryitems__item--buybtn:hover{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    background-color: #F14036;
+    color: #fff;
+}
+
+.categoryitems__item--composition{
+    font-family: 'ProximaNovaRegular';
+    font-size: 10px;
+    color: #A0A0A0;
+}
+
+.recomend {
+    text-align: center;
+}
+
+.recomend h1{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "ProximaNovaRegular";
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.product{
+    text-align: center;
+}
+
+.product h1{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "ProximaNovaRegular";
+    font-size: 30px;
+    color: #000;
+}
+
+.product--item--info{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 30px;
+}
+
+.product--item__thumb{
+    display: inline-block;
+    height: auto;
+    max-width: 450px;
+    max-height: 300px;
+    margin: 30px auto;
+}
+
+.product--item--info--price{
+    font-family: "ProximaNovaBold";
+    color: #000;
+    display: block;
+    font-size: 16px;
+    margin: 5px auto;
+}
+
+.product--item--info--numbs{
+    display: inline-block;
+}
+
+.product--item--info--numbs__weight {
+    display: inline-block;
+    /* float: left;*/
+    font-size: 11px;
+    margin-right: 20px;
+    font-family: "ProximaNovaRegular";
+    font-weight: 600;
+    padding-left: 20px;
+    background-image: url("../img/44-16.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    color: #A0A0A0;
+}
+
+.product--item--info--numbs__qt {
+    display: inline-block;
+    /*float: left;*/
+    font-size: 11px;
+    font-family: "ProximaNovaRegular";
+    font-weight: 600;
+    background-image: url("../img/food-drink-26-16.png");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-position: 0 50%;
+    color: #A0A0A0;
+}
+
+.product--item--info--price span{
+    display: inline-block;
+    /*float: left;*/
+}
+
+.product--item--info--price__num{
+    font-size: 34px;
+}
+
+.product--item--info__buybtn{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    line-height: 1;
+    outline: none;
+    font-family: "ProximaNovaRegular";
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid #F14036;
+    color: #F14036;
+    background-color: #fff;
+    border-radius: 13px;
+    text-transform: uppercase;
+    padding: 11px 25px;
+    margin-bottom: 20px;
+}
+
+.product--item--info__buybtn:hover{
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    background-color: #F14036;
+    color: #fff;
+}
+
+.product--ingredients{
+    display: block;
+    margin-bottom: 30px;
+}
+
+.product--ingredients--item{
+    display: inline-block;
+}
+
+.product--ingredients p{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    height: 10px;
+    border-bottom: solid 1px #cdcdcd;
+    text-align: center;
+}
+
+.product--ingredients p span{
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 10px;
+    font-family: 'ProximaNovaRegular';
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.product--ingredients--item{
+    margin: 25px 10px;
+}
+
+.product--ingredients--item img{
+    vertical-align: top;
+    width: 65px;
+    height: 65px;
+    border-radius: 25px;
+    border: 2px solid #e5e5e5;
+    padding: 5px 0;
+}
+
+.product--ingredients--item p{
+    font-family: 'ProximaNovaRegular';
+    font-size: 10px;
+    color: #a0a0a0;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+a.basket__foot--order--noactive {
+
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+    filter: grayscale(50%);
+    filter: gray; /* IE 6-9 */
+    opacity: 0.5;
+}
+
+.orderBody{
+    display: none;
+}
+
+.basket__content__order--advanced{
+    display: none;
+}
+
+.basket__foot--order--success{
+    min-height: 40px;
+    display: none;
+    width: 100%;
+    font-size: 15px;
+    color: #FFF!important;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    padding: 10px 0;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-radius: 12px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #ef3f35;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 700;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.total_price {
+    float: left!important;
+    margin-right: 5px;
+}
+
+.basket__content__order--advanced--addresstitle{
+    font-family: "ProximaNovaBold";
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px;
+    float: left;
+}
+
+.basket__content__order--advanced--closeaddress{
+    float: right;
+    border: 1px solid #c4c9cc;
+    border-radius: 5px;
+    margin: 7.5px 15px;
+    background-color: transparent;
+    padding: 1px 2px;
+
+}
+
+.basket__content__order--advanced--closeaddress i{
+    color: #f14036;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.basket__content__order--advanced--label{
+    display: block;
+    font-family: 'ProximaNovaLight';
+    margin-bottom: 7px;
+    padding-left: 14px;
+    font-size: 10px;
+    color: #000;
+}
+
+.basket__content__order--advanced input, .basket__content__order--advanced textarea{
+    display: block;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.5);
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.basket__content__order--advanced input{
+    padding: 9px 13px 9px 26px;
+}
+
+.basket__content__order--advanced textarea{
+    padding: 9px;
+}
+
+.p0{
+    padding: 0;
+}
+
+.basket__content__order--advanced .row{
+    margin: 0;
+}
+
+.thankBody{
+    display: none;
+    text-align: center;
+    float: left;
+    width: 100%;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    -ms-overflow-y: auto;
+    overflow-y: auto;
+    margin: 109px 0 0 0;
+}
+
+.thankBody h4{
+    font-family: "ProximaNovaBold";
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.thankBody p{
+    width: 70%;
+    font-family: "ProximaNovaRegular";
+    font-weight: 500;
+    font-size: 12px;
+    margin: 10px auto;
+}
+
+.thankBody img{
+    width: 150px;
+    height: auto;
+    margin: 10px auto;
+}
+
+.thankBody button{
+    width: 90%;
+    display: block;
+    position: relative;
+    margin: 15px auto;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #F14036;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: "ProximaNovaRegular";
+    font-weight: lighter;
+    outline: none;
+    border: 1px solid #f14036;
+    text-decoration: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.basket__foot--wrap--required p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 139px;
+}
+
+.not-required{
+    display: none;
+}
+
+.page-coments-form__form--alert{
+    display: none;
+    float: left;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.page-coments-form__form--alert p{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    font-size: 10px;
+
+}
+
+.alert-green{
+    color: #64F136;
+    background-color: #E7FFDB;
+}
+
+.alert-red{
+    color: #F14036;
+    background-color: #FFDBDB;
+}
+
+.post h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-coments--rating ul, .reviews__carousel__item ul {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    width: 80px;
+    background-color: #fff;
+}
+
+.page-coments--rating, .reviews__carousel__item {
+    position: relative;
+    margin-top: -22px;
+}
+
+
+

@@ -1289,12 +1289,20 @@ img.preLoader {
       color: #A0A0A0;
       font-family: "ProximaNovaRegular"; }
 
+.page-coments-form p {
+  font-family: "ProximaNovaRegular";
+  font-weight: 500;
+  font-size: 16px; }
+.page-coments-form .ulogin_label {
+  font-family: "ProximaNovaRegular";
+  font-weight: 500;
+  font-size: 16px; }
 .page-coments-form__title h3 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
   text-align: center;
-  font-family: "ProximaNovaBold";
+  font-family: "ProximaNovaRegular";
   margin-bottom: 20px; }
 .page-coments-form__form span {
   display: block;
