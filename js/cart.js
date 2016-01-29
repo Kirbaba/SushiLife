@@ -145,7 +145,6 @@ $(function () {
         }
     });
 
-
     $(document).on('click','.basket__content__order--advanced--closeaddress', function(){
         if($('.basket__content__order--advanced').is(':visible')){
             $('.basket__content__order--advanced').hide();
@@ -219,6 +218,7 @@ $(function () {
         $('.basket__foot').show();
         $('.thankBody').hide();
         $('.cartBody').show();
+        updateButtons();
     });
 
     $(document).on('input','input[name="order-phone"]',function(){
@@ -300,9 +300,11 @@ function updateButtons(){
         active( $('.basket__foot--order'),0);
         $('.basket__foot--wrap--required').fadeOut(300);
     }else{
-        active( $('.basket__foot--order'),1);
-        $('.basket__foot--wrap--required').html('<p>Минимальный заказ 80 грн.</p>');
-        $('.basket__foot--wrap--required').fadeIn(300);
+        if($('.cartBody').is(':visible')){
+            active( $('.basket__foot--order'),1);
+            $('.basket__foot--wrap--required').html('<p>Минимальный заказ 80 грн.</p>');
+            $('.basket__foot--wrap--required').fadeIn(300);
+        }
     }
 }
 

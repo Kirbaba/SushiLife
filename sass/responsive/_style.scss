@@ -234,7 +234,7 @@
 	}
 	.navigation--box {
 		margin-left: 150px;
-		width: calc(100%-150px);
+		width: calc(100% - 150px);
 		//padding-right: 256px;
 	}
 	.navigation--box--topline {
@@ -416,6 +416,10 @@
 	    height: 50px;
 	    line-height: 50px;
 	    margin-top: 15px;
+	}
+
+	.basket__foot--wrap--required p{
+		bottom: 104px;
 	}
 }
 

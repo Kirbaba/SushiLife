@@ -1452,6 +1452,11 @@ img.preLoader {
     .news-category__item:hover:after, .news-category__item:active:after, .news-category__item:focus:after {
       opacity: 1; }
 
+.post {
+  display: block;
+  float: left;
+  width: 100%; }
+
 .footer {
   display: block;
   float: left;
@@ -1690,7 +1695,7 @@ img.preLoader {
 
   .navigation--box {
     margin-left: 150px;
-    width: calc(100%-150px); }
+    width: calc(100% - 150px); }
 
   .navigation--box--topline {
     width: 100%;
@@ -1850,7 +1855,10 @@ img.preLoader {
     font-size: 15px;
     height: 50px;
     line-height: 50px;
-    margin-top: 15px; } }
+    margin-top: 15px; }
+
+  .basket__foot--wrap--required p {
+    bottom: 104px; } }
 @media only screen and (max-width: 500px) {
   .basket--width {
     display: none; }
