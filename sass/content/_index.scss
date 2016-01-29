@@ -225,6 +225,11 @@
 				display: block;
 				margin: 15px auto;
 				@include overflow-img;
+				background-image: url('../img/dpc_Silhouette.png');
+				-webkit-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+				background-position: 50% 50%;
 				img {
 					max-width: 200%;
 				}

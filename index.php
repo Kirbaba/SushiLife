@@ -78,7 +78,7 @@
 
 	<section class="social-media">
 		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-			<h3>Следите за нами в соцсетях</h3>
+			<h3>Следите за нами в<br>соцсетях</h3>
 		</div>
 		<div class="col-lg-3 col-lg-offset-6 col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
 			<div class="social-media--icon-wrap">

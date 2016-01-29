@@ -596,10 +596,10 @@ a.basket__foot--order--noactive {
 }
 
 .page-coments--rating ul, .reviews__carousel__item ul {
-    padding: 5px 10px;
-    box-sizing: border-box;
-    width: 80px;
-    background-color: #fff;
+    padding: 5px 10px!important;
+    box-sizing: border-box!important;
+    width: 80px!important;
+    background-color: #fff!important;
 }
 
 .page-coments--rating, .reviews__carousel__item {
