@@ -418,9 +418,6 @@
 	    margin-top: 15px;
 	}
 
-	.basket__foot--wrap--required p {
-		bottom: 104px;
-	}
 	.navigation--logo {
 	    width: 75px;
 	}
@@ -437,6 +434,8 @@
 	.navigation--box--menutoggle a, .navigation--box--showbasket a, .navigation--box--showbasket a {
 		margin-top: 0;
 	}
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -551,6 +550,11 @@
 	.navigation--box--menutoggle a, .navigation--box--showbasket a, .navigation--box--showbasket a {
 		margin-top: 0;
 	}
+
+	.basket__foot--wrap--required p{
+		bottom: 104px!important;
+	}
+
 }
 
 @media only screen and (max-width: 320px) {
