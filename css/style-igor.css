@@ -611,7 +611,13 @@ a.basket__foot--order--noactive {
 .reviews.page-coments--rating, .reviews__carousel__item {
         margin-top: -10px;
 }
+.c-rating {
+    margin-left: 0;
+}
 
+.page-coments-form__title {
+    margin-top: 60px;
+}
 
 
 

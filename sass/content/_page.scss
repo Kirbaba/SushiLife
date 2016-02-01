@@ -158,6 +158,9 @@
 		font-size: 16px;
 	}
 	&__title{
+		.c-rating {
+		    margin-left: 0 !important;
+		}
 		h3{
 			text-transform: uppercase;
 			font-weight: 700;
@@ -179,11 +182,15 @@
 			font-size: 12px;
 			line-height: 14px;
 			padding: 9px 13px 9px 26px;
-			border-radius: 24px;
+			@include border-radius(12px);
 			border: 1px solid rgba(0,0,0,.5);
 			margin-bottom: 16px;
 			color: #444;
 			outline: none;
+		}
+		input[type="file"] {
+			display: block;
+			margin-bottom: 10px;
 		}
 		textarea{
 			display: block;
@@ -191,7 +198,7 @@
 			font-size: 12px;
 			line-height: 14px;
 			padding: 9px 13px 9px 26px;
-			border-radius: 24px;
+			@include border-radius(12px);
 			border: 1px solid rgba(0,0,0,.5);
 			margin-bottom: 16px;
 			color: #444;
@@ -201,8 +208,8 @@
 		input[type='submit']{
 			display: block;
 			margin: 10px auto 0 auto;
-			padding: 2px 30px;
-			border-radius: 15px;
+			padding: 10px 30px;
+			@include border-radius(12px);
 			border: 1px solid #EF3F35;
 			background: transparent;
 			color: #EF3F35;
