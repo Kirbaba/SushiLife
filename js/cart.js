@@ -136,14 +136,26 @@ $(function () {
 
     });
 
-    $(".add-address-btn").on({
-        mouseenter: function () {
-            $('.not-required').fadeIn(300);
-        },
-        mouseleave: function () {
-            $('.not-required').fadeOut(300);
-        }
-    });
+
+    if($( window ).width() > 1025){
+        $(".add-address-btn").on({
+            mouseenter: function () {
+                $('.not-required').fadeIn(300);
+            },
+            mouseleave: function () {
+                $('.not-required').fadeOut(300);
+            }
+        });
+    }else{
+        $(document).on('click','.add-address-btn', function(){
+            if($('.not-required').is(':visible')){
+                $('.not-required').fadeOut(300);
+            }else{
+                $('.not-required').fadeIn(300);
+            }
+        });
+    }
+
 
     $(document).on('click','.basket__content__order--advanced--closeaddress', function(){
         if($('.basket__content__order--advanced').is(':visible')){
