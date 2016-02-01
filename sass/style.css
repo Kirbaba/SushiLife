@@ -1711,9 +1711,10 @@ img.preLoader {
     margin-left: 100px;
     width: calc(100% - 150px); }
 
-  .navigation--box--topline {
-    width: 100%;
-    padding-right: 256px; }
+  .navigation {
+    min-height: 80px; }
+    .navigation--logo {
+      width: 100px; }
 
   .navigation--logo {
     position: absolute; }

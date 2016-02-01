@@ -237,9 +237,15 @@
 		width: calc(100% - 150px);
 		//padding-right: 256px;
 	}
-	.navigation--box--topline {
-		width: 100%;
-		padding-right: 256px;	
+	// .navigation--box--topline {
+	// 	width: 100%;
+	// 	padding-right: 256px;	
+	// }
+	.navigation {
+		min-height: 80px;
+		&--logo {
+			width: 100px;
+		}
 	}
 	.navigation--logo {
 		position: absolute;
@@ -436,7 +442,7 @@
 	}
 
 	.basket__foot--wrap--required p{
-		bottom: 104px;
+		bottom: 104px!important;
 	}
 
 	.thankBody {
